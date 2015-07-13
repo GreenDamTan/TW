@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+html,*,body, div, ul,ol, li,h1,h2,h3,h4,h5,h6,p,span{margin:0;padding:0;}
+body{font-family:"微软雅黑", Arial, Helvetica, sans-serif;color:#666666;line-height:25px;font-size:14px;background:#f2f2f2;}
+em{font-style:normal;}
+a img, :link img, :visited img{border:0;}
+a:link, a:visited{text-decoration:none;color:#666666;}
+a:hover,a:focus{text-decoration:underline;color:#0573bd;text-decoration:none;}
+ul, ul li{list-style-type:none;}
+
+
+#top_bg{height:45px;width:100%;background:#333;box-shadow:1px 1px 7px #999;position:fixed;z-index:999;left:0;border-bottom:#C6C6C6 solid 1px;}
+
+.nav_z{width:auto!important;height:45px;float:left;position:relative;z-index:999 ;}
+#navul li a, #navul li a:visited{color:#FFF;font-weight:500;letter-spacing:2px;}
+#navul li{float:left;height:45px;width: 150px;position:relative;text-align:center;line-height:45px;margin-top: 0px;}
+
+.logo {width: 240px; height: 120px;}
+
+.queryButton {
+	margin-top: 5px;
+}
+
+.gameClass {
+position: relative;
+bottom: 0;
+left: 50%;
+width: 500px;
+margin-left: -250px;
+text-align: center;
+padding: 0 5px;
+background: rgba(0,0,0,.8);
+border-radius: 0 0 10px 10px;
+}
+
+.closeButton {
+position: absolute;
+top: -5px;
+right: -10px;
+background: url(../../../../images/cgweb/closeButton.png) no-repeat 0 0;
+width: 31px;
+height: 31px;
+}
+
+.footBar {
+position: fixed;
+bottom: 0;
+left: 50%;
+width: 500px;
+margin-left: -250px;
+text-align: center;
+padding: 5 5px;
+background: rgba(0,0,0,.8);
+border-radius: 10px 10px 0 0;
+}
+
+.table {
+    width: 50%;
+}
+
+.table thead tr th, tbody tr td{
+    border: 1px solid #eee;
+    padding: .6em 10px;
+    text-align: left;
+    color: black;
+}
+
+.button:link, .button:active {
+    background-color: #C5DEFF;
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,.25);
+}
