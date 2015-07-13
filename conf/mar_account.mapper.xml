@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.account.dao.AccountDao">
+    <resultMap id="AccountEvtMap" type="AccountEvt">
+        <id property="id" column="ID" />
+        <result property="uuid" column="UUID" />
+        <result property="hashToken" column="HASHTOKEN" />
+        <result property="gachaHash" column="GACHAHASH" />
+        <result property="accountKey" column="ACCOUNTKEY" />
+        <result property="status" column="STATUS" />
+        <result property="inviteCode" column="INVITECODE" />
+        <result property="title" column="TITLE" />
+        <result property="urNumA" column="URNUMA" />
+        <result property="urNumB" column="URNUMB" />
+        <result property="urNumC" column="URNUMC" />
+        <result property="urNumD" column="URNUMD" />
+        <result property="cardIds" column="CARDIDS" />
+        <result property="crystal" column="CRYSTAL" />
+        <result property="price" column="PRICE" />
+        <result property="createTime" column="CREATETIME" />
+        <result property="remark" column="REMARK" />
+    </resultMap>
+</mapper>

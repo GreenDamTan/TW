@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.account.dao.AccountDao">
+<select id="mar_queryAccount" parameterType="AccountReq" resultType="AccountEvt" resultMap="AccountEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.uuid, t.hashToken, t.gachaHash, t.accountkey, t.status, t.invitecode, t.title, t.urnuma, t.urnumb, t.urnumc, t.urnumd, t.cardids, t.crystal, t.price, t.createtime, t.remark FROM t_tgks_mar_account t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="uuid !=null and uuid !='' ">
+                AND t.UUID = #{uuid}
+            </if>
+            <if test="accountKey !=null and accountKey !='' ">
+                AND t.KEY = #{accountKey}
+            </if>
+            <if test="status !=null and status !='' ">
+                AND t.STATUS = #{status}
+            </if>
+            <if test="inviteCode !=null and inviteCode !='' ">
+                AND t.INVITECODE = #{inviteCode}
+            </if>
+            <if test="title !=null and title !='' ">
+                AND t.TITLE LIKE CONCAT(CONCAT('%', #{title}),'%')
+            </if>
+            <if test="urNumA !=null and urNumA !='' ">
+                AND t.URNUMA > 1
+            </if>
+            <if test="urNumB !=null and urNumB !='' ">
+                AND t.URNUMB > 1
+            </if>
+            <if test="urNumC !=null and urNumC !='' ">
+                AND t.URNUMC > 1
+            </if>
+            <if test="urNumD !=null and urNumD !='' ">
+                AND t.URNUMD > 1
+            </if>
+            <if test="crystal !=null and crystal !='' ">
+                AND t.CRYSTAL >= #{crystal}
+            </if>
+            <if test="createTimeStart !=null and createTimeStart !='' ">
+                AND t.CREATETIME >= #{createTimeStart}
+            </if>
+            <if test="createTimeEnd !=null and createTimeEnd !='' ">
+                AND #{createTimeEnd} >= t.CREATETIME
+            </if>
+            <if test="price !=null and price !='' ">
+                AND t.PRICE >= (#{price} - 50)
+            </if>
+            <if test="price !=null and price !='' ">
+                AND (#{price} + 50) >= t.PRICE
+            </if>
+            <if test="remark !=null and remark !='' ">
+                AND t.REMARK = #{remark}
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+<select id="mar_queryAccountByIds" parameterType="list" resultType="AccountEvt" resultMap="AccountEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.uuid, t.hashToken, t.gachaHash, t.accountkey, t.status, t.invitecode, t.title, t.urnuma, t.urnumb, t.urnumc, t.urnumd, t.cardids, t.crystal, t.price, t.createtime, t.remark FROM t_tgks_mar_account t WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</select>
+
+<insert id="mar_addAccount" parameterType="AccountEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_account (id, uuid, hashToken, gachaHash, accountkey, status, invitecode, title, urnuma, urnumb, urnumc, urnumd, cardids, crystal, price, createtime, remark) 
+            VALUES (#{id}, #{uuid}, #{hashToken}, #{gachaHash}, #{accountKey}, #{status}, #{inviteCode}, #{title}, #{urNumA}, #{urNumB}, #{urNumC}, #{urNumD}, #{cardIds}, #{crystal}, #{price}, #{createTime}, #{remark}) 
+        ]]>
+</insert>
+
+<update id="mar_updateAccount" parameterType="AccountEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_account SET 
+                       uuid = #{uuid},
+                       hashToken = #{hashToken},
+                       gachaHash = #{gachaHash},
+                       accountkey = #{accountKey},
+                       status = #{status},
+                       invitecode = #{inviteCode},
+                       title = #{title},
+                       urnuma = #{urNumA},
+                       urnumb = #{urNumB},
+                       urnumc = #{urNumC},
+                       urnumd = #{urNumD},
+                       cardids = #{cardIds},
+                       crystal = #{crystal},
+                       price = #{price},
+                       remark = #{remark}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteAccount" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_account WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>

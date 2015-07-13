@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzmap.dao.MarzMapDao">
+    <resultMap id="MarzMapEvtMap" type="MarzMapEvt">
+        <id property="id" column="ID" />
+        <result property="bossId" column="BOSSID" />
+        <result property="bossName" column="BOSSNAME" />
+        <result property="bpCost" column="BPCOST" />
+        <result property="target" column="TARGET" />
+        <result property="vip" column="VIP" />
+    </resultMap>
+</mapper>

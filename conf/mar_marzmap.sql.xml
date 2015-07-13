@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzmap.dao.MarzMapDao">
+<select id="mar_queryMarzMap" parameterType="MarzMapReq" resultType="MarzMapEvt" resultMap="MarzMapEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.bossid, t.bossname, t.bpcost, t.target, t.vip FROM t_tgks_mar_marzmap t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="bossId !=null and bossId !='' ">
+                AND t.BOSSID = #{bossId}
+            </if>
+            <if test="bossName !=null and bossName !='' ">
+                AND t.BOSSNAME = #{bossName}
+            </if>
+            <if test="bpCost !=null and bpCost !='' ">
+                AND t.BPCOST = #{bpCost}
+            </if>
+            <if test="vip !=null and vip !='' ">
+                AND t.VIP = #{vip}
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+<insert id="mar_addMarzMap" parameterType="MarzMapEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_marzmap (id, bossid, bossname, bpcost, target, vip) 
+            VALUES (#{id}, #{bossId}, #{bossName}, #{bpCost}, #{target}, #{vip}) 
+        ]]>
+</insert>
+
+<update id="mar_updateMarzMap" parameterType="MarzMapEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_marzmap SET 
+                       bossid = #{bossId},
+                       bossname = #{bossName},
+                       bpcost = #{bpCost},
+                       target = #{target},
+                       vip = #{vip}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteMarzMap" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_marzmap WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>

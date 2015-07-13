@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC 
+"-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- mar_﻿passwordcard -->
+		<typeAlias alias="PasswordCardEvt" type="com.moemao.tgks.mar.passwordcard.entity.PasswordCardEvt" />
+		<typeAlias alias="PasswordCardReq" type="com.moemao.tgks.mar.passwordcard.entity.PasswordCardReq" />
+		
+		<!-- mar_﻿krsmacard -->
+		<typeAlias alias="KrsmaCardEvt" type="com.moemao.tgks.mar.krsmacard.entity.KrsmaCardEvt" />
+		<typeAlias alias="KrsmaCardReq" type="com.moemao.tgks.mar.krsmacard.entity.KrsmaCardReq" />
+		
+		<!-- mar_﻿account -->
+		<typeAlias alias="AccountEvt" type="com.moemao.tgks.mar.account.entity.AccountEvt" />
+		<typeAlias alias="AccountReq" type="com.moemao.tgks.mar.account.entity.AccountReq" />
+		
+		<!-- mar_﻿marzmap -->
+		<typeAlias alias="MarzMapEvt" type="com.moemao.tgks.mar.marzmap.entity.MarzMapEvt" />
+		<typeAlias alias="MarzMapReq" type="com.moemao.tgks.mar.marzmap.entity.MarzMapReq" />
+		
+		<!-- mar_﻿marzlog -->
+		<typeAlias alias="MarzLogEvt" type="com.moemao.tgks.mar.marzlog.entity.MarzLogEvt" />
+		<typeAlias alias="MarzLogReq" type="com.moemao.tgks.mar.marzlog.entity.MarzLogReq" />
+		
+		<!-- mar_﻿marzaccount -->
+		<typeAlias alias="MarzAccountEvt" type="com.moemao.tgks.mar.marzaccount.entity.MarzAccountEvt" />
+		<typeAlias alias="MarzAccountReq" type="com.moemao.tgks.mar.marzaccount.entity.MarzAccountReq" />
+		
+		<!-- mar_﻿marzcard -->
+		<typeAlias alias="MarzCardEvt" type="com.moemao.tgks.mar.marzcard.entity.MarzCardEvt" />
+		<typeAlias alias="MarzCardReq" type="com.moemao.tgks.mar.marzcard.entity.MarzCardReq" />
+		
+		<!-- mar_﻿marzsetting -->
+		<typeAlias alias="MarzSettingEvt" type="com.moemao.tgks.mar.marzsetting.entity.MarzSettingEvt" />
+		<typeAlias alias="MarzSettingReq" type="com.moemao.tgks.mar.marzsetting.entity.MarzSettingReq" />
+		
+		<!-- mar_﻿marzitem -->
+		<typeAlias alias="MarzItemEvt" type="com.moemao.tgks.mar.marzitem.entity.MarzItemEvt" />
+		<typeAlias alias="MarzItemReq" type="com.moemao.tgks.mar.marzitem.entity.MarzItemReq" />
+	</typeAliases>
+</configuration>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzitem.dao.MarzItemDao">
+<select id="mar_queryMarzItem" parameterType="MarzItemReq" resultType="MarzItemEvt" resultMap="MarzItemEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.itemid, t.name, t.type, t.status, t.param FROM t_tgks_mar_marzitem t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="itemId !=null and itemId !='' ">
+                AND t.ITEMID = #{itemId}
+            </if>
+            <if test="name !=null and name !='' ">
+                AND t.NAME = #{name}
+            </if>
+            <if test="type !=null and type !='' ">
+                AND t.TYPE = #{type}
+            </if>
+            <if test="status !=null and status !='' ">
+                AND t.STATUS = #{status}
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+<insert id="mar_addMarzItem" parameterType="MarzItemEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_marzitem (id, itemid, name, type, status, param) 
+            VALUES (#{id}, #{itemId}, #{name}, #{type}, #{status}, #{param}) 
+        ]]>
+</insert>
+
+<update id="mar_updateMarzItem" parameterType="MarzItemEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_marzitem SET 
+                       itemid = #{itemId},
+                       name = #{name},
+                       type = #{type},
+                       status = #{status},
+                       param = #{param}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteMarzItem" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_marzitem WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>

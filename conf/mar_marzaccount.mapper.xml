@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzaccount.dao.MarzAccountDao">
+    <resultMap id="MarzAccountEvtMap" type="MarzAccountEvt">
+        <id property="id" column="ID" />
+        <result property="tgksId" column="TGKSID" />
+        <result property="uuid" column="UUID" />
+        <result property="hashToken" column="HASHTOKEN" />
+        <result property="accountKey" column="ACCOUNTKEY" />
+        <result property="gachaHash" column="GACHAHASH" />
+        <result property="type" column="TYPE" />
+        <result property="status" column="STATUS" />
+        <result property="sessionId" column="SESSIONID" />
+        <result property="vip" column="VIP" />
+        <result property="name" column="NAME" />
+        <result property="userId" column="USERID" />
+        <result property="lv" column="LV" />
+        <result property="ap" column="AP" />
+        <result property="apMax" column="APMAX" />
+        <result property="bp" column="BP" />
+        <result property="bpMax" column="BPMAX" />
+        <result property="cardNum" column="CARDNUM" />
+        <result property="cardMax" column="CARDMAX" />
+        <result property="gold" column="GOLD" />
+        <result property="fp" column="FP" />
+        <result property="coin" column="COIN" />
+        <result property="itemInfo" column="ITEMINFO" />
+        <result property="bossIds" column="BOSSIDS" />
+        <result property="sellCardIds" column="SELLCARDIDS" />
+        <result property="fameCardIds" column="FAMECARDIDS" />
+        <result property="createTime" column="CREATETIME" />
+        <result property="endTime" column="ENDTIME" />
+        <result property="remark" column="REMARK" />
+    </resultMap>
+</mapper>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <package namespace="/mar" name="mar" extends="struts-default">
+  
+    <action name="invite_login" class="com.moemao.tgks.mar.login.action.LoginAction" method="invite_login">
+        <result name="success">/WEB-INF/jsp/mar/invite/index.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="invite_ie_login" class="com.moemao.tgks.mar.login.action.LoginAction" method="invite_ie_login">
+        <result name="success">/WEB-INF/jsp/mar/invite/ie.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="invite" class="com.moemao.tgks.mar.invite.action.InviteAction" method="invite">
+        <result name="success">/WEB-INF/jsp/mar/invite/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/mar/invite/error.jsp</result>
+    </action>
+    
+    <action name="account_login" class="com.moemao.tgks.mar.login.action.LoginAction" method="account_login">
+        <result name="success">/WEB-INF/jsp/mar/account/accountManagerTB.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <!-- mar_passwordcard -->
+    <action name="passwordCardManager" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="passwordCardManager">
+        <result name="success">/WEB-INF/jsp/mar/passwordcard/passwordCardManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryPasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="queryPasswordCard">
+        <result name="success">/WEB-INF/jsp/mar/passwordcard/passwordCardList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editPasswordCardPage" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="editPasswordCardPage">
+        <result name="success">/WEB-INF/jsp/mar/passwordcard/passwordCardEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editPasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="editPasswordCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deletePasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="deletePasswordCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="renewPasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="renewPasswordCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="createPasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="createPasswordCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="exportPasswordCard" class="com.moemao.tgks.mar.passwordcard.action.PasswordCardAction" method="exportPasswordCard">
+        <result name="success">/WEB-INF/jsp/mar/passwordcard/passwordCardExport.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_krsmacard -->
+    <action name="krsmaCardManager" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="krsmaCardManager">
+        <result name="success">/WEB-INF/jsp/mar/krsmacard/krsmaCardManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryKrsmaCard" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="queryKrsmaCard">
+        <result name="success">/WEB-INF/jsp/mar/krsmacard/krsmaCardList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editKrsmaCardPage" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="editKrsmaCardPage">
+        <result name="success">/WEB-INF/jsp/mar/krsmacard/krsmaCardEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editKrsmaCard" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="editKrsmaCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteKrsmaCard" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="deleteKrsmaCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_account -->
+    <action name="accountManager" class="com.moemao.tgks.mar.account.action.AccountAction" method="accountManager">
+        <result name="success">/WEB-INF/jsp/mar/account/accountManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="queryAccount">
+        <result name="success">/WEB-INF/jsp/mar/account/accountList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editAccountPage" class="com.moemao.tgks.mar.account.action.AccountAction" method="editAccountPage">
+        <result name="success">/WEB-INF/jsp/mar/account/accountEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="editAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="deleteAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="initialAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="initialAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="checkCardAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="checkCardAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="gachaAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="gachaAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="allCheckCardAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="allCheckCardAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="allGachaAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="allGachaAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="exportAccountUuid" class="com.moemao.tgks.mar.account.action.AccountAction" method="exportAccountUuid">
+        <result name="success">/WEB-INF/jsp/mar/account/accountUuid.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="forInviteAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="forInviteAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="uploadAccount" class="com.moemao.tgks.mar.account.action.AccountAction" method="uploadAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="queryAccountTB_login" class="com.moemao.tgks.mar.account.action.AccountAction" method="queryAccountTB_login">
+        <result name="success">/WEB-INF/jsp/mar/account/accountListTB.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzmap -->
+    <action name="marzMapManager" class="com.moemao.tgks.mar.marzmap.action.MarzMapAction" method="marzMapManager">
+        <result name="success">/WEB-INF/jsp/mar/marzmap/marzMapManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzMap" class="com.moemao.tgks.mar.marzmap.action.MarzMapAction" method="queryMarzMap">
+        <result name="success">/WEB-INF/jsp/mar/marzmap/marzMapList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzMapPage" class="com.moemao.tgks.mar.marzmap.action.MarzMapAction" method="editMarzMapPage">
+        <result name="success">/WEB-INF/jsp/mar/marzmap/marzMapEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzMap" class="com.moemao.tgks.mar.marzmap.action.MarzMapAction" method="editMarzMap">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzMap" class="com.moemao.tgks.mar.marzmap.action.MarzMapAction" method="deleteMarzMap">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzlog -->
+    <action name="marzLogManager" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="marzLogManager">
+        <result name="success">/WEB-INF/jsp/mar/marzlog/marzLogManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzLog" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="queryMarzLog">
+        <result name="success">/WEB-INF/jsp/mar/marzlog/marzLogList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzLogPage" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="editMarzLogPage">
+        <result name="success">/WEB-INF/jsp/mar/marzlog/marzLogEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzLog" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="editMarzLog">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzLog" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="deleteMarzLog">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzaccount -->
+    <action name="marzAccountManager" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="marzAccountManager">
+        <result name="success">/WEB-INF/jsp/mar/marzaccount/marzAccountManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzAccount" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="queryMarzAccount">
+        <result name="success">/WEB-INF/jsp/mar/marzaccount/marzAccountList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzAccountPage" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="editMarzAccountPage">
+        <result name="success">/WEB-INF/jsp/mar/marzaccount/marzAccountEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzAccount" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="editMarzAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzAccount" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="deleteMarzAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="changeStatusMarzAccount" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="changeStatusMarzAccount">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzcard -->
+    <action name="marzCardManager" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="marzCardManager">
+        <result name="success">/WEB-INF/jsp/mar/marzcard/marzCardManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="queryMarzCard">
+        <result name="success">/WEB-INF/jsp/mar/marzcard/marzCardList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzCardPage" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="editMarzCardPage">
+        <result name="success">/WEB-INF/jsp/mar/marzcard/marzCardEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="editMarzCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="deleteMarzCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="renewMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="renewMarzCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="createMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="createMarzCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="exportMarzCard" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="exportMarzCard">
+        <result name="success">/WEB-INF/jsp/mar/marzcard/marzCardExport.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzsetting -->
+    <action name="marzSettingManager" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="marzSettingManager">
+        <result name="success">/WEB-INF/jsp/mar/marzsetting/marzSettingManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzSetting" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="queryMarzSetting">
+        <result name="success">/WEB-INF/jsp/mar/marzsetting/marzSettingList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzSettingPage" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="editMarzSettingPage">
+        <result name="success">/WEB-INF/jsp/mar/marzsetting/marzSettingEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzSetting" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="editMarzSetting">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzSetting" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="deleteMarzSetting">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- marzManager -->
+    <action name="marzThreadPoolManager" class="com.moemao.tgks.mar.marz.action.MarzAction" method="marzThreadPoolManager">
+        <result name="success">/WEB-INF/jsp/mar/marz/marzThreadPoolManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="marzThreadPoolStart" class="com.moemao.tgks.mar.marz.action.MarzAction" method="marzThreadPoolStart">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="marzThreadPoolShutdown" class="com.moemao.tgks.mar.marz.action.MarzAction" method="marzThreadPoolShutdown">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <!-- mar_marzitem -->
+    <action name="marzItemManager" class="com.moemao.tgks.mar.marzitem.action.MarzItemAction" method="marzItemManager">
+        <result name="success">/WEB-INF/jsp/mar/marzitem/marzItemManager.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="queryMarzItem" class="com.moemao.tgks.mar.marzitem.action.MarzItemAction" method="queryMarzItem">
+        <result name="success">/WEB-INF/jsp/mar/marzitem/marzItemList.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzItemPage" class="com.moemao.tgks.mar.marzitem.action.MarzItemAction" method="editMarzItemPage">
+        <result name="success">/WEB-INF/jsp/mar/marzitem/marzItemEdit.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="editMarzItem" class="com.moemao.tgks.mar.marzitem.action.MarzItemAction" method="editMarzItem">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+
+    <action name="deleteMarzItem" class="com.moemao.tgks.mar.marzitem.action.MarzItemAction" method="deleteMarzItem">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+  </package>
+</struts>

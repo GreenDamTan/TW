@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <package namespace="/marweb" name="marweb" extends="struts-default">
+
+    <action name="login" class="com.moemao.tgks.marweb.login.action.LoginAction" method="login">
+        <result name="success">/WEB-INF/jsp/marweb/main/index.jsp</result>
+        <result name="error">/marweb/index.jsp</result>
+    </action>
+    
+    <action name="register" class="com.moemao.tgks.marweb.login.action.LoginAction" method="register">
+        <result name="success">/marweb/index.jsp</result>
+        <result name="error">/marweb/register.jsp</result>
+    </action>
+    
+    <action name="marzLocalPage" class="com.moemao.tgks.marweb.login.action.LoginAction" method="marzLocalPage">
+        <result name="success">/WEB-INF/jsp/marweb/local/local.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="queryMarzLogByTgksId" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="queryMarzLogByTgksId">
+        <result name="success">/WEB-INF/jsp/marweb/log/log.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="queryMarzLogByTgksIdOnlyMarzCard" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="queryMarzLogByTgksIdOnlyMarzCard">
+        <result name="success">/WEB-INF/jsp/marweb/log/log.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="queryMarzAccountByTgksId" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="queryMarzAccountByTgksId">
+        <result name="success">/WEB-INF/jsp/marweb/account/account.jsp</result>
+        <result name="error">/WEB-INF/jsp/marweb/main/binding.jsp</result>
+    </action>
+    
+    <action name="marzAccountBinding" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="marzAccountBinding">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="accountOnline" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="accountOnline">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="accountOffline" class="com.moemao.tgks.mar.marzaccount.action.MarzAccountAction" method="accountOffline">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="settingPage" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="settingPage">
+        <result name="success">/WEB-INF/jsp/marweb/setting/setting.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="saveSetting" class="com.moemao.tgks.mar.marzsetting.action.MarzSettingAction" method="saveSetting">
+        <result name="success">/WEB-INF/jsp/marweb/setting/setting.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="marzCardUsePage" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="marzCardUsePage">
+        <result name="success">/WEB-INF/jsp/marweb/main/marzCardUse.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="marzCardUse" class="com.moemao.tgks.mar.marzcard.action.MarzCardAction" method="marzCardUse">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+  </package>
+</struts>

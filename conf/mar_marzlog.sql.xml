@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzlog.dao.MarzLogDao">
+<select id="mar_queryMarzLog" parameterType="MarzLogReq" resultType="MarzLogEvt" resultMap="MarzLogEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.tgksid, t.type, t.info, t.createtime FROM t_tgks_mar_marzlog t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="tgksId !=null and tgksId !='' ">
+                AND t.TGKSID = #{tgksId}
+            </if>
+            <if test="type !=null and type !='' ">
+                AND t.TYPE = #{type}
+            </if>
+            <if test="info !=null and info !='' ">
+                AND t.INFO = #{info}
+            </if>
+            <if test="createTimeStart !=null and createTimeStart !='' ">
+                AND t.CREATETIME >= #{createTimeStart}
+            </if>
+            <if test="createTimeEnd !=null and createTimeEnd !='' ">
+                AND #{createTimeEnd} >= t.CREATETIME
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+<insert id="mar_addMarzLog" parameterType="MarzLogEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_marzlog (id, tgksid, type, info, createtime) 
+            VALUES (#{id}, #{tgksId}, #{type}, #{info}, #{createTime}) 
+        ]]>
+</insert>
+
+<update id="mar_updateMarzLog" parameterType="MarzLogEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_marzlog SET 
+                       tgksid = #{tgksId},
+                       type = #{type},
+                       info = #{info},
+                       createtime = #{createTime}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteMarzLog" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_marzlog WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>

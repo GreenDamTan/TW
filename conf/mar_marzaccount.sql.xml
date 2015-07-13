@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.marzaccount.dao.MarzAccountDao">
+<select id="mar_queryMarzAccount" parameterType="MarzAccountReq" resultType="MarzAccountEvt" resultMap="MarzAccountEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.tgksid, t.uuid, t.hashtoken, t.accountKey, t.gachahash, t.type, t.status, t.sessionid, t.vip, t.name, t.userid, t.lv, t.ap, t.apmax, t.bp, t.bpmax, t.cardnum, t.cardmax, t.gold, t.fp, t.coin, t.bossids, t.sellCardIds, t.fameCardIds, t.itemInfo, t.createtime, t.endtime, t.remark FROM t_tgks_mar_marzaccount t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="tgksId !=null and tgksId !='' ">
+                AND t.TGKSID = #{tgksId}
+            </if>
+            <if test="uuid !=null and uuid !='' ">
+                AND t.UUID = #{uuid}
+            </if>
+            <if test="accountKey !=null and accountKey !='' ">
+                AND t.ACCOUNTKEY = #{accountKey}
+            </if>
+            <if test="type !=null and type !='' ">
+                AND t.TYPE = #{type}
+            </if>
+            <if test="status !=null and status !='' ">
+                AND t.STATUS = #{status}
+            </if>
+            <if test="sessionId !=null and sessionId !='' ">
+                AND t.SESSIONID = #{sessionId}
+            </if>
+            <if test="vip !=null and vip !='' ">
+                AND t.VIP = #{vip}
+            </if>
+            <if test="name !=null and name !='' ">
+                AND t.NAME = #{name}
+            </if>
+            <if test="userId !=null and userId !='' ">
+                AND t.USERID = #{userId}
+            </if>
+            <if test="lv !=null and lv !='' ">
+                AND t.LV = #{lv}
+            </if>
+            <if test="ap !=null and ap !='' ">
+                AND t.AP = #{ap}
+            </if>
+            <if test="apMax !=null and apMax !='' ">
+                AND t.APMAX = #{apMax}
+            </if>
+            <if test="bp !=null and bp !='' ">
+                AND t.BP = #{bp}
+            </if>
+            <if test="bpMax !=null and bpMax !='' ">
+                AND t.BPMAX = #{bpMax}
+            </if>
+            <if test="cardNum !=null and cardNum !='' ">
+                AND t.CARDNUM = #{cardNum}
+            </if>
+            <if test="cardMax !=null and cardMax !='' ">
+                AND t.CARDMAX = #{cardMax}
+            </if>
+            <if test="gold !=null and gold !='' ">
+                AND t.GOLD = #{gold}
+            </if>
+            <if test="fp !=null and fp !='' ">
+                AND t.FP = #{fp}
+            </if>
+            <if test="coin !=null and coin !='' ">
+                AND t.COIN = #{coin}
+            </if>
+            <if test="endTime !=null and endTime !='' ">
+                AND t.ENDTIME > #{endTime}
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+
+<select id="mar_queryMarzAccountByIds" parameterType="list" resultType="MarzAccountEvt" resultMap="MarzAccountEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.tgksid, t.uuid, t.hashtoken, t.accountKey, t.gachahash, t.type, t.status, t.sessionid, t.vip, t.name, t.userid, t.lv, t.ap, t.apmax, t.bp, t.bpmax, t.cardnum, t.cardmax, t.gold, t.fp, t.coin, t.bossids, t.sellCardIds, t.fameCardIds, t.createtime, t.endtime, t.remark FROM t_tgks_mar_marzaccount t WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</select>
+
+<insert id="mar_addMarzAccount" parameterType="MarzAccountEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_marzaccount (id, tgksid, uuid, hashToken, accountKey, gachaHash, type, status, sessionid, vip, name, userid, lv, ap, apmax, bp, bpmax, cardnum, cardmax, gold, fp, coin, bossids, sellCardIds, fameCardIds, itemInfo, createtime, endtime, remark) 
+            VALUES (#{id}, #{tgksId}, #{uuid}, #{hashToken}, #{accountKey}, #{gachaHash}, #{type}, #{status}, #{sessionId}, #{vip}, #{name}, #{userId}, #{lv}, #{ap}, #{apMax}, #{bp}, #{bpMax}, #{cardNum}, #{cardMax}, #{gold}, #{fp}, #{coin}, #{bossIds}, #{sellCardIds}, #{fameCardIds}, #{itemInfo}, #{createTime}, #{endTime}, #{remark}) 
+        ]]>
+</insert>
+
+<update id="mar_updateMarzAccount" parameterType="MarzAccountEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_marzaccount SET 
+                       tgksid = #{tgksId},
+                       uuid = #{uuid},
+                       hashtoken = #{hashToken},
+                       accountkey = #{accountKey},
+                       gachahash = #{gachaHash},
+                       type = #{type},
+                       status = #{status},
+                       sessionid = #{sessionId},
+                       vip = #{vip},
+                       name = #{name},
+                       userid = #{userId},
+                       lv = #{lv},
+                       ap = #{ap},
+                       apmax = #{apMax},
+                       bp = #{bp},
+                       bpmax = #{bpMax},
+                       cardnum = #{cardNum},
+                       cardmax = #{cardMax},
+                       gold = #{gold},
+                       fp = #{fp},
+                       coin = #{coin},
+                       bossids = #{bossIds},
+                       sellCardIds = #{sellCardIds},
+                       fameCardIds = #{fameCardIds},
+                       itemInfo = #{itemInfo},
+                       endtime = #{endTime},
+                       remark = #{remark}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteMarzAccount" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_marzaccount WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>

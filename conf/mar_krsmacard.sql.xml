@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+  "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.moemao.tgks.mar.krsmacard.dao.KrsmaCardDao">
+<select id="mar_queryKrsmaCard" parameterType="KrsmaCardReq" resultType="KrsmaCardEvt" resultMap="KrsmaCardEvtMap">
+        <![CDATA[  
+            SELECT t.id, t.cardid, t.evocardid, t.sellflag, t.fameFlag, t.name, t.nickname, t.type, t.rarity, t.imageurl, t.iconurl FROM t_tgks_mar_krsmacard t
+        ]]>
+        <where>
+                1=1
+            <if test="id !=null and id !='' ">
+                AND t.ID = #{id}
+            </if>
+            <if test="cardId !=null and cardId !='' ">
+                AND t.CARDID LIKE CONCAT(CONCAT('%', #{cardId}),'%')
+            </if>
+            <if test="evoCardId !=null and evoCardId !='' ">
+                AND t.EVOCARDID = #{evoCardId}
+            </if>
+            <if test="sellFlag !=null and sellFlag !='' ">
+                AND t.SELLFLAG = #{sellFlag}
+            </if>
+            <if test="fameFlag !=null and fameFlag !='' ">
+                AND t.FAMEFLAG = #{fameFlag}
+            </if>
+            <if test="name !=null and name !='' ">
+                AND t.NAME LIKE CONCAT(CONCAT('%', #{name}),'%')
+            </if>
+            <if test="nickName !=null and nickName !='' ">
+                AND t.NICKNAME LIKE CONCAT(CONCAT('%', #{nickName}),'%')
+            </if>
+            <if test="type !=null and type !='' ">
+                AND t.TYPE = #{type}
+            </if>
+            <if test="rarity !=null and rarity !='' ">
+                AND t.RARITY = #{rarity}
+            </if>
+            <if test="imageUrl !=null and imageUrl !='' ">
+                AND t.IMAGEURL = #{imageUrl}
+            </if>
+            <if test="iconUrl !=null and iconUrl !='' ">
+                AND t.ICONURL = #{iconUrl}
+            </if>
+        </where>
+        <if test="sortSql !=null and sortSql !='' ">
+            ORDER BY ${sortSql}
+        </if>
+</select>
+
+<insert id="mar_addKrsmaCard" parameterType="KrsmaCardEvt">
+        <![CDATA[  
+            INSERT INTO t_tgks_mar_krsmacard (id, cardid, evocardid, sellflag, fameFlag, name, nickname, type, rarity, imageurl, iconurl) 
+            VALUES (#{id}, #{cardId}, #{evoCardId}, #{sellFlag}, #{fameFlag}, #{name}, #{nickName}, #{type}, #{rarity}, #{imageUrl}, #{iconUrl}) 
+        ]]>
+</insert>
+
+<update id="mar_updateKrsmaCard" parameterType="KrsmaCardEvt">
+        <![CDATA[  
+            UPDATE t_tgks_mar_krsmacard SET 
+                       cardid = #{cardId},
+                       evocardid = #{evoCardId},
+                       sellflag = #{sellFlag},
+                       fameflag = #{fameFlag},
+                       name = #{name},
+                       nickname = #{nickName},
+                       type = #{type},
+                       rarity = #{rarity},
+                       imageurl = #{imageUrl},
+                       iconurl = #{iconUrl}
+             WHERE ID = #{id}
+        ]]>
+</update>
+
+<delete id="mar_deleteKrsmaCard" parameterType="list">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_krsmacard WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</delete>
+</mapper>
