@@ -5,7 +5,7 @@
 <html>
   <head>
     
-    <title>乖离性MA账号托管系统——猫萌公社</title>
+    <title>乖离性MA台服 账号托管系统——猫萌公社</title>
     
     <meta charset="utf-8">
     <meta http-equiv="pragma" content="no-cache">
