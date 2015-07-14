@@ -675,7 +675,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
     private int explore()
     {
         // 在开头加入条件限制
-        if (!validateSetting(MarzConstant.VALIDATE_SETTING_EXPLORE) || account.getAp() == 0 || (account.getBpMax() - account.getBp()) < 6)
+        if (!validateSetting(MarzConstant.VALIDATE_SETTING_EXPLORE) || account.getAp() == 0)// || (account.getBpMax() - account.getBp()) < 6)
         {
             return MarzConstant.SUCCESS;
         }
@@ -749,8 +749,8 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 // cardShow2接口中的1
                 
                 // add by Ken 2015-6-3 for PVP & Solo
-                // cardShow2接口中 decks → 2
-                JSONArray decksJSON = cardShowJSON.getJSONArray("2");
+                // cardShow2接口中 decks → 2 台服还是1
+                JSONArray decksJSON = cardShowJSON.getJSONArray("1");
                 deckMap = new HashMap<String, String>();
                 JSONObject deckJSON;
                 DeckEvt deckEvt;

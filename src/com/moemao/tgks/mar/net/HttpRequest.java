@@ -19,7 +19,7 @@ public class HttpRequest
     
     private static final Semaphore semp = new Semaphore(1);
     
-    private boolean bDebug = true;
+    private boolean bDebug = false;
     
     /**
      * 向指定URL发送GET方法的请求
