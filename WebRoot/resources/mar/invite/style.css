@@ -1,0 +1,7116 @@
+@charset "UTF-8";
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+{
+    display: block
+}
+
+html
+{
+    overflow-y: scroll
+}
+
+blockquote,q
+{
+    quotes: none
+}
+
+blockquote:before,blockquote:after,q:before,q:after
+{
+    content: '';
+    content: none
+}
+
+input,textarea
+{
+    margin: 0;
+    padding: 0
+}
+
+ol,ul
+{
+    list-style: none
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,th
+{
+    text-align: left
+}
+
+a:focus
+{
+    outline: none
+}
+
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden
+}
+
+.clearfix
+{
+    min-height: 1px
+}
+
+.clear:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clear
+{
+    display: inline-table;
+    zoom: 1
+}
+
+* html .clear
+{
+    height: 1%
+}
+
+.clear
+{
+    display: block
+}
+
+* html .clearfix
+{
+    height: 1px
+}
+
+.both
+{
+    clear: both
+}
+
+html
+{
+    margin: 0;
+    padding: 0
+}
+
+body
+{
+    font-family: "�ᥤ�ꥪ", Meiryo, "�ҥ饮�νǥ� Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "�ͣ� �Х����å�", "MS PGothic", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    color: #000000;
+    font-size: 12px
+}
+
+body#black
+{
+    background: #000
+}
+
+body#white
+{
+    background: #fff
+}
+
+a:link,a:visited
+{
+    color: #ffffff;
+    text-decoration: none
+}
+
+a:hover
+{
+    color: #ffffff;
+    text-decoration: underline
+}
+
+a:active
+{
+    color: #ffffff;
+    text-decoration: none
+}
+
+#pcOnly
+{
+    display: block
+}
+
+#spOnly
+{
+    display: none
+}
+
+@media screen and (max-width: 640px)
+{
+    #pcOnly
+    {
+        display: none
+    }
+
+    #spOnly
+    {
+        display: block
+    }
+}
+
+header#sqexHeader-black_rsp
+{
+    border-bottom: 1px solid #838383;
+    background: #000
+}
+
+header#sqexHeader-white_rsp
+{
+    border-bottom: 1px solid #ccc;
+    background: #fff
+}
+
+@media screen and (max-width: 640px)
+{
+    header#sqexHeader-black_rsp,header#sqexHeader-white_rsp
+    {
+        height: auto;
+        padding: 10px 0
+    }
+}
+
+#header-title
+{
+    height: 37px;
+    padding: 0 10px
+}
+
+#header-title div.logo
+{
+    float: left;
+    margin-top: 13px
+}
+
+#header-title div.logo a
+{
+    width: 130px;
+    height: 14px;
+    display: block
+}
+
+@media screen and (max-width: 640px)
+{
+    #header-title
+    {
+        display: none
+    }
+
+    #phone-title
+    {
+        width: 100%;
+        height: auto;
+        position: relative
+    }
+
+    #phone-title div.logo
+    {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    #phone-title div.logo img
+    {
+        display: block;
+        width: 100%
+    }
+}
+
+div#___gcse_0
+{
+    width: 156px;
+    margin: 8px 0 0 10px;
+    float: right
+}
+
+div#___gcse_0 .gsc-control-cse
+{
+    padding: 0;
+    border: none;
+    background: none
+}
+
+div#___gcse_0 form,div#___gcse_0 input
+{
+    margin: 0;
+    padding: 0
+}
+
+div#___gcse_0 form table.gsc-search-box
+{
+    margin-bottom: 0
+}
+
+div#___gcse_0 form td.gsc-input
+{
+    padding-right: 0
+}
+
+div#___gcse_0 form td.gsc-clear-button
+{
+    display: none
+}
+
+div#___gcse_0 form input#gsc-i-id1
+{
+    width: 137px;
+    height: 20px;
+    border: 1px solid #333 !important;
+    font-size: 11px;
+    color: #333
+}
+
+header#sqexHeader-white_rsp div#___gcse_0 form input#gsc-i-id1
+{
+    border: 1px solid #bbb !important
+}
+
+div#___gcse_0 form input#gsc-i-id1.gsc-input
+{
+    background: url(https://cache.pre.kairisei-ma.jp/common/images/gcse.gif) left center no-repeat #fff !important;
+    line-height: 20px
+}
+
+div#___gcse_0 form input#gsc-i-id1.gsc-input-focus
+{
+    background-image: none !important
+}
+
+div#___gcse_0 form input.gsc-search-button
+{
+    min-width: 20px;
+    width: 20px;
+    height: 22px;
+    cursor: pointer;
+    text-indent: -9999px;
+    border: none;
+    background: url(https://cache.pre.kairisei-ma.jp/common/images/gcse_icon_k.png) left center no-repeat !important
+}
+
+header#sqexHeader-white_rsp div#___gcse_0 form input.gsc-search-button
+{
+    background: url(https://cache.pre.kairisei-ma.jp/common/images/gcse_icon_w.png) left center no-repeat !important
+}
+
+div#___gcse_0 form div.gsc-clear-button
+{
+    margin: 0;
+    padding: 4px
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay
+{
+    background: #1b1b1b
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay #resInfo-0
+{
+    color: #ffffff
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gsc-orderby-label
+{
+    color: #ffffff
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gsc-selected-option-container
+{
+    border: 1px solid #999;
+    color: #999
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gcsc-branding
+{
+    color: #999
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gsc-cursor-box
+{
+    text-align: center
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gsc-cursor .gsc-cursor-page
+{
+    background-color: #1b1b1b;
+    color: #999
+}
+
+div#___gcse_0 div.gsc-results-wrapper-overlay .gsc-cursor .gsc-cursor-page.gsc-cursor-current-page
+{
+    background-color: #b6b6b6;
+    color: #000
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result
+{
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-left: 10px solid #ffffff
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result:hover
+{
+    border-left: 10px solid #ff0000
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title
+{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    height: 21px
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title a
+{
+    color: #333;
+    text-decoration: none
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title a:hover,div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title a:hover em
+{
+    text-decoration: underline;
+    font-size: 16px !important
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title b
+{
+    color: #000
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result .gs-snippet
+{
+    color: #333
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result .gs-no-results-result .gs-snippet,div#___gcse_0 div.gsc-webResult.gsc-result .gs-error-result .gs-snippet
+{
+    background: none;
+    border: none;
+    padding: 10px
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result .gs-visibleUrl
+{
+    color: #000;
+    font-weight: bold
+}
+
+div#___gcse_0 div.gsc-webResult.gsc-result div.gs-title.gs-bidi-start-align a em
+{
+    text-decoration: underline;
+    color: #000
+}
+
+#contents
+{
+    margin: 0 auto;
+    background: #fff;
+    color: #000
+}
+
+@media screen and (max-width: 640px)
+{
+    #contents
+    {
+        width: 100%
+    }
+}
+
+div#sqexFooter
+{
+    margin-top: 0px;
+    clear: both;
+    text-align: center;
+    font-family: Verdana,Arial,Meiryo,"Hiragino Kaku Gothic Pro",Osaka,"MS P Gothic",sans-serif;
+    font-weight: normal !important
+}
+
+div#sqexFooter.sqex-footer-white
+{
+    background: #000;
+    border-top: 1px solid #666
+}
+
+div#sqexFooter.sqex-footer-white
+{
+    background: #fff;
+    border-top: 1px solid #ccc
+}
+
+div#sqexFooter a:link,div#sqexFooter a:visited,div#sqexFooter a:hover,div#sqexFooter a:active
+{
+    text-decoration: none !important;
+    font-weight: normal !important
+}
+
+div#sqexFooter a:hover
+{
+    text-decoration: underline !important;
+    font-weight: normal !important
+}
+
+div#sqex-footer-contents
+{
+    line-height: 1.0
+}
+
+div#sqexFooter div.sqex-footer-spbuy
+{
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #333;
+    padding: 0 0 10px 0;
+    text-align: center
+}
+
+div#sqexFooter.sqex-footer-white div.sqex-footer-spbuy
+{
+    border-bottom: 1px solid #ccc
+}
+
+div#sqexFooter div.sqex-footer-spbuy a
+{
+    margin: 10px 5px 0 5px;
+    display: inline-block
+}
+
+div#sqexFooter div.sqex-footer-spbuy a:last-child
+{
+    margin-right: 0
+}
+
+div#sqexFooter div.sqex-footer-spbuy img
+{
+    height: 40px
+}
+
+div#sqex-footer-contents-inner
+{
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+    text-align: center;
+    position: relative
+}
+
+div.sqex-footer-white div#sqex-footer-contents-inner
+{
+    border-bottom: 1px solid #ccc
+}
+
+div#sqexFooter div.sqex-footer-links
+{
+    padding: 10px 0;
+    position: absolute;
+    right: 10px;
+    top: 0
+}
+
+div#sqexFooter div.sqex-footer-links a
+{
+    display: inline-block;
+    margin-right: 20px
+}
+
+div#sqexFooter div.sqex-footer-links a:last-child
+{
+    margin-right: 0
+}
+
+div#sqexFooter div.sqex-footer-links img
+{
+    height: 40px
+}
+
+@media screen and (max-width: 640px)
+{
+    div#sqexFooter div.sqex-footer-links
+    {
+        margin: 0;
+        float: none;
+        text-align: center;
+        border-top: 1px solid #333333;
+        position: relative;
+        right: auto;
+        top: auto
+    }
+
+    div#sqexFooter.sqex-footer-white div.sqex-footer-links
+    {
+        border-bottom: 1px solid #ccc
+    }
+
+    div#sqexFooter div.sqex-footer-links a
+    {
+        margin: 0 5px
+    }
+}
+
+div#sqexFooter div.sqex-footer-shares-wrap
+{
+    display: inline-block;
+    padding: 10px 0;
+    width: 313px;
+    position: absolute;
+    left: 50%;
+    margin-left: -156px
+}
+
+div#sqexFooter div.sqex-footer-shares-wrap.logoless
+{
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+    width: 313px;
+    left: 0;
+    margin: 0 auto
+}
+
+div#sqexFooter dl.sqex-footer-shares
+{
+    text-align: center;
+    width: 313px;
+    height: 40px
+}
+
+div#sqexFooter dl.sqex-footer-shares dt,div#sqexFooter dl.sqex-footer-shares dd
+{
+    display: inline-block;
+    margin: 7px 15px 7px 0;
+    vertical-align: middle;
+    height: 25px
+}
+
+div#sqexFooter dl.sqex-footer-shares dd:last-child
+{
+    margin-right: 0
+}
+
+div#sqexFooter dl.sqex-footer-shares dd div
+{
+    vertical-align: middle !important
+}
+
+@media screen and (max-width: 640px)
+{
+    div#sqexFooter div.sqex-footer-shares-wrap
+    {
+        width: auto;
+        position: relative;
+        left: auto;
+        margin-left: auto
+    }
+
+    div#sqexFooter dl.sqex-footer-shares
+    {
+        width: auto;
+        border: none;
+        float: none
+    }
+
+    div#sqexFooter dl.sqex-footer-shares dt
+    {
+        display: none
+    }
+}
+
+div#sqexFooter div.sqex-footer-logos
+{
+    float: left;
+    margin-left: 10px;
+    padding: 10px 0
+}
+
+div#sqexFooter div.sqex-footer-logos img
+{
+    margin-right: 20px;
+    height: 40px
+}
+
+@media screen and (max-width: 640px)
+{
+    div#sqexFooter div.sqex-footer-logos
+    {
+        float: none;
+        padding: 10px;
+        margin: 0;
+        text-align: center
+    }
+
+    div#sqexFooter div.sqex-footer-logos img
+    {
+        margin: 5px
+    }
+}
+
+div#sqexFooter ul
+{
+    padding: 10px 0;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    border-bottom: 1px solid #333
+}
+
+div#sqexFooter.sqex-footer-white ul
+{
+    padding: 10px 0;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    border-bottom: 1px solid #ccc
+}
+
+div#sqexFooter ul li
+{
+    display: inline;
+    padding-left: 11px;
+    padding-right: 10px;
+    border-right: 1px dotted #666
+}
+
+div#sqexFooter ul li:last-child
+{
+    border: none
+}
+
+@media screen and (max-width: 640px)
+{
+    div#sqexFooter ul li
+    {
+        display: block;
+        float: left;
+        width: 48%;
+        padding: 0.5%;
+        margin: 1% 0;
+        border: none
+    }
+
+    div#sqexFooter ul li:first-child
+    {
+        border-right: 1px dotted #666
+    }
+
+    div#sqexFooter ul li:nth-child(3)
+    {
+        border-right: 1px dotted #666
+    }
+}
+
+div#sqexFooter p.sqex-footer-copyright
+{
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+    width: 70%
+}
+
+p.sqex-footer-copyright span
+{
+    display: block;
+    margin: -25px 10px 0 0;
+    text-align: right
+}
+
+p.sqex-footer-copyright span a
+{
+    margin-left: 10px
+}
+
+div.sqex-footer-white
+{
+    color: #333;
+    background: #FFF
+}
+
+div.sqex-footer-white a:link,div.sqex-footer-white a:visited,div.sqex-footer-white a:hover,div.sqex-footer-white a:active
+{
+    color: #000
+}
+
+div.sqex-footer-white div#sqex-footer-contents-inner
+{
+    border-top: none
+}
+
+div.sqex-footer-black
+{
+    background: #000;
+    color: #ccc
+}
+
+div.sqex-footer-black a:link,div.sqex-footer-black a:visited,div.sqex-footer-black a:hover,div.sqex-footer-black a:active
+{
+    color: #fff
+}
+
+div.column3 div#sqex-footer-contents-inner
+{
+    position: relative
+}
+
+div.column3 div#sqex-footer-contents div.sqex-footer-logos
+{
+    float: none;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 0 0 0
+}
+
+@media screen and (max-width: 640px)
+{
+    div.column3 div#sqex-footer-contents div.sqex-footer-logos
+    {
+        float: none;
+        padding: 10px 0;
+        text-align: center;
+        margin: 0
+    }
+}
+
+div.column3 div#sqex-footer-contents div.sqex-footer-links
+{
+    margin-right: 10px;
+    text-align: center
+}
+
+@media screen and (max-width: 640px)
+{
+    div.column3 div#sqex-footer-contents div.sqex-footer-links
+    {
+        float: none
+    }
+}
+
+div.sqex-footer-white.column3 div#sqex-footer-contents div.sqex-footer-links
+{
+    border-bottom: 1px solid #ccc
+}
+
+div.sqex-footer-white.column3 div#sqex-footer-contents div.sqex-footer-logos
+{
+    border-bottom: 1px solid #ccc
+}
+
+div#sqexFooter.column3 div.sqex-footer-shares-wrap
+{
+    width: auto;
+    position: relative;
+    left: auto;
+    margin-left: auto
+}
+
+body,a
+{
+    color: white
+}
+
+#wrapper
+{
+    position: relative;
+    z-index: 2
+}
+
+#wrapper #container
+{
+    margin: 100px 0;
+    padding: 20px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_black_alpha-7c89f94cc8593a6e2e29c09b32cebf80.png) left top repeat transparent;
+    opacity: 0
+}
+
+#light
+{
+    z-index: 3;
+    position: fixed;
+    width: 200px;
+    height: 0;
+    padding-top: 200px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/light-a1e5174cc4af47b79af4c0f9d0791b77.png) left top repeat transparent;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    -webkit-transform-origin: 50% 50% 50%;
+    -moz-transform-origin: 50% 50% 50%;
+    -ms-transform-origin: 50% 50% 50%;
+    -o-transform-origin: 50% 50% 50%;
+    transform-origin: 50% 50% 50%;
+    -webkit-transform: scale(0) rotate(0);
+    -moz-transform: scale(0) rotate(0);
+    -ms-transform: scale(0) rotate(0);
+    -o-transform: scale(0) rotate(0);
+    transform: scale(0) rotate(0)
+}
+
+#get_card
+{
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -310px;
+    margin-top: -462px;
+    -webkit-transform-origin: 50% 50% 50%;
+    -moz-transform-origin: 50% 50% 50%;
+    -ms-transform-origin: 50% 50% 50%;
+    -o-transform-origin: 50% 50% 50%;
+    transform-origin: 50% 50% 50%
+}
+
+#animation_layer
+{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none
+}
+
+#background
+{
+    opacity: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+#background .bg_video
+{
+    position: absolute;
+    top: 50%;
+    left: 50%
+}/*! normalize.css v2.0.1 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
+{
+    display: block
+}
+
+audio,canvas,video
+{
+    display: inline-block
+}
+
+audio:not([controls])
+{
+    display: none;
+    height: 0
+}[hidden]
+{
+    display: none
+}
+
+html
+{
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+body
+{
+    margin: 0
+}
+
+a:focus
+{
+    outline: thin dotted
+}
+
+a:active,a:hover
+{
+    outline: 0
+}
+
+h1
+{
+    font-size: 2em
+}
+
+abbr[title]
+{
+    border-bottom: 1px dotted
+}
+
+b,strong
+{
+    font-weight: bold
+}
+
+dfn
+{
+    font-style: italic
+}
+
+mark
+{
+    background: #ff0;
+    color: #000
+}
+
+code,kbd,pre,samp
+{
+    font-family: monospace, serif;
+    font-size: 1em
+}
+
+pre
+{
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+q
+{
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+
+small
+{
+    font-size: 80%
+}
+
+sub,sup
+{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup
+{
+    top: -0.5em
+}
+
+sub
+{
+    bottom: -0.25em
+}
+
+img
+{
+    border: 0
+}
+
+svg:not(:root)
+{
+    overflow: hidden
+}
+
+figure
+{
+    margin: 0
+}
+
+fieldset
+{
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em
+}
+
+legend
+{
+    border: 0;
+    padding: 0
+}
+
+button,input,select,textarea
+{
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+button,input
+{
+    line-height: normal
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"]
+{
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],input[disabled]
+{
+    cursor: default
+}
+
+input[type="checkbox"],input[type="radio"]
+{
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type="search"]
+{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration
+{
+    -webkit-appearance: none
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner
+{
+    border: 0;
+    padding: 0
+}
+
+textarea
+{
+    overflow: auto;
+    vertical-align: top
+}
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body
+{
+    font-family: "�ᥤ�ꥪ", Meiryo, "�ҥ饮�νǥ� Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "�ͣ� �Х����å�", "MS PGothic", sans-serif;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_loading-e0164d7ba1d636661a34773a63a2a9bf.png) center 150px no-repeat #000
+}
+
+a
+{
+    color: yellow;
+    outline: none !important
+}
+
+a:link,a:visited,a:hover,a:active
+{
+    text-decoration: none;
+    outline: none !important
+}
+
+.btnArea a
+{
+    font-size: 0
+}
+
+::selection
+{
+    background-color: #ffe4e8
+}
+
+ul
+{
+    padding: 0;
+    margin: 0
+}
+
+ul li
+{
+    list-style-type: none
+}
+
+.outlineTitle
+{
+    display: none
+}
+
+@-webkit-keyframes twinkle
+{
+    0%
+    {
+        opacity: 0
+    }
+
+    100%
+    {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes twinkle
+{
+    0%
+    {
+        opacity: 0
+    }
+
+    100%
+    {
+        opacity: 1
+    }
+}
+
+@-o-keyframes twinkle
+{
+    0%
+    {
+        opacity: 0
+    }
+
+    100%
+    {
+        opacity: 1
+    }
+}
+
+@keyframes twinkle
+{
+    0%
+    {
+        opacity: 0
+    }
+
+    100%
+    {
+        opacity: 1
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    .sp
+    {
+        display: none !important
+    }
+
+    #foot_home
+    {
+        background-color: black;
+        text-align: center;
+        border-top: 1px solid #666666
+    }
+
+    #foot_home .bannerLink
+    {
+        border-bottom: 1px solid #666666
+    }
+
+    #foot_home .bannerLink ul
+    {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        *zoom: 1
+    }
+
+    #foot_home .bannerLink ul:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    #foot_home .bannerLink ul li
+    {
+        float: right;
+        width: 49%;
+        text-align: left;
+        margin: 0;
+        padding: 20px 0;
+        line-height: 0;
+        font-size: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    #foot_home .bannerLink ul li:first-child
+    {
+        float: left;
+        text-align: right
+    }
+
+    #foot_home .bannerLink ul li img
+    {
+        width: 280px
+    }
+
+    #foot_home .supportLink
+    {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 12px;
+        color: #666666;
+        border-bottom: 1px solid #333333
+    }
+
+    #foot_home .supportLink a
+    {
+        color: white
+    }
+
+    #foot_home .supportLink a:hover
+    {
+        text-decoration: underline
+    }
+
+    #foot_home #Foot_home_inner
+    {
+        padding: 6px
+    }
+
+    #foot_home #Foot_home_inner p
+    {
+        color: #999999;
+        font-size: 13px
+    }
+
+    .card_image
+    {
+        position: relative
+    }
+
+    body.gacha_result #bg_light
+    {
+        min-height: 745px;
+        padding: 0px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light-09a149927def9cb3e49d67b7986c6bea.png) center 60px no-repeat transparent;
+        position: relative
+    }
+
+    body.gacha_result .twinkle
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    body.gacha_result .twinkle#twinkle1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light_1-30c497f9cf93be464e2c42818d775d4c.png) center center no-repeat transparent;
+        -webkit-animation: twinkle 800ms linear infinite alternate;
+        -moz-animation: twinkle 800ms linear infinite alternate;
+        -o-animation: twinkle 800ms linear infinite alternate;
+        animation: twinkle 800ms linear infinite alternate
+    }
+
+    body.gacha_result .twinkle#twinkle2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light_2-10b89b8fb261e0e4bbfe16b39c53e883.png) center center no-repeat transparent;
+        -webkit-animation: twinkle 800ms linear infinite alternate 800ms;
+        -moz-animation: twinkle 800ms linear infinite alternate 800ms;
+        -o-animation: twinkle 800ms linear infinite alternate 800ms;
+        animation: twinkle 800ms linear infinite alternate 800ms
+    }
+
+    body.gacha_result .twinkle#card_twinkle1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/twinkle_1-b3e048fc15e2f2c6c45ec17749fafac5.png) center center no-repeat transparent;
+        background-size: contain;
+        -webkit-animation: twinkle 800ms linear infinite alternate;
+        -moz-animation: twinkle 800ms linear infinite alternate;
+        -o-animation: twinkle 800ms linear infinite alternate;
+        animation: twinkle 800ms linear infinite alternate
+    }
+
+    body.gacha_result .twinkle#card_twinkle2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/twinkle_2-696b8c99aadf9b5cb352d12ce3b41b28.png) center center no-repeat transparent;
+        background-size: contain;
+        -webkit-animation: twinkle 800ms linear infinite alternate 800ms;
+        -moz-animation: twinkle 800ms linear infinite alternate 800ms;
+        -o-animation: twinkle 800ms linear infinite alternate 800ms;
+        animation: twinkle 800ms linear infinite alternate 800ms
+    }
+
+    #wrapper
+    {
+        min-width: 1024px
+    }
+
+    #wrapper #container
+    {
+        min-height: 745px;
+        border-top: 8px solid #333333;
+        border-bottom: 8px solid #333333;
+        margin: 50px 0;
+        padding: 0px
+    }
+
+    #wrapper #container #bg_line_e
+    {
+        min-height: 745px;
+        padding: 0px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_line_bottom-29c6c2d0641e0d4d4be315c7d2ef4f2a.png) center bottom repeat-x transparent;
+        position: relative
+    }
+
+    #wrapper #container #bg_line
+    {
+        min-height: 745px;
+        padding: 0px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_line-d58c88f94254bab8665c55b975e9d722.png) center top repeat-x transparent;
+        position: relative
+    }
+
+    #wrapper #container #bg_line .bg_lt
+    {
+        position: absolute;
+        top: 12px;
+        left: 0
+    }
+
+    #wrapper #container #bg_line .bg_rt
+    {
+        position: absolute;
+        top: 12px;
+        right: 0
+    }
+
+    #wrapper #container #bg_line .bg_lb
+    {
+        position: absolute;
+        bottom: 12px;
+        left: 0
+    }
+
+    #wrapper #container #bg_line .bg_rb
+    {
+        position: absolute;
+        bottom: 12px;
+        right: 0
+    }
+
+    #wrapper #container #bg_line #contents
+    {
+        width: 932px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        top: -30px;
+        background: none !important;
+        color: white !important
+    }
+
+    section.indexPage
+    {
+        position: relative;
+        padding-top: 190px
+    }
+
+    section.indexPage h1
+    {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        display: block;
+        width: 307px;
+        height: 235px;
+        margin: 0
+    }
+
+    section.indexPage h1 span
+    {
+        display: block;
+        width: 307px;
+        height: 0;
+        padding-top: 235px;
+        background: url(logo.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0;
+        font-size: 0
+    }
+
+    section.indexPage h2
+    {
+        position: absolute;
+        top: 57px;
+        left: 275px;
+        display: block;
+        width: 483px;
+        height: 0;
+        font-size: 0;
+        padding-top: 122px;
+        background: url(h2_title.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0
+    }
+
+    section.indexPage #term
+    {
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        display: block;
+        width: 180px;
+        height: 0;
+        font-size: 0;
+        padding-top: 180px;
+        background: url(term.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0;
+        z-index: 4
+    }
+
+    section.indexPage #contentsBox
+    {
+        min-height: 530px;
+        position: relative;
+        margin: 0 20px;
+        background-color: rgba(0,0,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        padding: 15px;
+        z-index: 3
+    }
+
+    section.indexPage #contentsBox #countBox
+    {
+        height: 73px;
+        width: 862px;
+        background: url(bg_count.png) left top no-repeat transparent;
+        overflow: hidden;
+        position: relative
+    }
+
+    section.indexPage #contentsBox #countBox ul.total
+    {
+        position: absolute;
+        left: 81px;
+        top: 8px
+    }
+
+    section.indexPage #contentsBox #countBox ul.total li
+    {
+        float: left;
+        display: block;
+        width: 30px;
+        height: 56px;
+        margin-right: 8px
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr
+    {
+        position: absolute;
+        right: 104px;
+        top: 8px
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr li
+    {
+        float: left;
+        display: block;
+        width: 26px;
+        height: 56px
+    }
+
+    section.indexPage #contentsBox #achieve
+    {
+        position: absolute;
+        width: 876px;
+        height: 446px;
+        left: 0;
+        bottom: 15px;
+        background: url(union.png) left top no-repeat transparent
+    }
+
+    section.indexPage #contentsBox #achieve .nav
+    {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 272px;
+        width: 346px;
+        height: 115px;
+        text-align: center
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.twitter
+    {
+        padding: 27px 1px 0;
+        background: url(hint.png) left top no-repeat transparent
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.twitter a
+    {
+        display: block;
+        width: 344px;
+        height: 0;
+        font-size: 0;
+        padding-top: 88px;
+        overflow: hidden;
+        background: url(btn_submit.png) left top no-repeat transparent
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.twitter a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.achievement
+    {
+        padding: 4px 1px 8px
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.achievement a
+    {
+        display: block;
+        width: 344px;
+        height: 0;
+        font-size: 0;
+        padding-top: 62px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_achievement-113a475b2a14da191fd5270e0c4c101e.png) left top no-repeat transparent
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.achievement a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.logout a
+    {
+        display: block;
+        padding: 0.5em;
+        margin: 5px auto;
+        background-color: #212121;
+        color: white;
+        border: 2px solid #454545;
+        width: 36%;
+        font-size: 14px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        border-radius: 100px
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.logout a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage
+    {
+        position: relative;
+        padding-top: 130px
+    }
+
+    section.subPage h1
+    {
+        position: absolute;
+        top: 24px;
+        left: 140px;
+        display: block;
+        width: 167px;
+        height: 129px;
+        margin: 0
+    }
+
+    section.subPage h1 a
+    {
+        display: block;
+        width: 167px;
+        height: 0;
+        font-size: 0;
+        padding-top: 129px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/logo-191818c1023a49ac483549698265ed08.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0
+    }
+
+    section.subPage h2
+    {
+        position: absolute;
+        top: 58px;
+        left: 295px;
+        display: block;
+        width: 444px;
+        height: 0;
+        font-size: 0;
+        padding-top: 54px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/h2_title-eb03d112566be1f9adec5965bc4e9451.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0
+    }
+
+    section.subPage #contentsBox
+    {
+        line-height: 1em;
+        min-height: 590px;
+        position: relative;
+        margin: 0 20px;
+        background-color: rgba(0,0,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        padding: 15px;
+        z-index: 3;
+        *zoom: 1
+    }
+
+    section.subPage #contentsBox:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox .attentionText
+    {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.6em;
+        color: #ffc514;
+        letter-spacing: -1px
+    }
+
+    section.subPage #contentsBox h3.mypage
+    {
+        padding-top: 60px;
+        height: 0;
+        font-size: 0;
+        width: 862px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/h3_title_mypage-0ee383ebd6ae9e5efb0473f8e490ebdd.png) left top no-repeat transparent;
+        overflow: hidden;
+        position: relative;
+        margin: 10px 0
+    }
+
+    section.subPage #contentsBox #rules
+    {
+        padding: 10px;
+        background-color: rgba(31,31,31,0.75);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#991f1f1f, endcolorstr=#991f1f1f, gradienttype=0);
+        border: 4px solid #666666
+    }
+
+    section.subPage #contentsBox #rules h4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_rule-cf60d1a10c7a28fdb8cd5576d2953c82.png) left top no-repeat transparent;
+        width: 91px;
+        height: 0;
+        font-size: 0;
+        padding-top: 23px;
+        overflow: hidden;
+        margin: 0 0 4px
+    }
+
+    section.subPage #contentsBox #rules ul
+    {
+        font-size: 12px;
+        line-height: 1.3em
+    }
+
+    section.subPage #contentsBox #achieve
+    {
+        position: absolute;
+        width: 876px;
+        height: 446px;
+        left: 0;
+        bottom: 15px;
+        background: url(union.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #achieve .nav
+    {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 272px;
+        width: 346px;
+        height: 115px;
+        text-align: center
+    }
+
+    section.subPage #contentsBox #achieve .nav li.twitter
+    {
+        padding: 27px 1px 0;
+        background: url(hint.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #achieve .nav li.twitter a
+    {
+        display: block;
+        width: 344px;
+        height: 0;
+        font-size: 0;
+        padding-top: 88px;
+        overflow: hidden;
+        background: url(btn_submit.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #achieve .nav li.twitter a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #achieve .nav li.achievement
+    {
+        padding: 4px 1px 8px
+    }
+
+    section.subPage #contentsBox #achieve .nav li.achievement a
+    {
+        display: block;
+        width: 344px;
+        height: 0;
+        font-size: 0;
+        padding-top: 88px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_achievement-113a475b2a14da191fd5270e0c4c101e.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #achieve .nav li.achievement a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .awardInfo
+    {
+        *zoom: 1
+    }
+
+    section.subPage #contentsBox .awardInfo:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea
+    {
+        position: relative;
+        float: left;
+        width: 425px;
+        height: 370px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_entryBonus-0f4fbee304e6a0103b4ceb45de7880be.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea
+    {
+        position: relative;
+        float: right;
+        width: 425px;
+        height: 370px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gachaBonus-f1b0009ccb9082d440c120a1cfc71c58.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .noCard
+    {
+        height: 0;
+        font-size: 0;
+        width: 385px;
+        padding-top: 130px;
+        margin-top: 98px;
+        margin-left: 20px;
+        overflow: hidden;
+        background-color: #cccccc;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/text-cce4cde80296361b9e6f10f879cbfc5c.png) center top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea
+    {
+        margin: 10px auto 0
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a
+    {
+        display: block;
+        width: 355px;
+        height: 0;
+        font-size: 0;
+        padding-top: 73px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) center top no-repeat;
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited5_l-8f530c58be14a77cf00a39842b883972.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited4_l-1911f2d9a676c7b558e63bf96d7b2961.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited3_l-1eb1501d70aa6248a6052e6c3b625a8d.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited2_l-3d5f59c69cdb145bad43777bae4f7644.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited1_l-05e87f660062f69732fce821272d48d1.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .awardInfo .cardImage
+    {
+        position: absolute;
+        left: 20px;
+        top: 58px;
+        width: 195px;
+        height: 290px;
+        background: none;
+        box-shadow: none
+    }
+
+    section.subPage #contentsBox .awardInfo .cardImage img
+    {
+        display: block;
+        width: 195px
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus
+    {
+        text-align: center;
+        position: absolute;
+        right: 20px;
+        top: 78px;
+        width: 180px;
+        height: 250px;
+        overflow: hidden;
+        text-shadow: 0 1px black;
+        line-height: 1em
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .stars
+    {
+        margin: 5px 0 0
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .stars img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .card_title
+    {
+        margin: 0
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .card_title img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .card_name
+    {
+        margin: 0
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .card_name img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .serif
+    {
+        display: table-cell;
+        width: 180px;
+        vertical-align: middle;
+        height: 85px;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 5px 0;
+        line-height: 1em
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .voice
+    {
+        margin: 5px 0
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .voice a
+    {
+        margin: 0 auto;
+        width: 127px;
+        height: 0;
+        font-size: 0;
+        padding-top: 37px;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .voice a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .awardInfo .cardStatus .author
+    {
+        font-size: 12px;
+        margin: 5px 0
+    }
+
+    section.subPage #contentsBox .btnArea
+    {
+        text-align: center;
+        margin-top: 10px
+    }
+
+    section.subPage #contentsBox .btnArea.half
+    {
+        *zoom: 1
+    }
+
+    section.subPage #contentsBox .btnArea.half:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha
+    {
+        width: 50%;
+        float: right
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a
+    {
+        display: block;
+        width: 322px;
+        height: 0;
+        font-size: 0;
+        padding-top: 72px;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited5-15de987cc0ab5480408e3582435ff74b.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited4-f76c9c9fb348c313f83489f28b272069.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited3-7661e192c10e5369fbf66e9c7e04d73a.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited2-4531eae03dc43838ceab636768be47dc.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited1-936dec9fba837f49575ccfcf2bd8cbb3.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a.first
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .toGacha a:hoverR
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry
+    {
+        width: 50%;
+        float: right
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a
+    {
+        display: block;
+        width: 282px;
+        height: 0;
+        font-size: 0;
+        padding-top: 72px;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry-442c2b6f6ea63666a17baceac1f71baa.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/images/btn_retry5.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry4-c2fcd4bc2138f49834fcb491b5737efe.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry3-44fb59d483ececa407f294526794474a.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry2-936a29e9e6a378fa8a1a64d9e8467399.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry1-830668741fda1b394b63862e9c740f94.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox .btnArea.half .retry a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .btnArea.half .back
+    {
+        width: 50%;
+        float: left
+    }
+
+    section.subPage #contentsBox .btnArea .back
+    {
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox .btnArea .back a
+    {
+        display: block;
+        width: 282px;
+        height: 0;
+        font-size: 0;
+        padding-top: 72px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_back_sub-721f8eecf0151e2587be82eb9e5ea335.png) left top no-repeat transparent;
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox .btnArea .back a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox .btnArea .back.topPage a
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_topPage-12e8467ff05f2988f5f4dfe0cddb83bb.png) center top no-repeat transparent;
+        width: 310px;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox #gachaArea
+    {
+        background-color: rgba(123,25,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#667b1900, endcolorstr=#667b1900, gradienttype=0);
+        width: 100%;
+        height: 380px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative
+    }
+
+    section.subPage #contentsBox #gachaArea #card
+    {
+        position: absolute;
+        height: 360px;
+        width: 423px;
+        top: 10px;
+        left: 10px;
+        overflow: hidden
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_card-1ac136bdc5d95bb841f87c72bba1ed69.png) left top no-repeat transparent;
+        position: relative;
+        height: 360px;
+        width: 423px
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .card_image
+    {
+        position: absolute;
+        top: 70px;
+        left: 12px;
+        background-size: contain;
+        background-color: rgba(0,0,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        width: 180px;
+        height: 268px;
+        box-shadow: 0 0 5px 0 #222222
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus
+    {
+        position: absolute;
+        text-align: center;
+        top: 113px;
+        right: 13px;
+        width: 208px
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .stars
+    {
+        height: 37px;
+        background-position: center top;
+        background-repeat: no-repeat
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .card_title
+    {
+        height: 22px;
+        background-position: center top;
+        background-repeat: no-repeat
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .card_name
+    {
+        height: 28px;
+        background-position: center top;
+        background-repeat: no-repeat
+    }
+
+    section.subPage #contentsBox #gachaArea #card .btnArea
+    {
+        position: absolute;
+        bottom: 35px;
+        right: 23px;
+        width: 190px
+    }
+
+    section.subPage #contentsBox #gachaArea #card .btnArea a
+    {
+        display: block;
+        width: 190px;
+        height: 0;
+        font-size: 0;
+        padding-top: 56px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_list-b5a54f313f681ce2f7c0ec38383fb8ab.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #gachaArea #card .btnArea a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_noCard-21e631b01f65aba43350e1c4de0af313.png) left top no-repeat transparent;
+        height: 360px;
+        width: 423px;
+        position: relative
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card h3
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card p
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card .btnArea
+    {
+        right: 110px;
+        bottom: 14px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count
+    {
+        position: absolute;
+        height: 123px;
+        width: 410px;
+        top: 10px;
+        right: 10px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gachaCount-d5df5d65963dc94bd1a9d25d1ae8e231.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count
+    {
+        position: absolute;
+        left: 73px;
+        top: 8px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li
+    {
+        float: left;
+        display: block;
+        width: 400px;
+        height: 56px;
+        margin-right: 2px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li img
+    {
+        width: 37px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count
+    {
+        position: absolute;
+        right: 104px;
+        bottom: 2px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count li
+    {
+        float: left;
+        display: block;
+        width: 26px;
+        height: 56px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count p
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha
+    {
+        position: absolute;
+        height: 228px;
+        width: 410px;
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gacha-14beda87ab6aca25a558a0037b89f330.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .small
+    {
+        font-size: 11px;
+        margin-top: 6px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .term
+    {
+        color: yellow;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .limited
+    {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha button
+    {
+        display: block;
+        width: 355px;
+        height: 0;
+        font-size: 0;
+        padding: 73px 0 0;
+        overflow: hidden;
+        border: none;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_gacha-b8f5fbce9ae84b36f0a783384f662f39.png) center top no-repeat transparent;
+        margin: 50px auto 20px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha button:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha
+    {
+        position: absolute;
+        height: 227px;
+        width: 410px;
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gacha-14beda87ab6aca25a558a0037b89f330.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha .info
+    {
+        display: table-cell;
+        vertical-align: middle;
+        width: 410px;
+        height: 227px;
+        line-height: 1.3em
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha .info .term
+    {
+        color: yellow;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet
+    {
+        position: absolute;
+        height: 185px;
+        width: 410px;
+        bottom: 10px;
+        right: 10px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_recoveryTweet-31fa84086a870b089b933bb4408bc871.png) left top no-repeat transparent;
+        padding-top: 45px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet p
+    {
+        margin: 0 0 6px;
+        padding: 0 16px;
+        font-size: 12px;
+        line-height: 1.2em
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet textarea#recovery_input
+    {
+        resize: none;
+        border-radius: 10px;
+        border: 4px solid black;
+        height: 36px;
+        width: 360px;
+        display: block;
+        margin: 0 auto;
+        overflow: y;
+        padding: 6px;
+        font-size: 13px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea
+    {
+        margin-top: 6px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea button#recovery_button
+    {
+        display: block;
+        border: none;
+        overflow: hidden;
+        padding-top: 44px;
+        height: 44px;
+        width: 176px;
+        margin: 0 auto;
+        background-color: none;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_tweet-ba4e0838d9d4b5e13f7e20e9bae78d50.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea span.small
+    {
+        padding-top: 6px;
+        display: block
+    }
+
+    section.subPage #contentsBox #gacha_result_navigations.disabled .notice,section.subPage #contentsBox #gacha_result_navigations.disabled .retry
+    {
+        display: none !important
+    }
+
+    section.subPage #contentsBox #resultInfo
+    {
+        position: relative;
+        height: 476px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_result-4a1cbe8e12b476ddfc055c7c5b852e19.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #resultInfo .getCard
+    {
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        width: 508px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        text-shadow: 0 1px black
+    }
+
+    section.subPage #contentsBox #resultInfo .getCard .stars
+    {
+        color: #ffc514;
+        margin-right: 10px;
+        font-size: 17px
+    }
+
+    section.subPage #contentsBox #resultInfo .getCard .card_name
+    {
+        margin-right: 10px
+    }
+
+    section.subPage #contentsBox #resultInfo .card_image
+    {
+        width: 308px;
+        height: 460px
+    }
+
+    section.subPage #contentsBox #resultInfo .card_image img
+    {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: rgba(0,0,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        background-size: contain;
+        position: relative;
+        width: 100%
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus
+    {
+        text-align: center;
+        position: absolute;
+        right: 20px;
+        top: 71px;
+        width: 508px;
+        height: 210px;
+        overflow: hidden;
+        text-shadow: 0 1px black
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus img
+    {
+        display: block
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .stars
+    {
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .card_title
+    {
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .card_name
+    {
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .serifArea
+    {
+        display: table-cell;
+        width: 510px;
+        vertical-align: middle;
+        height: 88px;
+        font-size: 13px;
+        font-weight: normal
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .serif
+    {
+        display: block;
+        margin: 5px 0
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .voice
+    {
+        margin: 5px 0
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .voice a
+    {
+        margin: 0 auto;
+        width: 127px;
+        height: 0;
+        font-size: 0;
+        padding-top: 37px;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .voice a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #resultInfo .cardStatus .author
+    {
+        font-size: 12px;
+        margin: 5px 0
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet
+    {
+        position: absolute;
+        width: 508px;
+        right: 20px;
+        bottom: 18px;
+        text-align: center
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet #keep_tweet_complete
+    {
+        height: 156px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 508px;
+        background-color: rgba(127,37,2,0.3)
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet #keep_tweet_complete img
+    {
+        padding-top: 60px
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet #keep_tweet .title_keep
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_keepTweet-16827676712d0f7e63f800808a4e6408.png) center top no-repeat transparent;
+        height: 0;
+        font-size: 0;
+        padding-top: 23px;
+        overflow: hidden
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet textarea#keep_tweet_input
+    {
+        width: 500px;
+        resize: none;
+        border-radius: 10px;
+        border: 4px solid black;
+        height: 56px;
+        display: block;
+        margin: 0 auto;
+        overflow: y;
+        padding: 6px;
+        font-size: 13px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea
+    {
+        margin-top: 6px
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea button#keep_tweet_button
+    {
+        display: block;
+        border: none;
+        overflow: hidden;
+        padding-top: 52px;
+        height: 0;
+        font-size: 0;
+        width: 343px;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_keepTweet-e2afe150b7728a50c792a0b44fcb37bf.png) left top no-repeat transparent
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea button#keep_tweet_button:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #resultInfo #gacha_result_tweet span.small
+    {
+        letter-spacing: -1px;
+        font-size: 11px;
+        margin-top: 6px;
+        display: block
+    }
+
+    section.subPage #contentsBox .notice
+    {
+        text-align: center;
+        color: red;
+        text-shadow: 0 1px black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 12px 0
+    }
+
+    section.subPage #bonusTitle
+    {
+        width: 862px;
+        height: 0;
+        font-size: 0;
+        overflow: hidden;
+        padding-top: 73px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_bonus-4710dfbb4099400024074aec66909527.png) left top no-repeat transparent
+    }
+
+    section.subPage #bonusInfo
+    {
+        position: relative;
+        height: 476px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_bonus-be70e71502f0230e0162ad81e2ef74d2.png) left top no-repeat transparent;
+        margin-top: 15px
+    }
+
+    section.subPage #bonusInfo .getCard
+    {
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        width: 510px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 27px;
+        height: 0;
+        overflow: hidden;
+        text-shadow: 0 1px black;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/text_getBonus-0df2a74760dd522331a9fb5826f4783b.png) center top no-repeat transparent;
+        font-size: 0
+    }
+
+    section.subPage #bonusInfo .getCard .stars
+    {
+        color: orange;
+        margin-right: 10px;
+        font-style: italic;
+        font-size: 20px
+    }
+
+    section.subPage #bonusInfo .getCard .card_name
+    {
+        margin-right: 10px
+    }
+
+    section.subPage #bonusInfo .card_image
+    {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 308px;
+        height: 460px;
+        background-color: none;
+        background-size: contain
+    }
+
+    section.subPage #bonusInfo .card_image img
+    {
+        width: 100%
+    }
+
+    section.subPage #bonusInfo .cardStatus
+    {
+        text-align: center;
+        position: absolute;
+        right: 17px;
+        top: 81px;
+        width: 510px;
+        height: 257px;
+        overflow: hidden;
+        text-shadow: 0 1px black
+    }
+
+    section.subPage #bonusInfo .cardStatus .stars
+    {
+        margin: 5px 0 0
+    }
+
+    section.subPage #bonusInfo .cardStatus .card_title
+    {
+        margin: 0
+    }
+
+    section.subPage #bonusInfo .cardStatus .card_name
+    {
+        margin: 0
+    }
+
+    section.subPage #bonusInfo .cardStatus .serifArea
+    {
+        display: table-cell;
+        width: 510px;
+        vertical-align: middle;
+        height: 105px;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 5px 0
+    }
+
+    section.subPage #bonusInfo .cardStatus .serifArea .serif
+    {
+        font-size: 17px
+    }
+
+    section.subPage #bonusInfo .cardStatus .serifArea .voice
+    {
+        margin: 8px 0
+    }
+
+    section.subPage #bonusInfo .cardStatus .serifArea .voice a
+    {
+        margin: 0 auto;
+        width: 127px;
+        height: 0;
+        font-size: 0;
+        padding-top: 37px;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+    }
+
+    section.subPage #bonusInfo .cardStatus .serifArea .voice a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #bonusInfo .cardStatus .author
+    {
+        font-size: 12px;
+        margin: 5px 0
+    }
+
+    section.subPage #bonusInfo .btnArea
+    {
+        position: absolute;
+        width: 282px;
+        margin-top: 0;
+        bottom: 30px;
+        right: 133px
+    }
+
+    section.subPage #bonusInfo .btnArea a
+    {
+        display: block;
+        padding-top: 72px;
+        height: 0;
+        font-size: 0;
+        width: 282px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_next-0964d9b9cfcb7bbfdda200b4fd7d1b99.png) left top no-repeat transparent
+    }
+
+    section.subPage #bonusInfo .btnArea a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage.cards #contentsBox
+    {
+        height: auto
+    }
+
+    section.subPage.cards #contentsBox .titleCards
+    {
+        margin: 0 0 15px;
+        padding-top: 60px;
+        height: 0;
+        font-size: 0;
+        width: 860px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_cardList-42dabfef094573c1ce0f0644aff59aa3.png) left top no-repeat transparent
+    }
+
+    section.subPage.cards #contentsBox .titleCards img
+    {
+        display: none
+    }
+
+    section.subPage.cards #contentsBox .cardList
+    {
+        margin: 10px 0;
+        *zoom: 1
+    }
+
+    section.subPage.cards #contentsBox .cardList:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox
+    {
+        float: left;
+        width: 425px;
+        height: 342px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_cards-6d4e79cd22940ced04a1a9ce3dd9b28a.png) left top no-repeat transparent;
+        margin: 3px 3px;
+        position: relative
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardImage
+    {
+        position: absolute;
+        left: 26px;
+        top: 27px;
+        box-shadow: 0 0 5px 0 #222222
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardImage img
+    {
+        display: block;
+        width: 194px
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus
+    {
+        width: 180px;
+        position: absolute;
+        right: 15px;
+        top: 70px;
+        text-align: center
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .serif
+    {
+        font-size: 13px;
+        height: 5em;
+        display: table-cell;
+        width: 180px;
+        vertical-align: middle
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .author
+    {
+        font-size: 12px
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .voice
+    {
+        margin: 5px 0
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .voice a
+    {
+        margin: 0 auto;
+        width: 127px;
+        height: 0;
+        font-size: 0;
+        padding-top: 37px;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .voice a:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage.error #contentsBox #notfound
+    {
+        background-color: rgba(0,0,0,0.5);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        border-top: 1px solid #454545;
+        border-left: 1px solid #333333;
+        border-right: 1px solid #252525;
+        border-bottom: 1px solid #111111
+    }
+
+    section.subPage.error #contentsBox #notfound .bg_frame
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_frame-a9c60c87087eb6e3a4f00902c7bb408b.png) center top no-repeat transparent;
+        padding: 230px 0
+    }
+
+    section.subPage.error #contentsBox #notfound .bg_frame h3
+    {
+        padding-top: 39px;
+        font-size: 0;
+        height: 0;
+        font-size: 0;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_notfound-e4ca1769cad96a5b9eed49d74a5dac58.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    #term_finished,#preregister_serial,#gacha_serial
+    {
+        margin: 0 20px 10px;
+        padding: 8px;
+        background-color: #ac2300;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        border: 5px solid #7b1900;
+        color: white;
+        text-shadow: 0 1px black;
+        line-height: 1.3em
+    }
+
+    #preregister_serial
+    {
+        margin: 15px 5px 10px
+    }
+
+    #gacha_serial
+    {
+        margin: 30px 5px 10px
+    }
+
+    #contentsBox #term_finished
+    {
+        margin: 10px 0
+    }
+
+    #lightBoxBg
+    {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        z-index: 100
+    }
+
+    #lightBoxBg #connection
+    {
+        position: absolute;
+        top: 45%;
+        margin: 0 auto;
+        width: 100%;
+        height: 10%;
+        text-align: center
+    }
+
+    #lightBoxBg #connection img
+    {
+        height: 100%
+    }
+
+    #lightBoxBg #lightBox
+    {
+        display: none;
+        position: relative;
+        top: 36%;
+        margin: 0 auto;
+        width: 315px;
+        height: auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox-5a862a4018fc01dcf63fe67ed0f5944b.png) left top no-repeat transparent;
+        background-size: 100% auto;
+        padding: 10px 0 0;
+        color: black
+    }
+
+    #lightBoxBg #lightBox p.title
+    {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold
+    }
+
+    #lightBoxBg #lightBox p.text
+    {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 12px
+    }
+
+    #lightBoxBg #lightBox .btnArea
+    {
+        text-align: center;
+        margin: 15px 0;
+        padding-bottom: 25px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox_foot-72cac1f419065b9da8fb69df317894cb.png) center bottom no-repeat transparent
+    }
+
+    #lightBoxBg #lightBox .btnArea .close
+    {
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .close a
+    {
+        display: block;
+        width: 220px;
+        height: 0;
+        font-size: 0;
+        padding-top: 56px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_close-e11d8799e083365b96b3c950e122d5c2.png) center top no-repeat transparent;
+        background-size: contain;
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .close a:hover
+    {
+        opacity: 0.8
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok
+    {
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok a
+    {
+        display: block;
+        width: 220px;
+        height: 0;
+        font-size: 0;
+        padding-top: 56px;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_ok-2ac733ccb0b842476a49fa52c180d5b1.png) center top no-repeat transparent;
+        background-size: contain;
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok a:hover
+    {
+        opacity: 0.8
+    }
+
+    .new img
+    {
+        position: absolute;
+        right: -10px;
+        top: -65px
+    }
+
+    #infoArea a
+    {
+        color: red !important;
+        display: block;
+        text-align: center;
+        padding: 0.75em;
+        background-color: white;
+        margin-bottom: 10px;
+        border: 5px solid #eeeeee;
+        font-weight: bold;
+        text-decoration: underline
+    }
+
+    #infoArea a:hover
+    {
+        opacity: 0.75
+    }
+
+    li#newRule
+    {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px
+    }
+
+    li#newRule .title
+    {
+        color: red;
+        font-weight: bold
+    }
+
+    table.timeList
+    {
+        margin: 10px auto 0
+    }
+
+    table.timeList th,table.timeList td
+    {
+        padding: 0.4em 0.8em;
+        border: 2px solid #623218
+    }
+
+    .maintenance p
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        line-height: 1.8em;
+        font-size: 16px
+    }
+
+    .maintenance h1
+    {
+        position: absolute;
+        top: 24px;
+        left: 140px;
+        display: block;
+        margin: 0;
+        width: 167px;
+        height: 0;
+        font-size: 0;
+        padding-top: 129px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/logo-191818c1023a49ac483549698265ed08.png) left top no-repeat transparent;
+        overflow: hidden;
+        margin: 0
+    }
+
+    .maintenance h3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_maintenance-880d5cc36181332ca10656550804bf53.png) center top no-repeat transparent !important
+    }
+}
+
+html.oldie #animation_layer
+{
+    display: none !important
+}
+
+html.oldie .sp
+{
+    display: none !important
+}
+
+html.oldie.gacha #bg_top_movie
+{
+    display: none
+}
+
+html.oldie.gacha #bg_gacha_movie
+{
+    display: block
+}
+
+html.oldie #bg_top_movie
+{
+    display: block
+}
+
+html.oldie #bg_gacha_movie
+{
+    display: none
+}
+
+html.oldie #foot_home
+{
+    background-color: black;
+    text-align: center;
+    border-top: 1px solid #666666
+}
+
+html.oldie #foot_home .bannerLink
+{
+    border-bottom: 1px solid #666666
+}
+
+html.oldie #foot_home .bannerLink ul
+{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    *zoom: 1
+}
+
+html.oldie #foot_home .bannerLink ul:after
+{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden
+}
+
+html.oldie #foot_home .bannerLink ul li
+{
+    float: right;
+    width: 49%;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0;
+    line-height: 0;
+    font-size: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html.oldie #foot_home .bannerLink ul li:first-child
+{
+    float: left;
+    text-align: right
+}
+
+html.oldie #foot_home .bannerLink ul li img
+{
+    width: 280px
+}
+
+html.oldie #foot_home .supportLink
+{
+    display: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    color: #666666;
+    border-bottom: 1px solid #333333
+}
+
+html.oldie #foot_home .supportLink a:hover
+{
+    text-decoration: underline
+}
+
+html.oldie #foot_home #Foot_home_inner
+{
+    padding: 6px
+}
+
+html.oldie #foot_home #Foot_home_inner p
+{
+    color: #999999;
+    font-size: 13px
+}
+
+html.oldie body.gacha_result #bg_light
+{
+    min-height: 745px;
+    padding: 0px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light-09a149927def9cb3e49d67b7986c6bea.png) center 60px no-repeat transparent;
+    position: relative
+}
+
+html.oldie #wrapper
+{
+    min-width: 1024px
+}
+
+html.oldie #wrapper #container
+{
+    min-height: 745px;
+    border-top: 8px solid #333333;
+    border-bottom: 8px solid #333333;
+    margin: 50px 0;
+    padding: 0px
+}
+
+html.oldie #wrapper #container #bg_line_e
+{
+    min-height: 745px;
+    padding: 0px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_line_bottom-29c6c2d0641e0d4d4be315c7d2ef4f2a.png) center bottom repeat-x transparent;
+    position: relative
+}
+
+html.oldie #wrapper #container #bg_line
+{
+    min-height: 745px;
+    padding: 0px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_line-d58c88f94254bab8665c55b975e9d722.png) center top repeat-x transparent;
+    position: relative
+}
+
+html.oldie #wrapper #container #bg_line .bg_lt
+{
+    position: absolute;
+    top: 12px;
+    left: 0
+}
+
+html.oldie #wrapper #container #bg_line .bg_rt
+{
+    position: absolute;
+    top: 12px;
+    right: 0
+}
+
+html.oldie #wrapper #container #bg_line .bg_lb
+{
+    position: absolute;
+    bottom: 12px;
+    left: 0
+}
+
+html.oldie #wrapper #container #bg_line .bg_rb
+{
+    position: absolute;
+    bottom: 12px;
+    right: 0
+}
+
+html.oldie #wrapper #container #bg_line #contents
+{
+    width: 932px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: -30px
+}
+
+html.oldie section.indexPage
+{
+    position: relative;
+    padding-top: 190px
+}
+
+html.oldie section.indexPage h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 307px;
+    height: 235px;
+    margin: 0
+}
+
+html.oldie section.indexPage h1 span
+{
+    display: block;
+    width: 307px;
+    height: 0;
+    font-size: 0;
+    padding-top: 235px;
+    background: url(logo.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0
+}
+
+html.oldie section.indexPage h2
+{
+    position: absolute;
+    top: 57px;
+    left: 275px;
+    display: block;
+    width: 483px;
+    height: 0;
+    font-size: 0;
+    padding-top: 122px;
+    background: url(h2_title.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0
+}
+
+html.oldie section.indexPage #term
+{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display: block;
+    width: 180px;
+    height: 0;
+    font-size: 0;
+    padding-top: 180px;
+    background: url(term.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0;
+    z-index: 4
+}
+
+html.oldie section.indexPage #contentsBox
+{
+    min-height: 530px;
+    position: relative;
+    margin: 0 20px;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    padding: 15px;
+    z-index: 3
+}
+
+html.oldie section.indexPage #contentsBox #countBox
+{
+    height: 73px;
+    width: 862px;
+    background: url(bg_count.png) left top no-repeat transparent;
+    overflow: hidden;
+    position: relative
+}
+
+html.oldie section.indexPage #contentsBox #countBox ul.total
+{
+    position: absolute;
+    left: 81px;
+    top: 8px
+}
+
+html.oldie section.indexPage #contentsBox #countBox ul.total li
+{
+    float: left;
+    display: block;
+    width: 400px;
+    height: 56px;
+    margin-right: 8px
+}
+
+html.oldie section.indexPage #contentsBox #countBox ul.mr
+{
+    position: absolute;
+    right: 104px;
+    top: 8px
+}
+
+html.oldie section.indexPage #contentsBox #countBox ul.mr li
+{
+    float: left;
+    display: block;
+    width: 26px;
+    height: 56px
+}
+
+html.oldie section.indexPage #contentsBox #achieve
+{
+    position: absolute;
+    width: 876px;
+    height: 446px;
+    left: 0;
+    bottom: 15px;
+    background: url(union.png) left top no-repeat transparent
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav
+{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 272px;
+    width: 346px;
+    height: 115px;
+    text-align: center
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.twitter
+{
+    padding: 27px 1px 0;
+    background: url(hint.png) left top no-repeat transparent
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.twitter a
+{
+    display: block;
+    width: 344px;
+    height: 0;
+    font-size: 0;
+    padding-top: 88px;
+    overflow: hidden;
+    background: url(btn_submit.png) left top no-repeat transparent
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.twitter a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.achievement
+{
+    padding: 4px 1px 8px
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.achievement a
+{
+    display: block;
+    width: 344px;
+    height: 0;
+    font-size: 0;
+    padding-top: 62px;
+    overflow: hidden;
+    background: url(btn_submit.png) left top no-repeat transparent
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.achievement a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.logout a
+{
+    display: block;
+    padding: 0.5em;
+    margin: 5px auto;
+    background-color: #212121;
+    color: white;
+    border: 2px solid #454545;
+    width: 36%;
+    font-size: 14px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px
+}
+
+html.oldie section.indexPage #contentsBox #achieve .nav li.logout a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage
+{
+    position: relative;
+    padding-top: 130px
+}
+
+html.oldie section.subPage h1
+{
+    position: absolute;
+    top: 24px;
+    left: 140px;
+    display: block;
+    width: 167px;
+    height: 129px;
+    margin: 0
+}
+
+html.oldie section.subPage h1 a
+{
+    display: block;
+    width: 167px;
+    height: 0;
+    font-size: 0;
+    padding-top: 129px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/logo-191818c1023a49ac483549698265ed08.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0
+}
+
+html.oldie section.subPage h2
+{
+    position: absolute;
+    top: 58px;
+    left: 295px;
+    display: block;
+    width: 444px;
+    height: 0;
+    font-size: 0;
+    padding-top: 54px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/h2_title-eb03d112566be1f9adec5965bc4e9451.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0
+}
+
+html.oldie section.subPage #contentsBox
+{
+    line-height: 1em;
+    min-height: 590px;
+    position: relative;
+    margin: 0 20px;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    padding: 15px;
+    z-index: 3;
+    *zoom: 1
+}
+
+html.oldie section.subPage #contentsBox:after
+{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden
+}
+
+html.oldie section.subPage #contentsBox .attentionText
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #ffc514;
+    letter-spacing: -1px
+}
+
+html.oldie section.subPage #contentsBox h3.mypage
+{
+    padding-top: 60px;
+    height: 0;
+    font-size: 0;
+    width: 862px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/h3_title_mypage-0ee383ebd6ae9e5efb0473f8e490ebdd.png) left top no-repeat transparent;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+    font-size: 0
+}
+
+html.oldie section.subPage #contentsBox #rules
+{
+    padding: 10px;
+    background-color: rgba(31,31,31,0.75);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#991f1f1f, endcolorstr=#991f1f1f, gradienttype=0);
+    border: 4px solid #666666
+}
+
+html.oldie section.subPage #contentsBox #rules h4
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_rule-cf60d1a10c7a28fdb8cd5576d2953c82.png) left top no-repeat transparent;
+    width: 91px;
+    height: 0;
+    font-size: 0;
+    padding-top: 23px;
+    overflow: hidden;
+    margin: 0 0 4px
+}
+
+html.oldie section.subPage #contentsBox #rules ul
+{
+    font-size: 12px;
+    line-height: 1.3em
+}
+
+html.oldie section.subPage #contentsBox #achieve
+{
+    position: absolute;
+    width: 876px;
+    height: 446px;
+    left: 0;
+    bottom: 15px;
+    background: url(union.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav
+{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 272px;
+    width: 346px;
+    height: 115px;
+    text-align: center
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.twitter
+{
+    padding: 27px 1px 0;
+    background: url(hint.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.twitter a
+{
+    display: block;
+    width: 344px;
+    height: 0;
+    font-size: 0;
+    padding-top: 88px;
+    overflow: hidden;
+    background: url(btn_submit.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.twitter a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.achievement
+{
+    padding: 4px 1px 8px
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.achievement a
+{
+    display: block;
+    width: 344px;
+    height: 0;
+    font-size: 0;
+    padding-top: 88px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_achievement-113a475b2a14da191fd5270e0c4c101e.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #achieve .nav li.achievement a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .awardInfo
+{
+    *zoom: 1
+}
+
+html.oldie section.subPage #contentsBox .awardInfo:after
+{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .entryBonusArea
+{
+    position: relative;
+    float: left;
+    width: 425px;
+    height: 370px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_entryBonus-0f4fbee304e6a0103b4ceb45de7880be.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea
+{
+    position: relative;
+    float: right;
+    width: 425px;
+    height: 370px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gachaBonus-f1b0009ccb9082d440c120a1cfc71c58.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .noCard
+{
+    height: 0;
+    font-size: 0;
+    width: 385px;
+    padding-top: 130px;
+    margin-top: 98px;
+    margin-left: 20px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/text-cce4cde80296361b9e6f10f879cbfc5c.png) center top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea
+{
+    margin: 10px auto 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a
+{
+    display: block;
+    width: 355px;
+    height: 0;
+    font-size: 0;
+    padding-top: 73px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) left top no-repeat transparent;
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited5
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited5_l-8f530c58be14a77cf00a39842b883972.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited4
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited4_l-1911f2d9a676c7b558e63bf96d7b2961.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited3
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited3_l-1eb1501d70aa6248a6052e6c3b625a8d.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited2
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited2_l-3d5f59c69cdb145bad43777bae4f7644.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited1
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited1_l-05e87f660062f69732fce821272d48d1.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardImage
+{
+    position: absolute;
+    left: 20px;
+    top: 58px;
+    width: 195px;
+    height: 290px;
+    background-color: none
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardImage img
+{
+    display: block;
+    width: 195px
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus
+{
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    top: 78px;
+    width: 180px;
+    height: 250px;
+    overflow: hidden;
+    text-shadow: 0 1px black
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .stars
+{
+    margin: 5px 0 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .stars img
+{
+    width: 100%
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .card_title
+{
+    margin: 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .card_title img
+{
+    width: 100%
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .card_name
+{
+    margin: 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .card_name img
+{
+    width: 100%
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .serif
+{
+    display: table-cell;
+    width: 180px;
+    vertical-align: middle;
+    height: 105px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .voice
+{
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .voice a
+{
+    margin: 0 auto;
+    width: 127px;
+    height: 0;
+    font-size: 0;
+    padding-top: 37px;
+    display: block;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .voice a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .awardInfo .cardStatus .author
+{
+    font-size: 12px;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox .btnArea
+{
+    text-align: center;
+    margin-top: 10px
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half
+{
+    *zoom: 1
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half:after
+{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha
+{
+    width: 50%;
+    float: right
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a
+{
+    display: block;
+    width: 322px;
+    height: 0;
+    font-size: 0;
+    padding-top: 72px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.limited5
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited5-15de987cc0ab5480408e3582435ff74b.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.limited4
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited4-f76c9c9fb348c313f83489f28b272069.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.limited3
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited3-7661e192c10e5369fbf66e9c7e04d73a.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.limited2
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited2-4531eae03dc43838ceab636768be47dc.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.limited1
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited1-936dec9fba837f49575ccfcf2bd8cbb3.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a.first
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_limited-9a5f34560c8f7f8af3fc831f81146488.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .toGacha a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry
+{
+    width: 50%;
+    float: right
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a
+{
+    display: block;
+    width: 282px;
+    height: 0;
+    font-size: 0;
+    padding-top: 72px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry-442c2b6f6ea63666a17baceac1f71baa.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a.limited5
+{
+    background: url(https://cache.pre.kairisei-ma.jp/images/btn_retry5.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a.limited4
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry4-c2fcd4bc2138f49834fcb491b5737efe.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a.limited3
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry3-44fb59d483ececa407f294526794474a.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a.limited2
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry2-936a29e9e6a378fa8a1a64d9e8467399.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a.limited1
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_retry1-830668741fda1b394b63862e9c740f94.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .retry a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .btnArea.half .back
+{
+    width: 50%;
+    float: left
+}
+
+html.oldie section.subPage #contentsBox .btnArea .back
+{
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox .btnArea .back a
+{
+    display: block;
+    width: 282px;
+    height: 0;
+    font-size: 0;
+    padding-top: 72px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_back_sub-721f8eecf0151e2587be82eb9e5ea335.png) left top no-repeat transparent;
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox .btnArea .back a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox .btnArea .back.topPage a
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_topPage-12e8467ff05f2988f5f4dfe0cddb83bb.png) center top no-repeat transparent;
+    width: 310px;
+    background-size: contain
+}
+
+html.oldie section.subPage #contentsBox #gachaArea
+{
+    background-color: rgba(123,25,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#667b1900, endcolorstr=#667b1900, gradienttype=0);
+    width: 100%;
+    height: 380px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card
+{
+    position: absolute;
+    height: 360px;
+    width: 423px;
+    top: 10px;
+    left: 10px;
+    overflow: hidden
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_card-1ac136bdc5d95bb841f87c72bba1ed69.png) left top no-repeat transparent;
+    position: relative;
+    height: 360px;
+    width: 423px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card .card_image
+{
+    position: absolute;
+    top: 70px;
+    left: 12px;
+    background-size: contain;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    width: 180px;
+    height: 268px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card .cardStatus
+{
+    position: absolute;
+    text-align: center;
+    top: 113px;
+    right: 13px;
+    width: 208px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .stars
+{
+    height: 37px;
+    background-position: center top;
+    background-repeat: no-repeat
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .card_title
+{
+    height: 22px;
+    background-position: center top;
+    background-repeat: no-repeat
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #current_card .cardStatus .card_name
+{
+    height: 28px;
+    background-position: center top;
+    background-repeat: no-repeat
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card .btnArea
+{
+    position: absolute;
+    bottom: 35px;
+    right: 23px;
+    width: 190px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card .btnArea a
+{
+    display: block;
+    width: 190px;
+    height: 0;
+    font-size: 0;
+    padding-top: 56px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_list-b5a54f313f681ce2f7c0ec38383fb8ab.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card .btnArea a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #no_card
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_noCard-21e631b01f65aba43350e1c4de0af313.png) left top no-repeat transparent;
+    height: 360px;
+    width: 423px;
+    position: relative
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #no_card h3
+{
+    display: none
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #no_card p
+{
+    display: none
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #card #no_card .btnArea
+{
+    right: 110px;
+    bottom: 14px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count
+{
+    position: absolute;
+    height: 123px;
+    width: 410px;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gachaCount-d5df5d65963dc94bd1a9d25d1ae8e231.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count ul#all_count
+{
+    position: absolute;
+    left: 73px;
+    top: 8px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li
+{
+    float: left;
+    display: block;
+    width: 400px;
+    height: 56px;
+    margin-right: 2px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li img
+{
+    width: 37px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count
+{
+    position: absolute;
+    right: 104px;
+    bottom: 2px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count li
+{
+    float: left;
+    display: block;
+    width: 26px;
+    height: 56px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha_count p
+{
+    display: none
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha
+{
+    position: absolute;
+    height: 202px;
+    width: 410px;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gacha-14beda87ab6aca25a558a0037b89f330.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha .small
+{
+    font-size: 11px;
+    margin-top: 6px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha .term
+{
+    color: yellow;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha .limited
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha button
+{
+    display: block;
+    width: 355px;
+    height: 73px;
+    padding: 73px 0 0;
+    overflow: hidden;
+    border: none;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_gacha-b8f5fbce9ae84b36f0a783384f662f39.png) center top no-repeat transparent;
+    margin: 24px auto 0
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #gacha button:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #no_gacha
+{
+    position: absolute;
+    height: 227px;
+    width: 410px;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_gacha-14beda87ab6aca25a558a0037b89f330.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #no_gacha .info
+{
+    display: table-cell;
+    vertical-align: middle;
+    width: 410px;
+    height: 227px;
+    line-height: 1.3em
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #no_gacha .info .term
+{
+    color: yellow;
+    font-weight: bold;
+    margin-top: 10px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #recovery_tweet
+{
+    position: absolute;
+    height: 157px;
+    width: 410px;
+    bottom: 10px;
+    right: 10px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_recoveryTweet-31fa84086a870b089b933bb4408bc871.png) left top no-repeat transparent;
+    padding-top: 45px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #recovery_tweet p
+{
+    margin: 0 0 6px;
+    padding: 0 16px;
+    font-size: 12px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #recovery_tweet textarea#recovery_input
+{
+    resize: none;
+    border-radius: 10px;
+    border: 4px solid black;
+    height: 36px;
+    width: 360px;
+    display: block;
+    margin: 0 auto;
+    overflow: y;
+    padding: 6px;
+    font-size: 13px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea
+{
+    margin-top: 6px
+}
+
+html.oldie section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea button#recovery_button
+{
+    display: block;
+    border: none;
+    overflow: hidden;
+    padding-top: 44px;
+    height: 44px;
+    width: 176px;
+    margin: 0 auto;
+    background-color: none;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_tweet-ba4e0838d9d4b5e13f7e20e9bae78d50.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #gacha_result_navigations.disabled .notice,html.oldie section.subPage #contentsBox #gacha_result_navigations.disabled .retry
+{
+    display: none !important
+}
+
+html.oldie section.subPage #contentsBox #resultInfo
+{
+    position: relative;
+    height: 476px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_result-4a1cbe8e12b476ddfc055c7c5b852e19.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .getCard
+{
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    width: 508px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    height: 20px;
+    overflow: hidden;
+    text-shadow: 0 1px black
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .getCard .stars
+{
+    color: orange;
+    margin-right: 10px;
+    font-style: italic;
+    font-size: 20px
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .getCard .card_name
+{
+    margin-right: 10px
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .card_image
+{
+    width: 308px;
+    height: 460px
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .card_image img
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    background-size: contain;
+    position: relative;
+    width: 100%
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus
+{
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    top: 71px;
+    width: 508px;
+    height: 210px;
+    overflow: hidden;
+    text-shadow: 0 1px black
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus img
+{
+    display: block
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .stars
+{
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .card_title
+{
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .card_name
+{
+    margin: 0 auto
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .serifArea
+{
+    display: table-cell;
+    width: 510px;
+    vertical-align: middle;
+    height: 97px;
+    font-size: 13px;
+    font-weight: normal
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .serif
+{
+    display: block;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .voice
+{
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .voice a
+{
+    margin: 0 auto;
+    width: 127px;
+    height: 0;
+    font-size: 0;
+    padding-top: 37px;
+    display: block;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .voice a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox #resultInfo .cardStatus .author
+{
+    font-size: 12px;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet
+{
+    position: absolute;
+    width: 508px;
+    right: 20px;
+    bottom: 18px;
+    text-align: center
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet #keep_tweet_complete
+{
+    height: 156px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 508px;
+    background-color: rgba(127,37,2,0.3)
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet #keep_tweet .title_keep
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_keepTweet-16827676712d0f7e63f800808a4e6408.png) center top no-repeat transparent;
+    height: 0;
+    font-size: 0;
+    padding-top: 23px;
+    overflow: hidden
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet textarea#keep_tweet_input
+{
+    width: 500px;
+    resize: none;
+    border-radius: 10px;
+    border: 4px solid black;
+    height: 56px;
+    display: block;
+    margin: 0 auto;
+    overflow: y;
+    padding: 6px;
+    font-size: 13px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea
+{
+    margin-top: 6px
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea button#keep_tweet_button
+{
+    display: block;
+    border: none;
+    overflow: hidden;
+    padding-top: 52px;
+    height: 52px;
+    width: 343px;
+    margin: 0 auto;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_keepTweet-e2afe150b7728a50c792a0b44fcb37bf.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet .btnArea button#keep_tweet_button:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #contentsBox #resultInfo #gacha_result_tweet span.small
+{
+    letter-spacing: -1px;
+    font-size: 11px;
+    margin-top: 6px;
+    display: block
+}
+
+html.oldie section.subPage #contentsBox .notice
+{
+    text-align: center;
+    color: red;
+    text-shadow: 0 1px black;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0
+}
+
+html.oldie section.subPage #bonusTitle
+{
+    width: 862px;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    padding-top: 73px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_bonus-4710dfbb4099400024074aec66909527.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #bonusInfo
+{
+    position: relative;
+    height: 476px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_bonus-be70e71502f0230e0162ad81e2ef74d2.png) left top no-repeat transparent;
+    margin-top: 15px
+}
+
+html.oldie section.subPage #bonusInfo .getCard
+{
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    width: 510px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 27px;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    text-shadow: 0 1px black;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/text_getBonus-0df2a74760dd522331a9fb5826f4783b.png) center top no-repeat transparent;
+    font-size: 0
+}
+
+html.oldie section.subPage #bonusInfo .getCard .stars
+{
+    color: orange;
+    margin-right: 10px;
+    font-style: italic;
+    font-size: 20px
+}
+
+html.oldie section.subPage #bonusInfo .getCard .card_name
+{
+    margin-right: 10px
+}
+
+html.oldie section.subPage #bonusInfo .card_image
+{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 308px;
+    height: 460px;
+    background: none
+}
+
+html.oldie section.subPage #bonusInfo .card_image img
+{
+    width: 100%
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus
+{
+    text-align: center;
+    position: absolute;
+    right: 17px;
+    top: 81px;
+    width: 510px;
+    height: 257px;
+    overflow: hidden;
+    text-shadow: 0 1px black
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .stars
+{
+    margin: 5px 0 0
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .card_title
+{
+    margin: 0
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .card_name
+{
+    margin: 0
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .serifArea
+{
+    display: table-cell;
+    width: 510px;
+    vertical-align: middle;
+    height: 105px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .serifArea .serif
+{
+    font-size: 17px
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .serifArea .voice
+{
+    margin: 8px 0
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .serifArea .voice a
+{
+    margin: 0 auto;
+    width: 127px;
+    height: 0;
+    font-size: 0;
+    padding-top: 37px;
+    display: block;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_voice-1f3dc53211d597b56c2e7362ae758ad2.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .serifArea .voice a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage #bonusInfo .cardStatus .author
+{
+    font-size: 12px;
+    margin: 5px 0
+}
+
+html.oldie section.subPage #bonusInfo .btnArea
+{
+    position: absolute;
+    width: 282px;
+    margin-top: 0;
+    bottom: 30px;
+    right: 133px
+}
+
+html.oldie section.subPage #bonusInfo .btnArea a
+{
+    display: block;
+    padding-top: 72px;
+    height: 0;
+    font-size: 0;
+    width: 282px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_next-0964d9b9cfcb7bbfdda200b4fd7d1b99.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage #bonusInfo .btnArea a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie section.subPage.cards #contentsBox
+{
+    height: auto
+}
+
+html.oldie section.subPage.cards #contentsBox .titleCards
+{
+    margin: 0 0 15px;
+    padding-top: 60px;
+    height: 0;
+    font-size: 0;
+    width: 860px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_cardList-42dabfef094573c1ce0f0644aff59aa3.png) left top no-repeat transparent
+}
+
+html.oldie section.subPage.cards #contentsBox .titleCards img
+{
+    display: none
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList
+{
+    margin: 10px 0;
+    *zoom: 1
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList:after
+{
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox
+{
+    float: left;
+    width: 425px;
+    height: 342px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_cards-6d4e79cd22940ced04a1a9ce3dd9b28a.png) left top no-repeat transparent;
+    margin: 3px 3px;
+    position: relative
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox .cardImage
+{
+    position: absolute;
+    left: 25px;
+    top: 25px
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox .cardImage img
+{
+    display: block;
+    width: 195px
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox .cardStatus
+{
+    width: 180px;
+    position: absolute;
+    right: 15px;
+    top: 70px;
+    text-align: center
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .serif
+{
+    font-size: 13px;
+    height: 5em;
+    display: table-cell;
+    width: 180px;
+    vertical-align: middle
+}
+
+html.oldie section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .author
+{
+    font-size: 12px
+}
+
+html.oldie section.subPage.error #contentsBox #notfound
+{
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    border-top: 1px solid #454545;
+    border-left: 1px solid #333333;
+    border-right: 1px solid #252525;
+    border-bottom: 1px solid #111111
+}
+
+html.oldie section.subPage.error #contentsBox #notfound .bg_frame
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_frame-a9c60c87087eb6e3a4f00902c7bb408b.png) center top no-repeat transparent;
+    padding: 230px 0
+}
+
+html.oldie section.subPage.error #contentsBox #notfound .bg_frame h3
+{
+    padding-top: 39px;
+    font-size: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_notfound-e4ca1769cad96a5b9eed49d74a5dac58.png) center top no-repeat transparent;
+    background-size: contain
+}
+
+html.oldie #term_finished
+{
+    margin: 0 20px 10px;
+    padding: 8px;
+    background-color: #ac2300;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    border: 5px solid #7b1900;
+    color: white;
+    text-shadow: 0 1px black;
+    line-height: 1.3em
+}
+
+html.oldie #contentsBox #term_finished
+{
+    margin: 10px 0
+}
+
+html.oldie #lightBoxBg
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+    z-index: 100
+}
+
+html.oldie #lightBoxBg #connection
+{
+    position: absolute;
+    top: 45%;
+    margin: 0 auto;
+    width: 100%;
+    height: 10%;
+    text-align: center
+}
+
+html.oldie #lightBoxBg #connection img
+{
+    height: 100%
+}
+
+html.oldie #lightBoxBg #lightBox
+{
+    display: none;
+    position: relative;
+    top: 36%;
+    margin: 0 auto;
+    width: 315px;
+    height: auto;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox-5a862a4018fc01dcf63fe67ed0f5944b.png) left top no-repeat transparent;
+    background-size: 100% auto;
+    padding: 10px 0 0;
+    color: black
+}
+
+html.oldie #lightBoxBg #lightBox p.title
+{
+    padding: 15px 0 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold
+}
+
+html.oldie #lightBoxBg #lightBox p.text
+{
+    padding: 0 10px;
+    text-align: center;
+    font-size: 12px
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea
+{
+    text-align: center;
+    margin: 15px 0 0;
+    padding-bottom: 25px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox_foot-72cac1f419065b9da8fb69df317894cb.png) center bottom no-repeat transparent
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .close
+{
+    margin: 0 auto
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .close a
+{
+    display: block;
+    width: 220px;
+    height: 0;
+    font-size: 0;
+    padding-top: 56px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_close-e11d8799e083365b96b3c950e122d5c2.png) center top no-repeat transparent;
+    background-size: contain;
+    margin: 0 auto
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .close a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .ok
+{
+    margin: 0 auto
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .ok a
+{
+    display: block;
+    width: 220px;
+    height: 0;
+    font-size: 0;
+    padding-top: 56px;
+    overflow: hidden;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_ok-2ac733ccb0b842476a49fa52c180d5b1.png) center top no-repeat transparent;
+    background-size: contain;
+    margin: 0 auto
+}
+
+html.oldie #lightBoxBg #lightBox .btnArea .ok a:hover
+{
+    opacity: 0.8
+}
+
+html.oldie .new img
+{
+    position: absolute;
+    right: -10px;
+    top: -65px
+}
+
+html.oldie #infoArea a
+{
+    color: red !important;
+    display: block;
+    text-align: center;
+    padding: 0.75em;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 5px solid #eeeeee;
+    font-weight: bold;
+    text-decoration: underline
+}
+
+html.oldie #infoArea a:hover
+{
+    opacity: 0.75
+}
+
+html.oldie li#newRule
+{
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px
+}
+
+html.oldie li#newRule .title
+{
+    color: red;
+    font-weight: bold
+}
+
+html.oldie table.timeList
+{
+    margin: 10px auto 0
+}
+
+html.oldie table.timeList th,html.oldie table.timeList td
+{
+    padding: 0.4em 0.8em;
+    border: 2px solid #623218
+}
+
+html.oldie .maintenance p
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    line-height: 1.8em;
+    font-size: 16px
+}
+
+html.oldie .maintenance h1
+{
+    position: absolute;
+    top: 24px;
+    left: 140px;
+    display: block;
+    margin: 0;
+    width: 167px;
+    height: 0;
+    font-size: 0;
+    padding-top: 129px;
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sub/logo-191818c1023a49ac483549698265ed08.png) left top no-repeat transparent;
+    overflow: hidden;
+    margin: 0
+}
+
+html.oldie .maintenance h3
+{
+    background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_maintenance-880d5cc36181332ca10656550804bf53.png) center top no-repeat transparent !important
+}
+
+a
+{
+    color: yellow;
+    outline: none !important
+}
+
+a:link,a:visited,a:hover,a:active
+{
+    text-decoration: none;
+    outline: none !important
+}
+
+::selection
+{
+    background-color: #ffe4e8
+}
+
+ul
+{
+    padding: 0;
+    margin: 0
+}
+
+ul li
+{
+    list-style-type: none
+}
+
+.sp
+{
+    display: block
+}
+
+@media only screen and (max-width: 767px)
+{
+    body
+    {
+        background-size: contain;
+        background: black !important
+    }
+
+    body span.stars
+    {
+        color: #ffc514;
+        padding-right: 5px
+    }
+
+    #background
+    {
+        display: none
+    }
+
+    #contents
+    {
+        position: relative;
+        z-index: 2;
+        background: none !important;
+        color: white !important
+    }
+
+    body.gacha #wrapper
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_sub-290e2506963d0d4c60724672346f2499.png);
+        background-color: black !important
+    }
+
+    #wrapper
+    {
+        min-width: 320px;
+        position: relative;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+
+    #wrapper #container
+    {
+        background-size: contain;
+        margin: 0 !important;
+        padding: 0;
+        position: relative;
+        background: none
+    }
+
+    #wrapper #container #bg_line .bg_lt
+    {
+        display: none
+    }
+
+    #wrapper #container #bg_line .bg_rt
+    {
+        display: none
+    }
+
+    #wrapper #container #bg_line .bg_lb
+    {
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        width: 20%
+    }
+
+    #wrapper #container #bg_line .bg_rb
+    {
+        position: absolute;
+        bottom: 7px;
+        right: 0;
+        width: 20%
+    }
+
+    section.indexPage
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_line_bottom-e3f4e4155c6ae3c1eead2ef54166781a.png),url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_line_top-4a1248c3c1008accdfd653e54bcb592f.png),url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_top-5d7e3ec856c34b61cdbca6a50f964540.png);
+        background-position: center bottom, center top, center top;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 100% 7px, 100% 7px, contain;
+        padding: 20px 10px 20px
+    }
+
+    section.indexPage h1
+    {
+        font-size: 0
+    }
+
+    section.indexPage h1 span
+    {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 30%;
+        background: url(h2_title.png) center top no-repeat transparent;
+        background-size: contain;
+        overflow: hidden;
+        margin: 0;
+        z-index: 2
+    }
+
+    section.indexPage h2
+    {
+        display: none
+    }
+
+    section.indexPage #term
+    {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        display: block;
+        width: 24%;
+        height: 0;
+        padding-top: 166px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/term-6f013bcbc9fc22f7f357d634a1b2537e.png) right top no-repeat transparent;
+        background-size: contain;
+        overflow: hidden;
+        margin: 0;
+        z-index: 1
+    }
+
+    section.indexPage #contentsBox
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_black_alpha-7afa10787df8246c946d22870f1c652c.png) left top repeat transparent;
+        border: 3px solid #343434;
+        padding: 10px 10px 15px
+    }
+
+    section.indexPage #contentsBox #countBox
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_count-5b27cd7e8d06b557d3785f561f0d7bce.png) left top no-repeat transparent;
+        background-size: 100% 100%;
+        margin-bottom: 2%;
+        *zoom: 1
+    }
+
+    section.indexPage #contentsBox #countBox:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.indexPage #contentsBox #countBox ul.total
+    {
+        *zoom: 1;
+        width: 83%;
+        margin-left: 16.5%
+    }
+
+    section.indexPage #contentsBox #countBox ul.total:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.indexPage #contentsBox #countBox ul.total li
+    {
+        float: left;
+        display: block;
+        width: 12.5%;
+        padding-bottom: 3%
+    }
+
+    section.indexPage #contentsBox #countBox ul.total li img
+    {
+        width: 84%
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr
+    {
+        width: 26%;
+        margin-left: 45%;
+        *zoom: 1;
+        text-align: right;
+        font-size: 0
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr li
+    {
+        display: inline-block;
+        width: 18%;
+        margin-top: -20%;
+        position: relative;
+        bottom: 1px
+    }
+
+    section.indexPage #contentsBox #countBox ul.mr li img
+    {
+        width: 100%
+    }
+
+    section.indexPage #contentsBox #achieve
+    {
+        width: 100%
+    }
+
+    section.indexPage #contentsBox #achieve img
+    {
+        display: block;
+        width: 100%
+    }
+
+    section.indexPage #contentsBox #achieve img.achieve01
+    {
+        margin-top: 15px;
+        margin-bottom: 10px
+    }
+
+    section.indexPage #contentsBox #achieve img.achieve02
+    {
+        margin-bottom: 10px
+    }
+
+    section.indexPage #contentsBox #achieve .nav
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 16px 0 0
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.twitter
+    {
+        display: block;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/attention-4f3038071d74c0037239860cea906c31.png) center top no-repeat transparent;
+        background-size: contain;
+        padding-top: 10%
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.twitter a
+    {
+        display: block;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_twitter-b7a0c745ac4739d11cb88fc3b3146b8d.png) left top no-repeat transparent;
+        background-size: contain;
+        width: 80%;
+        height: 0;
+        padding-top: 20%;
+        margin: 0 auto;
+        overflow: hidden
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.achievement a
+    {
+        display: block;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_achievement-725755a564e1dc2ed796af803b6f2753.png) left top no-repeat transparent;
+        background-size: contain;
+        width: 90%;
+        height: 0;
+        padding-top: 20%;
+        margin: 0 auto;
+        overflow: hidden
+    }
+
+    section.indexPage #contentsBox #achieve .nav li.logout a
+    {
+        display: block;
+        background-size: contain;
+        width: 40%;
+        padding: 0.3em;
+        margin: 10px auto 0;
+        overflow: hidden;
+        background-color: #212121;
+        color: white;
+        border: 2px solid #454545;
+        font-size: 14px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        border-radius: 100px
+    }
+
+    section.subPage
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_line_bottom-e3f4e4155c6ae3c1eead2ef54166781a.png),url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_line_top-4a1248c3c1008accdfd653e54bcb592f.png);
+        background-position: center bottom, center top;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100% 7px, 100% 7px;
+        padding: 10px 0 20px
+    }
+
+    section.subPage h1
+    {
+        font-size: 0
+    }
+
+    section.subPage h1 a
+    {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 17%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/h2_subtitle-2bff97b3b835eccdc4ec88909694247e.png) center top no-repeat transparent;
+        background-size: contain;
+        overflow: hidden;
+        margin: 0
+    }
+
+    section.subPage h2
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_black_alpha-7afa10787df8246c946d22870f1c652c.png) left top repeat transparent;
+        border: 3px solid #343434;
+        margin: 0px 10px 0;
+        padding: 10px 10px 0
+    }
+
+    section.subPage #contentsBox .attentionText
+    {
+        line-height: 1.3em;
+        color: #ffc514;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 11px
+    }
+
+    section.subPage #contentsBox h3.mypage
+    {
+        padding-top: 15.4%;
+        height: 0;
+        width: 100%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/h3_title_mypage-0ae9803587b9b23e94df26130bb1b898.png) left top no-repeat transparent;
+        background-size: 100% 100%;
+        overflow: hidden;
+        margin: 0 0 10px
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea
+    {
+        padding: 17% 0 16px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_entryBonus-894a124a58ecd0ccf2e88f0a3ed39048.png) center top no-repeat transparent;
+        width: 100%;
+        background-size: 100% 100%;
+        *zoom: 1;
+        margin-bottom: 10px
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardImage
+    {
+        width: 50%;
+        float: left;
+        padding: 0 2% 0 5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardImage img
+    {
+        width: 100%;
+        box-shadow: none
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus
+    {
+        float: right;
+        width: 50%;
+        text-align: center;
+        text-shadow: 0 1px black;
+        font-size: 10px;
+        padding-right: 5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .stars
+    {
+        padding-top: 8%;
+        line-height: 1em
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .stars img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .card_title
+    {
+        line-height: 1em
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .card_title img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .card_name
+    {
+        line-height: 1em
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .card_name img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .serif
+    {
+        line-height: 1.2em;
+        width: 100%;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 4% 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .serif .voice a
+    {
+        margin: 3% auto 0;
+        width: 70%;
+        height: 0;
+        padding-top: 21%;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_voice-88c11d918076792ad9439754a8330f39.png) left top no-repeat transparent;
+        background-size: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .entryBonusArea .cardStatus .author
+    {
+        line-height: 1em;
+        font-weight: normal
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea
+    {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_gachaBonus-273cec42e540ead6dfccb8b60660d050.png) center top no-repeat transparent;
+        width: 100%;
+        background-size: 100% 100%;
+        padding: 17% 0 10% 0;
+        min-height: 34px;
+        *zoom: 1
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .noCard
+    {
+        height: 0;
+        width: 80%;
+        padding-top: 35%;
+        margin: 8% auto 4%;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/text-7e953862dfc70e67732164bb0562fe9a.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .noCard.notBonus
+    {
+        margin-bottom: 20%;
+        margin-top: 15%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardImage
+    {
+        width: 50%;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 4% 2% 0 5%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardImage img
+    {
+        width: 100%;
+        box-shadow: 0 0 5px 0 #222222
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus
+    {
+        float: right;
+        width: 50%;
+        text-align: center;
+        text-shadow: 0 1px black;
+        font-size: 10px;
+        padding-right: 5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .stars
+    {
+        padding-top: 12%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .stars img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .card_title img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .card_name img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .serif
+    {
+        width: 100%;
+        font-size: 10px;
+        font-weight: bold;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 4% 4px
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .serif .voice a
+    {
+        margin: 3% auto 0;
+        width: 70%;
+        height: 0;
+        padding-top: 21%;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_voice-88c11d918076792ad9439754a8330f39.png) left top no-repeat transparent;
+        background-size: 100%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .cardStatus .author
+    {
+        line-height: 1.2em;
+        font-weight: normal
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea
+    {
+        margin-bottom: 7%
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a
+    {
+        display: block;
+        width: 90%;
+        height: 0;
+        padding-top: 17%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited_l-c801df4376672c7986c79102f1be7f5f.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited1_l-8040380892c8743622b8a223032749f0.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited2_l-52b3ab368fc52c34a6bf317be0ca907c.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited3_l-b564529486ccb8b146fd835368106fa7.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited4_l-f298deab23ad249d6891f7ddfc6010d3.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .awardInfo .gachaBonusArea .btnArea a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited5_l-b8f06c7d7a65e7a8bf7b209ee5779bbc.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha
+    {
+        margin-top: 16px
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a
+    {
+        display: block;
+        width: 90%;
+        height: 0;
+        padding-top: 17%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited-3cd55a82697e24309b30bb5a42fd805a.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited1-936dec9fba837f49575ccfcf2bd8cbb3.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited2-4531eae03dc43838ceab636768be47dc.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited3-7661e192c10e5369fbf66e9c7e04d73a.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited4-f76c9c9fb348c313f83489f28b272069.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited5-15de987cc0ab5480408e3582435ff74b.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .toGacha a.first
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_limited-3cd55a82697e24309b30bb5a42fd805a.png) left top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox .btnArea .back a
+    {
+        display: block;
+        width: 50%;
+        height: 0;
+        padding-top: 15%;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_back_sub-3b507ab3cd9be2932525a1c8cc9cece5.png) center top no-repeat transparent;
+        background-size: 100%;
+        margin: 16px auto
+    }
+
+    section.subPage #contentsBox .btnArea .back.topPage a
+    {
+        width: 64%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_topPage-12e8467ff05f2988f5f4dfe0cddb83bb.png) center top no-repeat transparent;
+        background-size: 100%
+    }
+
+    section.subPage #contentsBox #gachaArea #card
+    {
+        margin: 0 0 10px;
+        position: relative
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_card-853c9e5c2bf55b023aacb00574d16f73.png) center top no-repeat transparent;
+        background-size: 100%;
+        padding: 20% 10px 9%;
+        *zoom: 1;
+        position: relative
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardBox
+    {
+        float: left;
+        width: 50%;
+        background-repeat: no-repeat;
+        padding: 0 3%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardBox img
+    {
+        width: 100%;
+        box-shadow: 0 0 5px 0 #222222
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus
+    {
+        float: right;
+        width: 50%;
+        text-align: center;
+        text-shadow: 0 1px black;
+        padding-top: 11%;
+        padding-right: 2%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus img.stars
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus img.card_title
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus img.card_name
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .cardStatus img
+    {
+        display: block
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .btnArea
+    {
+        width: 48%;
+        position: absolute;
+        top: 70%;
+        left: 48%
+    }
+
+    section.subPage #contentsBox #gachaArea #card #current_card .btnArea a
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_list-15b2002c0631e56031ecf064cdd23048.png) center top no-repeat transparent;
+        height: 0;
+        width: 90%;
+        padding-top: 35%;
+        overflow: hidden;
+        display: block;
+        background-size: contain;
+        margin: 0 auto
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_noCard-032f7a5578a8688e381200b379c342fb.png) center top no-repeat transparent;
+        background-size: 100%;
+        width: 100%;
+        height: 0;
+        padding-top: 93%;
+        position: relative
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card h3
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card p
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #card #no_card .btnArea a
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_list-15b2002c0631e56031ecf064cdd23048.png) center top no-repeat transparent;
+        height: 0;
+        width: 50%;
+        padding-top: 19%;
+        overflow: hidden;
+        display: block;
+        background-size: contain;
+        position: absolute;
+        top: 75%;
+        left: 25%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_count-5b27cd7e8d06b557d3785f561f0d7bce.png) left top no-repeat transparent;
+        background-size: 100% 100%;
+        margin-bottom: 10px;
+        *zoom: 1
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count
+    {
+        *zoom: 1;
+        width: 83%;
+        margin-left: 16.5%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li
+    {
+        float: left;
+        display: block;
+        width: 12.5%;
+        padding-bottom: 3%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#all_count li img
+    {
+        width: 84%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count
+    {
+        width: 24%;
+        margin-left: 47%;
+        text-align: right;
+        display: block;
+        *zoom: 1;
+        font-size: 0
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count li
+    {
+        display: inline-block;
+        width: 20%;
+        margin-top: -20%;
+        position: relative;
+        bottom: 1px
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count ul#mr_count li img
+    {
+        width: 100%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha_count p
+    {
+        display: none
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_card02-42491c553539f647b5e9a5eeeb705bee.png) left top no-repeat transparent;
+        background-size: 100% 100%;
+        padding: 6% 0;
+        text-align: center;
+        margin: 10px 0
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha button#turn_gacha
+    {
+        display: block;
+        width: 80%;
+        height: 0;
+        padding-top: 16%;
+        overflow: hidden;
+        border: none;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_gacha-b8f5fbce9ae84b36f0a783384f662f39.png) center top no-repeat transparent;
+        background-size: 100%;
+        margin: 0 auto 4%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha button#turn_gacha:hover
+    {
+        opacity: 0.8
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .limited
+    {
+        font-size: 14px;
+        margin-bottom: 2%;
+        font-weight: bold
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .small
+    {
+        font-size: 10px;
+        margin-bottom: 4%
+    }
+
+    section.subPage #contentsBox #gachaArea #gacha .term
+    {
+        color: #feef00;
+        font-size: 12px;
+        font-weight: bold
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet
+    {
+        margin: 10px 0;
+        background-color: #1f1c17;
+        border-left: 1px solid #1f1c17;
+        border-top: 1px solid #4c4132;
+        border-right: 1px solid #4a3a26;
+        border-bottom: 1px solid #392a16;
+        background: -webkit-gradient(linear, left top, left bottom, from(#423626), color-stop(0.5, #2d251a), to(#090705));
+        background-size: 100% 100%;
+        padding: 3px 10px 10px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet p.outlineTitle
+    {
+        display: block;
+        height: 0;
+        padding-top: 9%;
+        overflow: hidden;
+        text-align: center;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/title_recovery-d61f78e5980ff17cdbf276919cdfa95b.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet textarea#recovery_input
+    {
+        resize: none;
+        border-radius: 10px;
+        border: 4px solid black;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        overflow: y;
+        padding: 6px;
+        font-size: 11px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet p
+    {
+        margin: 1% 0;
+        font-size: 11px;
+        line-height: 1.2em
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea
+    {
+        margin-top: 6px
+    }
+
+    section.subPage #contentsBox #gachaArea #recovery_tweet .btnArea button#recovery_button
+    {
+        display: block;
+        border: none;
+        overflow: hidden;
+        padding-top: 15%;
+        height: 0;
+        width: 50%;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_tweet-ba4e0838d9d4b5e13f7e20e9bae78d50.png) left top no-repeat transparent;
+        background-size: contain
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha
+    {
+        margin: 10px 0;
+        text-align: center
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha .info
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_card02-42491c553539f647b5e9a5eeeb705bee.png) left top no-repeat transparent;
+        background-size: 100% 100%;
+        vertical-align: middle;
+        width: 94%;
+        line-height: 1.3em;
+        padding: 10% 3%;
+        font-size: 13px
+    }
+
+    section.subPage #contentsBox #gachaArea #no_gacha .info .term
+    {
+        color: yellow;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    section.subPage #contentsBox #rules
+    {
+        border: 3px solid rgba(126,126,126,0.7);
+        padding: 10px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_black_alpha03-ed7041ec8f0250c591929e471abeca1b.png) left top repeat transparent
+    }
+
+    section.subPage #contentsBox #rules h4
+    {
+        margin: 0;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/ttl_rule-0f2cbae72d1a98cf45a5a57f367e61bc.png) left top no-repeat transparent;
+        background-size: contain;
+        width: 32%;
+        padding-top: 9%;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 6px
+    }
+
+    section.subPage #contentsBox #rules ul li
+    {
+        font-size: 10px
+    }
+
+    .card_image
+    {
+        position: relative
+    }
+
+    body.gacha_result .twinkle
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1
+    }
+
+    body.gacha_result .twinkle#twinkle1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light_1-30c497f9cf93be464e2c42818d775d4c.png) center -100px repeat transparent;
+        -webkit-animation: twinkle 800ms linear infinite alternate;
+        -moz-animation: twinkle 800ms linear infinite alternate;
+        -o-animation: twinkle 800ms linear infinite alternate;
+        animation: twinkle 800ms linear infinite alternate
+    }
+
+    body.gacha_result .twinkle#twinkle2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_light_2-10b89b8fb261e0e4bbfe16b39c53e883.png) center -100px repeat transparent;
+        -webkit-animation: twinkle 800ms linear infinite alternate 800ms;
+        -moz-animation: twinkle 800ms linear infinite alternate 800ms;
+        -o-animation: twinkle 800ms linear infinite alternate 800ms;
+        animation: twinkle 800ms linear infinite alternate 800ms
+    }
+
+    body.gacha_result .twinkle#card_twinkle1
+    {
+        top: -45px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/twinkle_1-b3e048fc15e2f2c6c45ec17749fafac5.png) center center no-repeat transparent;
+        background-size: contain;
+        -webkit-animation: twinkle 800ms linear infinite alternate;
+        -moz-animation: twinkle 800ms linear infinite alternate;
+        -o-animation: twinkle 800ms linear infinite alternate;
+        animation: twinkle 800ms linear infinite alternate
+    }
+
+    body.gacha_result .twinkle#card_twinkle2
+    {
+        top: -45px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/twinkle_2-696b8c99aadf9b5cb352d12ce3b41b28.png) center center no-repeat transparent;
+        background-size: contain;
+        -webkit-animation: twinkle 800ms linear infinite alternate 800ms;
+        -moz-animation: twinkle 800ms linear infinite alternate 800ms;
+        -o-animation: twinkle 800ms linear infinite alternate 800ms;
+        animation: twinkle 800ms linear infinite alternate 800ms
+    }
+
+    body.gacha_result h1
+    {
+        margin-bottom: 10px
+    }
+
+    body.gacha_result h1 a
+    {
+        display: none
+    }
+
+    body.gacha_result #contentsBox
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_black_alpha-7afa10787df8246c946d22870f1c652c.png) left top repeat transparent
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry
+    {
+        margin: 4% 0
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a
+    {
+        display: block;
+        width: 80%;
+        height: 0;
+        padding-top: 17%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry-ad5ba20dc3f646ed871258f7899a75ce.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a.limited1
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry1-c138bafda0712c7fbfa799abd53abaf6.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a.limited2
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry2-09476f4ddab63d4ac555758aa6b923f3.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a.limited3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry3-03e3365b35782a0e01dd7686f7f57c48.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a.limited4
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry4-03bced754e9d1e211d2211656fd25b1c.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .btnArea .retry a.limited5
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_retry5-dac8b2d6b69376eabcd46659cccd2d3a.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    body.gacha_result #contentsBox .notice
+    {
+        color: #ff4e00;
+        text-shadow: 0 1px black;
+        font-size: 10px;
+        margin: 4% 0;
+        text-align: center
+    }
+
+    body.gacha_result #contentsBox #resultInfo
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_result-f9fdfc1ee6b6a70fa440368e54033345.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 12px 0
+    }
+
+    body.gacha_result #contentsBox #resultInfo .getCard
+    {
+        text-align: center;
+        text-shadow: 0 1px black;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 4% 2%
+    }
+
+    body.gacha_result #contentsBox #resultInfo .getCard span.rarity
+    {
+        width: 70%;
+        display: block;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #resultInfo .getCard span.rarity img.rarity
+    {
+        width: 100%
+    }
+
+    body.gacha_result #contentsBox #resultInfo .getCard .stars
+    {
+        display: block
+    }
+
+    body.gacha_result #contentsBox #resultInfo .getCard .stars.pc
+    {
+        display: none
+    }
+
+    body.gacha_result #contentsBox #resultInfo .card_image
+    {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+        padding: 0 2.6%
+    }
+
+    body.gacha_result #contentsBox #resultInfo .card_image img.card_image
+    {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+        display: block;
+        border-top: 5px solid #7f2502
+    }
+
+    body.gacha_result #contentsBox #resultInfo .cardStatus
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_result_card_image-b54d8e7dc9c9a72615408a9b480c1dc5.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px 10px
+    }
+
+    body.gacha_result #contentsBox #resultInfo .cardStatus img.stars
+    {
+        width: 50%;
+        display: block;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #resultInfo .cardStatus img.card_title
+    {
+        width: 50%;
+        display: block;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #resultInfo .cardStatus img.card_name
+    {
+        width: 50%;
+        display: block;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #resultInfo .serifArea span.serif
+    {
+        width: 100%;
+        font-size: 10px;
+        font-weight: bold;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 4% 4px 0;
+        display: block
+    }
+
+    body.gacha_result #contentsBox #resultInfo .serifArea .voice
+    {
+        margin: 3%
+    }
+
+    body.gacha_result #contentsBox #resultInfo .serifArea .voice #play_voice
+    {
+        margin: 0 auto 0;
+        width: 50%;
+        height: 0;
+        padding-top: 15%;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_voice-88c11d918076792ad9439754a8330f39.png) left top no-repeat transparent;
+        background-size: 100%
+    }
+
+    body.gacha_result #contentsBox #resultInfo .author
+    {
+        font-weight: bold;
+        font-size: 10px
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet
+    {
+        padding-top: 10px
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet #keep_tweet .title_keep
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/title_keepTweet-87b9e543843d4f378c099b88cd0b9b10.png) left top no-repeat transparent;
+        width: 30%;
+        height: 0;
+        overflow: hidden;
+        padding-top: 6%;
+        background-size: 100%;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet #keep_tweet #keep_tweet_input
+    {
+        width: 90%;
+        resize: none;
+        border-radius: 10px;
+        border: 4px solid black;
+        display: block;
+        margin: 0 auto;
+        overflow: y;
+        padding: 10px;
+        font-size: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 4%
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet #keep_tweet .btnArea #keep_tweet_button
+    {
+        display: block;
+        border: none;
+        overflow: hidden;
+        padding-top: 14%;
+        height: 0;
+        width: 90%;
+        margin: 0 auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_keepTweet-93962cc4202e1d00cf04f1b2881c4c07.png) left top no-repeat transparent;
+        background-size: 100%
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet #keep_tweet_complete
+    {
+        display: block;
+        padding: 10% 10% 9%;
+        width: auto;
+        background-color: rgba(127,37,2,0.3);
+        margin: 0 15px 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet #keep_tweet_complete img
+    {
+        width: 100%
+    }
+
+    body.gacha_result #contentsBox #resultInfo #gacha_result_tweet span.small
+    {
+        display: block;
+        font-size: 10px;
+        text-align: center;
+        padding: 10px
+    }
+
+    body.gacha_result #contentsBox #bonusTitle
+    {
+        width: 100%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/title_bonus-bc560bb13798825bb791d8ca3e7763f8.png) center top no-repeat transparent;
+        height: 0;
+        overflow: hidden;
+        padding-top: 17%;
+        background-size: 100%;
+        margin: 0 0 4%
+    }
+
+    body.gacha_result #contentsBox #bonusInfo
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_result-f9fdfc1ee6b6a70fa440368e54033345.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 12px 0;
+        margin-bottom: 10px
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .getCard
+    {
+        width: 92%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/text_getBonus-2d2bbbf960ba8115c3f3fe69288db8b5.png) center top no-repeat transparent;
+        height: 0;
+        overflow: hidden;
+        padding-top: 8%;
+        background-size: 100%;
+        margin: 2% auto 4%
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .card_image
+    {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+        padding: 0 2.6%
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .card_image img
+    {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        padding: 0;
+        display: block;
+        border-top: 5px solid #7f2502
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .cardStatus
+    {
+        background-image: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_result_card_image-b54d8e7dc9c9a72615408a9b480c1dc5.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px 10px
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .cardStatus .card_name img
+    {
+        width: 80%;
+        display: block;
+        margin: 0 auto
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .cardStatus .serifArea .serif
+    {
+        width: 100%;
+        font-size: 10px;
+        font-weight: bold;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 4% 4px
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .cardStatus .serifArea .voice a
+    {
+        margin: 0 auto 4%;
+        width: 50%;
+        height: 0;
+        padding-top: 15%;
+        display: block;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_voice-88c11d918076792ad9439754a8330f39.png) left top no-repeat transparent;
+        background-size: 100%
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .cardStatus .author
+    {
+        font-weight: bold;
+        font-size: 10px
+    }
+
+    body.gacha_result #contentsBox #bonusInfo .btnArea a
+    {
+        display: block;
+        padding-top: 18%;
+        height: 0;
+        width: 70%;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/btn_next-dfefbb6c6f3912a2dc41957420c6f532.png) center top no-repeat transparent;
+        margin: 4% auto;
+        background-size: 100%
+    }
+
+    #foot_home
+    {
+        text-align: center
+    }
+
+    #foot_home .bannerLink
+    {
+        border-bottom: 1px solid #666666;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/bg_black_alpha02-af1814a3d32897a7e8d1d0de62fd2abc.png) left top repeat transparent
+    }
+
+    #foot_home .bannerLink ul
+    {
+        background-size: contain;
+        *zoom: 1;
+        text-align: center;
+        padding-left: 0;
+        padding: 10px 10px
+    }
+
+    #foot_home .bannerLink ul:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    #foot_home .bannerLink ul li
+    {
+        width: 100%
+    }
+
+    #foot_home .bannerLink ul li figure a
+    {
+        display: block;
+        width: 100%
+    }
+
+    #foot_home .bannerLink ul li figure a img
+    {
+        display: block;
+        width: 100%
+    }
+
+    #foot_home .bannerLink ul li figure a img.banner01
+    {
+        margin-bottom: 10px
+    }
+
+    #foot_home .bannerLink ul li figure a img.banner02
+    {
+        margin-bottom: 0
+    }
+
+    #foot_home .supportLink
+    {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 12px;
+        color: #666666;
+        border-bottom: 1px solid #333333
+    }
+
+    #foot_home .supportLink a
+    {
+        color: white
+    }
+
+    #foot_home .supportLink a:hover
+    {
+        text-decoration: underline
+    }
+
+    #foot_home #Foot_home_inner
+    {
+        padding: 6px
+    }
+
+    #foot_home #Foot_home_inner p
+    {
+        color: #999999;
+        font-size: 13px
+    }
+
+    section.subPage.cards #contentsBox
+    {
+        line-height: 1em;
+        height: auto
+    }
+
+    section.subPage.cards #contentsBox .titleCards
+    {
+        margin: 0 !important
+    }
+
+    section.subPage.cards #contentsBox .titleCards img
+    {
+        width: 100%
+    }
+
+    section.subPage.cards #contentsBox img
+    {
+        width: 100%
+    }
+
+    section.subPage.cards #contentsBox .cardList
+    {
+        margin: 5px 0;
+        *zoom: 1
+    }
+
+    section.subPage.cards #contentsBox .cardList:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox
+    {
+        width: 100%;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_cards-6d4e79cd22940ced04a1a9ce3dd9b28a.png) left top no-repeat transparent;
+        margin: 10px 0;
+        position: relative;
+        background-size: 100% 100%;
+        *zoom: 1
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox:after
+    {
+        content: "\0020";
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+        visibility: hidden
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardImage
+    {
+        float: left;
+        width: 50%;
+        padding: 5% 2% 5% 5%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardImage img
+    {
+        width: 100%;
+        box-shadow: 0 0 5px 0 #222222
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus
+    {
+        float: right;
+        width: 50%;
+        text-align: center;
+        padding: 12% 15px 12% 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus img
+    {
+        width: 90%
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .serif
+    {
+        font-size: 11px;
+        height: 3em;
+        padding: 0.5em 0;
+        width: 100%;
+        vertical-align: middle;
+        font-weight: bold;
+        text-shadow: 0 1px black
+    }
+
+    section.subPage.cards #contentsBox .cardList .cardBox .cardStatus .author
+    {
+        font-size: 10px;
+        line-height: 1.2em;
+        text-shadow: 0 1px black
+    }
+
+    section.subPage.error #contentsBox #notfound
+    {
+        padding: 80px 0;
+        background-color: rgba(0,0,0,0.5);
+        border-top: 1px solid #666666;
+        border-left: 1px solid #333333;
+        border-right: 1px solid #454545;
+        border-bottom: 1px solid #111111
+    }
+
+    section.subPage.error #contentsBox #notfound h3
+    {
+        padding-top: 9%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/sp/title_notfound-e4ca1769cad96a5b9eed49d74a5dac58.png) center top no-repeat transparent;
+        background-size: contain
+    }
+
+    #term_finished,#preregister_serial,#gacha_serial
+    {
+        margin: 0 0 10px;
+        padding: 8px;
+        background-color: #ac2300;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        border: 5px solid #7b1900;
+        color: white;
+        text-shadow: 0 1px black;
+        line-height: 1.3em;
+        font-size: 12px
+    }
+
+    #preregister_serial,#gacha_serial
+    {
+        margin-top: 10px
+    }
+
+    #contentsBox #term_finished
+    {
+        margin: 10px 0
+    }
+
+    #lightBoxBg
+    {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#66000000, endcolorstr=#66000000, gradienttype=0);
+        z-index: 100
+    }
+
+    #lightBoxBg #connection
+    {
+        position: absolute;
+        top: 45%;
+        margin: 0 auto;
+        width: 100%;
+        height: 10%;
+        text-align: center
+    }
+
+    #lightBoxBg #connection img
+    {
+        height: 100%
+    }
+
+    #lightBoxBg #lightBox
+    {
+        display: none;
+        position: relative;
+        top: 25%;
+        margin: 0 auto;
+        width: 315px;
+        height: auto;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox-5a862a4018fc01dcf63fe67ed0f5944b.png) left top no-repeat transparent;
+        background-size: 100%;
+        padding: 10px 0 0;
+        color: black;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px
+    }
+
+    #lightBoxBg #lightBox p.title
+    {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold
+    }
+
+    #lightBoxBg #lightBox p.text
+    {
+        padding: 0 10px;
+        text-align: center;
+        font-size: 12px
+    }
+
+    #lightBoxBg #lightBox .btnArea
+    {
+        text-align: center;
+        margin: 15px 0;
+        padding-bottom: 25px;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/bg_lightBox_foot-72cac1f419065b9da8fb69df317894cb.png) center bottom no-repeat transparent;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px
+    }
+
+    #lightBoxBg #lightBox .btnArea .close
+    {
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .close a
+    {
+        display: block;
+        width: 56%;
+        height: 0;
+        padding-top: 14%;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_close-e11d8799e083365b96b3c950e122d5c2.png) center top no-repeat transparent;
+        background-size: contain;
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .close a:hover
+    {
+        opacity: 0.8
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok
+    {
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok a
+    {
+        display: block;
+        width: 56%;
+        height: 0;
+        padding-top: 14%;
+        overflow: hidden;
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/btn_ok-2ac733ccb0b842476a49fa52c180d5b1.png) center top no-repeat transparent;
+        background-size: contain;
+        margin: 0 auto
+    }
+
+    #lightBoxBg #lightBox .btnArea .ok a:hover
+    {
+        opacity: 0.8
+    }
+
+    .new img
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25% !important
+    }
+
+    #infoArea a
+    {
+        color: red !important;
+        display: block;
+        text-align: center;
+        padding: 0.5em;
+        background-color: white;
+        margin-bottom: 10px;
+        border: 5px solid #eeeeee;
+        font-weight: bold;
+        text-decoration: underline
+    }
+
+    #infoArea a:hover
+    {
+        opacity: 0.75
+    }
+
+    li#newRule
+    {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px
+    }
+
+    li#newRule .title
+    {
+        color: red;
+        font-weight: bold
+    }
+
+    table.timeList
+    {
+        margin: 10px auto 0
+    }
+
+    table.timeList th,table.timeList td
+    {
+        padding: 0.2em 0.1em;
+        border: 2px solid #623218
+    }
+
+    .maintenance p
+    {
+        padding: 20px 0.5em;
+        text-align: center;
+        line-height: 1.8em;
+        font-size: 14px
+    }
+
+    .maintenance h1
+    {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 17%;
+        background: url(h2_subtitle.png) center top no-repeat transparent;
+        background-size: contain;
+        overflow: hidden;
+        margin: 0
+    }
+
+    .maintenance h3
+    {
+        background: url(https://cache.pre.kairisei-ma.jp/pre/assets/title_maintenance-880d5cc36181332ca10656550804bf53.png) center top no-repeat transparent !important;
+        background-size: contain !important
+    }
+
+    .maintenance #notfound
+    {
+        padding: 40px 0 !important
+    }
+}
+
+#sqexHeader-black
+{
+    top: 0;
+    background-color: black;
+    border-bottom: 1px solid #838383;
+    font-family: Verdana, Arial, Meiryo, "Hiragino Kaku Gothic Pro", Osaka, "MS P Gothic", sans-serif;
+    height: 37px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    z-index: 2
+}
+
+#sqexHeader-black #sqexlogo
+{
+    display: block;
+    width: 150px;
+    height: 37px
+}
+
+#sqexHeader-black #sqexlogo img
+{
+    margin: 13px 10px 10px 10px
+}
