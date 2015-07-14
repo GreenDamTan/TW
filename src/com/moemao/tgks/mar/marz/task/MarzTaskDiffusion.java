@@ -1455,7 +1455,6 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                             }
                             
                             battleMapList.add(mapEvt);
-                            
                             eventMapList.add(mapEvt);
                         }
                     }
@@ -1469,7 +1468,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 if (validateSetting(MarzConstant.VALIDATE_SETTING_BATTLE_LEVEL_UP))
                 {
                     // 先看是否已经打出了17-3
-                    for (MarzMapEvt map : eventMapList)
+                    for (MarzMapEvt map : normalMapList)
                     {
                         if (MarConstant.BATTLESOLOSTART_17_3.equals(map.getBossId()))
                         {
@@ -1480,7 +1479,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                     
                     if (CommonUtil.isEmpty(mapEvt.getBossId()))
                     {
-                        for (MarzMapEvt map : eventMapList)
+                        for (MarzMapEvt map : normalMapList)
                         {
                             // 如果地图的标志为标明未通过 并且体力够打这个图 那么就打这个
                             if ((MarzConstant.MARZMAP_STATE_0.equals(map.getState()) || MarzConstant.MARZMAP_STATE_1.equals(map.getState()))
