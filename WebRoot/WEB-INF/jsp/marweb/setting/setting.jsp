@@ -129,7 +129,7 @@
                 <td>药水类型</td>
                 <td>
                     <select id="marzSettingEvt.autoUseBPPotionItemId" name="marzSettingEvt.autoUseBPPotionItemId">
-                         <option value="">不选择</option>
+                    	 <option value="">不选择</option>
                          <s:iterator value="allBPRecoverList" var="evt" status="idx">
                             <option value="<s:property value='#evt.itemId'/>" <s:if test="marzSettingEvt.autoUseBPPotionItemId == #evt.itemId">selected="selected"</s:if>><s:property value='#evt.name' /></option>
                         </s:iterator>
@@ -177,7 +177,7 @@
                 <td>
                     <select id="marzSettingEvt.battleNowasteBossId" name="marzSettingEvt.battleNowasteBossId">
                          <option value="0" <s:if test="marzSettingEvt.battleNowasteBossId == 0">selected="selected"</s:if>>每日限定素材</option>
-                         <s:iterator value="allMapList" var="evt" status="idx">
+                         <s:iterator value="noWasteMapList" var="evt" status="idx">
                             <s:if test="#evt.show == 1">
                                 <option value="<s:property value='#evt.bossId'/>" <s:if test="marzSettingEvt.battleNowasteBossId == #evt.bossId">selected="selected"</s:if>><s:property value='#evt.bossName'/></option>
                             </s:if>
@@ -190,20 +190,20 @@
                 <td colspan="9">
                     <table>
                         <tr>
-                            <s:iterator value="allMapList" var="evt" status="idx">
-                              <td width="20px">
-                                <s:if test="#evt.show == 1">
-                                  <input type="checkbox" name="marzSettingEvt.bossIds" value="<s:property value='#evt.bossId'/>" <s:if test="#evt.check == 1">checked="checked"</s:if> />
-                                </s:if>
-                              </td>
-                              <td>
-                                <s:property value='#evt.bossName'/>
-                              </td>
+		                    <s:iterator value="allMapList" var="evt" status="idx">
+		                      <td width="20px">
+		                        <s:if test="#evt.show == 1">
+		                          <input type="checkbox" name="marzSettingEvt.bossIds" value="<s:property value='#evt.bossId'/>" <s:if test="#evt.check == 1">checked="checked"</s:if> />
+		                        </s:if>
+		                      </td>
+		                      <td>
+		                        <s:property value='#evt.bossName'/>
+		                      </td>
                               <s:if test="#idx.index > 0  && (#idx.index + 1)%6 == 0">
                         </tr>
                         <tr>
                               </s:if>
-                            </s:iterator>
+		                    </s:iterator>
                         </tr>
                     </table>
                 </td>

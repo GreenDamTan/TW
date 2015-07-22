@@ -92,6 +92,11 @@
         <result name="error">/WEB-INF/jsp/common/error.jsp</result>
     </action>
     
+    <action name="changeStatusKrsmaCard" class="com.moemao.tgks.mar.krsmacard.action.KrsmaCardAction" method="changeStatusKrsmaCard">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
     <!-- mar_account -->
     <action name="accountManager" class="com.moemao.tgks.mar.account.action.AccountAction" method="accountManager">
         <result name="success">/WEB-INF/jsp/mar/account/accountManager.jsp</result>
@@ -211,6 +216,11 @@
     </action>
 
     <action name="deleteMarzLog" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="deleteMarzLog">
+        <result name="success">/WEB-INF/jsp/common/success.jsp</result>
+        <result name="error">/WEB-INF/jsp/common/error.jsp</result>
+    </action>
+    
+    <action name="resetMarzLog" class="com.moemao.tgks.mar.marzlog.action.MarzLogAction" method="resetMarzLog">
         <result name="success">/WEB-INF/jsp/common/success.jsp</result>
         <result name="error">/WEB-INF/jsp/common/error.jsp</result>
     </action>

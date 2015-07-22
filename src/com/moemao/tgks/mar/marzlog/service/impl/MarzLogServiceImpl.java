@@ -83,4 +83,10 @@ public void setMar_marzLogDao(MarzLogDao mar_marzLogDao)
     this.mar_marzLogDao = mar_marzLogDao;
 }
 
+@Override
+public int resetMarzLog()
+{
+    return mar_marzLogDao.mar_resetMarzLog();
+}
+
 }

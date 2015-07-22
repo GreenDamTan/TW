@@ -20,4 +20,6 @@ public int updateMarzLog(MarzLogEvt marzLogEvt);
 
 public int deleteMarzLog(List<String> ids);
 
+public int resetMarzLog();
+
 }

@@ -138,7 +138,10 @@ CREATE TABLE IF NOT EXISTS `t_tgks_mar_marzmap` (
   `bossName` varchar(100) default NULL COMMENT 'BOSS名称难度',
   `bpCost` int(5) NOT NULL default '0' COMMENT 'BP消耗',
   `target` int(3) NOT NULL default '0' COMMENT '攻击目标数量',
-  `vip` varchar(3) NOT NULL COMMENT 'VIP等级（0 试用；1 普通；2 白金；3 钻石）',
+  `process` int(3) NOT NULL default '1' COMMENT '战斗敌人批次数量',
+  `vip` varchar(3) NOT NULL default '0' COMMENT 'VIP等级（0 试用；1 普通；2 白金；3 钻石）',
+  `openKeyType` varchar(10) NOT NULL default '1' COMMENT '开图钥匙类型（0 无；其他 钥匙ID）',
+  `sort` varchar(5) NOT NULL default '0' COMMENT '展示顺序',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='挂机地图表';
 

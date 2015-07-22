@@ -8,7 +8,10 @@
         <result property="bossId" column="BOSSID" />
         <result property="bossName" column="BOSSNAME" />
         <result property="bpCost" column="BPCOST" />
+        <result property="process" column="PROCESS" />
         <result property="target" column="TARGET" />
+        <result property="openKeyType" column="OPENKEYTYPE" />
         <result property="vip" column="VIP" />
+        <result property="sort" column="SORT" />
     </resultMap>
 </mapper>

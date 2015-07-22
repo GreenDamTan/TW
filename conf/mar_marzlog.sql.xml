@@ -59,4 +59,10 @@
             #{ids}
         </foreach>
 </delete>
+
+<delete id="mar_resetMarzLog">
+        <![CDATA[  
+            DELETE FROM t_tgks_mar_marzlog WHERE type <> '9'
+        ]]>
+</delete>
 </mapper>

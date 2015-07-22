@@ -15,4 +15,6 @@ public int mar_addMarzLog(MarzLogEvt marzLogEvt) throws DataAccessException;
 public int mar_updateMarzLog(MarzLogEvt marzLogEvt) throws DataAccessException;
 
 public int mar_deleteMarzLog(List<String> list) throws DataAccessException;
+
+public int mar_resetMarzLog() throws DataAccessException;
 }

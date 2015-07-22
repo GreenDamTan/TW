@@ -94,6 +94,40 @@ public class KrsmaCardAction extends TGKSAction
     return SUCCESS;
     }
     
+    public String changeStatusKrsmaCard()
+    {
+        CommonUtil.debugLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_IN, "KrsmaCardAction.changeKrsmaCard");
+        String ids = this.getRequest().getParameter("ids");
+        String type = this.getRequest().getParameter("type");
+        String status = this.getRequest().getParameter("status");
+        
+        if ("sell".equals(type))
+        {
+            if ("0".equals(status))
+            {
+                mar_krsmaCardService.offSellKrsmaCard(CommonUtil.stringToList(ids));
+            }
+            else if ("1".equals(status))
+            {
+                mar_krsmaCardService.onSellKrsmaCard(CommonUtil.stringToList(ids));
+            }
+        }
+        else if ("fame".equals(type))
+        {
+            if ("0".equals(status))
+            {
+                mar_krsmaCardService.offFameKrsmaCard(CommonUtil.stringToList(ids));
+            }
+            else if ("1".equals(status))
+            {
+                mar_krsmaCardService.onFameKrsmaCard(CommonUtil.stringToList(ids));
+            }
+        }
+        
+        CommonUtil.debugLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_OUT, "KrsmaCardAction.changeKrsmaCard");
+        return SUCCESS;
+    }
+    
     /**
      * @return 返回 mar_krsmaCardService
      */

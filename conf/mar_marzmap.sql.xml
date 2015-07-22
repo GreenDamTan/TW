@@ -5,7 +5,7 @@
 <mapper namespace="com.moemao.tgks.mar.marzmap.dao.MarzMapDao">
 <select id="mar_queryMarzMap" parameterType="MarzMapReq" resultType="MarzMapEvt" resultMap="MarzMapEvtMap">
         <![CDATA[  
-            SELECT t.id, t.bossid, t.bossname, t.bpcost, t.target, t.vip FROM t_tgks_mar_marzmap t
+            SELECT t.id, t.bossid, t.bossname, t.bpcost, t.process, t.target, t.openKeyType, t.vip, t.sort FROM t_tgks_mar_marzmap t
         ]]>
         <where>
                 1=1
@@ -13,10 +13,10 @@
                 AND t.ID = #{id}
             </if>
             <if test="bossId !=null and bossId !='' ">
-                AND t.BOSSID = #{bossId}
+                AND t.BOSSID LIKE CONCAT(CONCAT('%', #{bossId}),'%')
             </if>
             <if test="bossName !=null and bossName !='' ">
-                AND t.BOSSNAME = #{bossName}
+                AND t.BOSSNAME LIKE CONCAT(CONCAT('%', #{bossName}),'%')
             </if>
             <if test="bpCost !=null and bpCost !='' ">
                 AND t.BPCOST = #{bpCost}
@@ -32,8 +32,8 @@
 
 <insert id="mar_addMarzMap" parameterType="MarzMapEvt">
         <![CDATA[  
-            INSERT INTO t_tgks_mar_marzmap (id, bossid, bossname, bpcost, target, vip) 
-            VALUES (#{id}, #{bossId}, #{bossName}, #{bpCost}, #{target}, #{vip}) 
+            INSERT INTO t_tgks_mar_marzmap (id, bossid, bossname, bpcost, process, target, openkeytype, vip, sort) 
+            VALUES (#{id}, #{bossId}, #{bossName}, #{bpCost}, #{process}, #{target}, #{openKeyType}, #{vip}, #{sort}) 
         ]]>
 </insert>
 
@@ -43,8 +43,11 @@
                        bossid = #{bossId},
                        bossname = #{bossName},
                        bpcost = #{bpCost},
+                       process = #{process},
                        target = #{target},
-                       vip = #{vip}
+                       openkeytype = #{openKeyType},
+                       vip = #{vip},
+                       sort = #{sort}
              WHERE ID = #{id}
         ]]>
 </update>

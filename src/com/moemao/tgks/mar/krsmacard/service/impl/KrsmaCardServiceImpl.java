@@ -83,4 +83,28 @@ public void setMar_krsmaCardDao(KrsmaCardDao mar_krsmaCardDao)
     this.mar_krsmaCardDao = mar_krsmaCardDao;
 }
 
+@Override
+public int onSellKrsmaCard(List<String> ids)
+{
+    return mar_krsmaCardDao.mar_onSellKrsmaCard(ids);
+}
+
+@Override
+public int offSellKrsmaCard(List<String> ids)
+{
+    return mar_krsmaCardDao.mar_offSellKrsmaCard(ids);
+}
+
+@Override
+public int onFameKrsmaCard(List<String> ids)
+{
+    return mar_krsmaCardDao.mar_onFameKrsmaCard(ids);
+}
+
+@Override
+public int offFameKrsmaCard(List<String> ids)
+{
+    return mar_krsmaCardDao.mar_offFameKrsmaCard(ids);
+}
+
 }

@@ -1,5 +1,7 @@
 package com.moemao.tgks.mar.marzmap.entity;
 
+import com.moemao.tgks.mar.marz.entity.BossEvt;
+
 public class MarzMapEvt
 {
 /**
@@ -18,6 +20,11 @@ private String bossId;
 private String bossName;
 
 /**
+ * 地图头像
+ */
+private String pictid;
+
+/**
  * VIP等级
  */
 private String vip;
@@ -28,14 +35,29 @@ private String vip;
 private Integer bpCost;
 
 /**
+ * 敌人回合数
+ */
+private Integer process;
+
+/**
  * 攻击弱点数
  */
 private Integer target;
 
 /**
+ * 钥匙类型
+ */
+private String openKeyType;
+
+/**
  * 敌人数量
  */
 private Integer enemy;
+
+/**
+ * 排序
+ */
+private String sort;
 
 /**
  * 设置页面是否被选中
@@ -47,10 +69,24 @@ private String check;
  */
 private String show;
 
-/**
- * 副本状态 0 未战斗；1 未通过；2 已通过
- */
-private String state;
+public MarzMapEvt()
+{
+    
+}
+
+public MarzMapEvt(BossEvt bossEvt)
+{
+    this.setBossId(bossEvt.getBossId());
+    this.setBossName(bossEvt.getBossName());
+    this.setPictid(bossEvt.getPictid());
+    this.setVip(bossEvt.getVip());
+    this.setBpCost(bossEvt.getBpCost());
+    this.setProcess(bossEvt.getProcess());
+    this.setTarget(bossEvt.getTarget());
+    this.setOpenKeyType(bossEvt.getOpenKeyType());
+    this.setEnemy(bossEvt.getEnemy());
+    this.setSort(bossEvt.getSort());
+}
 
 @Override
 public String toString()
@@ -106,6 +142,16 @@ public void setBossName(String bossName)
     this.bossName = bossName;
 }
 
+public String getPictid()
+{
+    return pictid;
+}
+
+public void setPictid(String pictid)
+{
+    this.pictid = pictid;
+}
+
 /**
  * @return 返回 bpCost
  */
@@ -120,6 +166,26 @@ public Integer getBpCost()
 public void setBpCost(Integer bpCost)
 {
     this.bpCost = bpCost;
+}
+
+public Integer getProcess()
+{
+    return process;
+}
+
+public void setProcess(Integer process)
+{
+    this.process = process;
+}
+
+public String getOpenKeyType()
+{
+    return openKeyType;
+}
+
+public void setOpenKeyType(String openKeyType)
+{
+    this.openKeyType = openKeyType;
 }
 
 public Integer getTarget()
@@ -140,6 +206,16 @@ public Integer getEnemy()
 public void setEnemy(Integer enemy)
 {
     this.enemy = enemy;
+}
+
+public String getSort()
+{
+    return sort;
+}
+
+public void setSort(String sort)
+{
+    this.sort = sort;
 }
 
 public String getVip()
@@ -170,16 +246,6 @@ public String getShow()
 public void setShow(String show)
 {
     this.show = show;
-}
-
-public String getState()
-{
-    return state;
-}
-
-public void setState(String state)
-{
-    this.state = state;
 }
 
 }

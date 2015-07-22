@@ -75,6 +75,7 @@ public class MarzSettingAction extends TGKSAction
     
     // 设置页面展示
     List<MarzMapEvt> allMapList;
+    List<MarzMapEvt> noWasteMapList;
     
     // 设置页面展示
     List<KrsmaCardEvt> sellCardList;
@@ -243,6 +244,7 @@ public class MarzSettingAction extends TGKSAction
         
         // 查询当前的战斗地图
         allMapList = this.mar_marzMapService.queryMarzMap(new MarzMapReq());
+        noWasteMapList = new ArrayList<MarzMapEvt>();
         MarzAccountReq marzAccountReq = new MarzAccountReq();
         marzAccountReq.setTgksId(tgksId);
         account = this.mar_marzAccountService.queryMarzAccount(marzAccountReq).get(0);
@@ -263,6 +265,12 @@ public class MarzSettingAction extends TGKSAction
             else
             {
                 map.setShow("1");
+            }
+            
+            // 给不浪费BP使用
+            if (!map.getBossName().contains("[鍵]"))
+            {
+                noWasteMapList.add(map);
             }
         }
         
@@ -704,5 +712,15 @@ public class MarzSettingAction extends TGKSAction
     public void setAccount(MarzAccountEvt account)
     {
         this.account = account;
+    }
+
+    public List<MarzMapEvt> getNoWasteMapList()
+    {
+        return noWasteMapList;
+    }
+
+    public void setNoWasteMapList(List<MarzMapEvt> noWasteMapList)
+    {
+        this.noWasteMapList = noWasteMapList;
     }
 }

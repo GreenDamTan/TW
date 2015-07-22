@@ -15,4 +15,12 @@ public int mar_addKrsmaCard(KrsmaCardEvt krsmaCardEvt) throws DataAccessExceptio
 public int mar_updateKrsmaCard(KrsmaCardEvt krsmaCardEvt) throws DataAccessException;
 
 public int mar_deleteKrsmaCard(List<String> list) throws DataAccessException;
+
+public int mar_onSellKrsmaCard(List<String> list) throws DataAccessException;
+
+public int mar_offSellKrsmaCard(List<String> list) throws DataAccessException;
+
+public int mar_onFameKrsmaCard(List<String> list) throws DataAccessException;
+
+public int mar_offFameKrsmaCard(List<String> list) throws DataAccessException;
 }

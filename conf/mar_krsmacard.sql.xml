@@ -80,4 +80,40 @@
             #{ids}
         </foreach>
 </delete>
+
+<update id="mar_offSellKrsmaCard" parameterType="list">
+        <![CDATA[ 
+            UPDATE t_tgks_mar_krsmacard SET sellflag = '0' WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</update>
+
+<update id="mar_onSellKrsmaCard" parameterType="list">
+        <![CDATA[ 
+            UPDATE t_tgks_mar_krsmacard SET sellflag = '1' WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</update>
+
+<update id="mar_offFameKrsmaCard" parameterType="list">
+        <![CDATA[ 
+            UPDATE t_tgks_mar_krsmacard SET fameflag = '0' WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</update>
+
+<update id="mar_onFameKrsmaCard" parameterType="list">
+        <![CDATA[ 
+            UPDATE t_tgks_mar_krsmacard SET fameflag = '1' WHERE id IN
+        ]]>
+        <foreach collection="list" item="ids"  open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+</update>
 </mapper>

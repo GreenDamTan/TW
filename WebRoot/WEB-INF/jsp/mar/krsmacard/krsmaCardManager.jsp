@@ -66,8 +66,10 @@
 
 <button id="addKrsmaCard">新增</button>
 <button id="deleteKrsmaCard">删除</button>
-<button id="onKrsmaCard">启用</button>
-<button id="offKrsmaCard">禁用</button>
+<button id="onSellKrsmaCard">启用出售</button>
+<button id="offSellKrsmaCard">禁用出售</button>
+<button id="onFameKrsmaCard">启用名声</button>
+<button id="offFameKrsmaCard">禁用名声</button>
 
 <div id="krsmaCardDiv"></div>
 
@@ -224,8 +226,7 @@ $(document).ready(function(){
         return false;
     });
      
-     // 启用按钮
-    $( "#onKrsmaCard" ).button({
+    $( "#onSellKrsmaCard" ).button({
         icons: {
             primary: "ui-icon-check"
             }
@@ -259,7 +260,7 @@ $(document).ready(function(){
             
             // ajax调用删除action
             var options = { 
-                url:"../mar/changeStatusKrsmaCard.action?status=1&ids=" + ids , // 提交给哪个执行
+                url:"../mar/changeStatusKrsmaCard.action?type=sell&status=1&ids=" + ids , // 提交给哪个执行
                 type:'POST', 
                 success: function(){
                     // 执行成功刷新form
@@ -276,7 +277,7 @@ $(document).ready(function(){
     });
      
      // 停用按钮
-    $( "#offKrsmaCard" ).button({
+    $( "#offSellKrsmaCard" ).button({
         icons: {
             primary: "ui-icon-close"
             }
@@ -310,7 +311,108 @@ $(document).ready(function(){
             
             // ajax调用删除action
             var options = { 
-                url:"../mar/changeStatusKrsmaCard.action?status=0&ids=" + ids , // 提交给哪个执行
+                url:"../mar/changeStatusKrsmaCard.action?type=sell&status=0&ids=" + ids , // 提交给哪个执行
+                type:'POST', 
+                success: function(){
+                    // 执行成功刷新form
+                    query();
+                },
+                error:function(){ 
+                    alert("操作失败"); 
+                }
+            };
+            
+            $("#krsmaCardConfirm").ajaxSubmit(options);
+            $("#krsmaCardManagerSubmit").val("0");
+            return false;
+    });
+    
+    $( "#onFameKrsmaCard" ).button({
+        icons: {
+            primary: "ui-icon-check"
+            }
+        }).click(function() {
+            $("#krsmaCardManagerSubmit").val("1");
+            // 获取选中的记录ids
+            var ids = "";
+            var array = document.getElementsByName("krsmaCardId");
+            for (var i=0; i<array.length; i++)
+            {
+                if (array[i].checked)
+                {
+                    if (ids == "")
+                    {
+                        ids += array[i].value;
+                    }
+                    else
+                    {
+                        ids += "," + array[i].value;
+                    }
+                }
+            }
+            
+            // 操作验证
+            if (ids == "")
+            {
+                alert("请选择至少一条记录");
+                $("#krsmaCardManagerSubmit").val("0");
+                return false;
+            }
+            
+            // ajax调用删除action
+            var options = { 
+                url:"../mar/changeStatusKrsmaCard.action?type=fame&status=1&ids=" + ids , // 提交给哪个执行
+                type:'POST', 
+                success: function(){
+                    // 执行成功刷新form
+                    query();
+                },
+                error:function(){ 
+                    alert("操作失败"); 
+                }
+            };
+            
+            $("#krsmaCardConfirm").ajaxSubmit(options);
+            $("#krsmaCardManagerSubmit").val("0");
+            return false;
+    });
+     
+     // 停用按钮
+    $( "#offFameKrsmaCard" ).button({
+        icons: {
+            primary: "ui-icon-close"
+            }
+        }).click(function() {
+            $("#krsmaCardManagerSubmit").val("1");
+            // 获取选中的记录ids
+            var ids = "";
+            var array = document.getElementsByName("krsmaCardId");
+            for (var i=0; i<array.length; i++)
+            {
+                if (array[i].checked)
+                {
+                    if (ids == "")
+                    {
+                        ids += array[i].value;
+                    }
+                    else
+                    {
+                        ids += "," + array[i].value;
+                    }
+                }
+            }
+            
+            // 操作验证
+            if (ids == "")
+            {
+                alert("请选择至少一条记录");
+                $("#krsmaCardManagerSubmit").val("0");
+                return false;
+            }
+            
+            // ajax调用删除action
+            var options = { 
+                url:"../mar/changeStatusKrsmaCard.action?type=fame&status=0&ids=" + ids , // 提交给哪个执行
                 type:'POST', 
                 success: function(){
                     // 执行成功刷新form

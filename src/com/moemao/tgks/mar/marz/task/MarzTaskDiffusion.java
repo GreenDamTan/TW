@@ -23,6 +23,7 @@ import com.moemao.tgks.common.tool.CommonUtil;
 import com.moemao.tgks.mar.execute.MarzRequest;
 import com.moemao.tgks.mar.krsmacard.entity.KrsmaCardEvt;
 import com.moemao.tgks.mar.krsmacard.service.KrsmaCardService;
+import com.moemao.tgks.mar.marz.entity.BossEvt;
 import com.moemao.tgks.mar.marz.entity.CardEvt;
 import com.moemao.tgks.mar.marz.entity.CardTagEvt;
 import com.moemao.tgks.mar.marz.entity.DeckEvt;
@@ -30,6 +31,7 @@ import com.moemao.tgks.mar.marz.entity.ItemEvt;
 import com.moemao.tgks.mar.marz.entity.MissionEvt;
 import com.moemao.tgks.mar.marz.thread.MarzThreadPoolDiffusion;
 import com.moemao.tgks.mar.marz.tool.MarzConstant;
+import com.moemao.tgks.mar.marz.tool.MarzDataPool;
 import com.moemao.tgks.mar.marz.tool.MarzUtil;
 import com.moemao.tgks.mar.marzaccount.entity.MarzAccountEvt;
 import com.moemao.tgks.mar.marzaccount.service.MarzAccountService;
@@ -38,8 +40,6 @@ import com.moemao.tgks.mar.marzitem.entity.MarzItemReq;
 import com.moemao.tgks.mar.marzitem.service.MarzItemService;
 import com.moemao.tgks.mar.marzlog.service.MarzLogService;
 import com.moemao.tgks.mar.marzmap.entity.MarzMapEvt;
-import com.moemao.tgks.mar.marzmap.entity.MarzMapReq;
-import com.moemao.tgks.mar.marzmap.service.MarzMapService;
 import com.moemao.tgks.mar.marzsetting.entity.MarzSettingEvt;
 import com.moemao.tgks.mar.marzsetting.entity.MarzSettingReq;
 import com.moemao.tgks.mar.marzsetting.service.MarzSettingService;
@@ -56,8 +56,6 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
     private MarzLogService marzLogService;
     
     private MarzSettingService marzSettingService;
-    
-    private MarzMapService marzMapService;
     
     private MarzSettingEvt marzSettingEvt;
     
@@ -93,7 +91,6 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
         marzAccountService = (MarzAccountService) ContextUtil.getBean("mar_marzAccountService");
         marzLogService = (MarzLogService) ContextUtil.getBean("mar_marzLogService");
         marzSettingService = (MarzSettingService) ContextUtil.getBean("mar_marzSettingService");
-        marzMapService = (MarzMapService) ContextUtil.getBean("mar_marzMapService");
         marzItemService = (MarzItemService) ContextUtil.getBean("mar_marzItemService");
         marKrsmaCardService = (KrsmaCardService) ContextUtil.getBean("mar_krsmaCardService");
         
@@ -553,7 +550,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 {
                     // 查看当前药水数量
                     int bpNum = 0;
-                    itemUseFlag = true;
+                    itemUseFlag = false;
                     for (ItemEvt item : itemList)
                     {
                         if (item.getItemId().equals(marzSettingEvt.getAutoUseBPPotionItemId()))
@@ -563,11 +560,13 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                         }
                     }
                     
-                    // 如果药水已经用完 看是否开启了自动买药
-                    if (0 == bpNum)
+                    if (bpNum > 0)
                     {
-                        itemUseFlag = false;
-                        
+                        itemUseFlag = true;
+                    }
+                    // 如果药水已经用完 看是否开启了自动买药
+                    else if (0 == bpNum)
+                    {
                         // 仅当开启了买药并且设定自动可ID为1000的大药时才会自动买药
                         if (validateSetting(MarzConstant.VALIDATE_SETTING_AUTOBUYBPPOTION)
                                 && MarConstant.ITEM_ID_BP_RECOVER_FULL.equals(marzSettingEvt.getAutoUseBPPotionItemId()))
@@ -1349,15 +1348,15 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
             {
                 sid = map.get(MarzConstant.JSON_TAG_SID).getString(MarzConstant.JSON_TAG_SID);
                 
-                List<MarzMapEvt> battleMapList = new ArrayList<MarzMapEvt>();
-                List<MarzMapEvt> normalMapList = new ArrayList<MarzMapEvt>();
-                List<MarzMapEvt> eventMapList = new ArrayList<MarzMapEvt>();
-                MarzMapEvt mapEvt = new MarzMapEvt();
+                List<BossEvt> battleMapList = new ArrayList<BossEvt>();
+                List<BossEvt> normalMapList = new ArrayList<BossEvt>();
+                List<BossEvt> eventMapList = new ArrayList<BossEvt>();
+                BossEvt bossEvt = new BossEvt();
                 
                 // 是否只战斗一次
                 boolean isBattleOnce = true;
                 
-                JSONObject mapJSON;
+                JSONObject groupJSON;
                 JSONArray bossArray;
                 JSONObject bossJSON;
 
@@ -1396,24 +1395,23 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 // 整理当前可以战斗的BOSSID Normal
                 for (int i = 0; i < battleMapNormal.size(); i++)
                 {
-                    mapJSON = JSONObject.fromObject(battleMapNormal.get(i));
+                    groupJSON = JSONObject.fromObject(battleMapNormal.get(i));
                     
-                    if (mapJSON.containsKey("bosses") && !CommonUtil.isEmpty(mapJSON.getString("bosses")))
+                    if (groupJSON.containsKey("bosses") && !CommonUtil.isEmpty(groupJSON.getString("bosses")))
                     {
-                        bossArray = mapJSON.getJSONArray("bosses");
+                        bossArray = groupJSON.getJSONArray("bosses");
                         
                         for (int j = 0; j < bossArray.size(); j++)
                         {
                             bossJSON = JSONObject.fromObject(bossArray.get(j));
                             
-                            mapEvt = new MarzMapEvt();
-                            mapEvt.setBossId(bossJSON.getString("bossid"));
-                            mapEvt.setBossName(mapJSON.getString("name") + " " + bossJSON.getString("difficulty"));
-                            mapEvt.setBpCost(bossJSON.getInt("bp_use"));
-                            mapEvt.setState(bossJSON.getString("state"));
-                            mapEvt.setTarget(0);
-                            battleMapList.add(mapEvt);
-                            normalMapList.add(mapEvt);
+                            bossEvt = new BossEvt(bossJSON);
+                            bossEvt.setBossName(groupJSON.getString("name") + " " + bossJSON.getString("difficulty"));
+                            bossEvt.setProcess(MarzConstant.MARZMAP_PROCESS_3);
+                            bossEvt.setTarget(0);
+                            
+                            battleMapList.add(bossEvt);
+                            normalMapList.add(bossEvt);
                         }
                     }
                 }
@@ -1421,71 +1419,100 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 // 整理当前可以战斗的BOSSID Event
                 for (int i = 0; i < battleMapEvent.size(); i++)
                 {
-                    mapJSON = JSONObject.fromObject(battleMapEvent.get(i));
+                    groupJSON = JSONObject.fromObject(battleMapEvent.get(i));
                     
-                    if (mapJSON.containsKey("bosses") && !CommonUtil.isEmpty(mapJSON.getString("bosses")))
+                    if (groupJSON.containsKey("bosses") && !CommonUtil.isEmpty(groupJSON.getString("bosses")))
                     {
-                        bossArray = mapJSON.getJSONArray("bosses");
+                        bossArray = groupJSON.getJSONArray("bosses");
                         
+                        // 开始处理副本分组内每个难度的BOSSID
                         for (int j = 0; j < bossArray.size(); j++)
                         {
                             bossJSON = JSONObject.fromObject(bossArray.get(j));
                             
-                            mapEvt = new MarzMapEvt();
-                            mapEvt.setBossId(bossJSON.getString("bossid"));
-                            mapEvt.setBossName(mapJSON.getString("name") + " " + bossJSON.getString("difficulty"));
-                            mapEvt.setBpCost(bossJSON.getInt("bp_use"));
-                            mapEvt.setState(bossJSON.getString("state"));
+                            bossEvt = new BossEvt(bossJSON);
+                            bossEvt.setBossName((groupJSON.getString("name").contains("グループ") ? "[鍵]" : groupJSON.getString("name")) +  bossJSON.getString("difficulty"));
                             
                             // 狗粮本跟每日限定要塞成0
-                            if (bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_CHIARI_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_MONDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_TUESDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_WEDNESDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_THURSDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_FRIDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_SATURDAY_HEAD)
-                                    || bossJSON.getString("bossid").startsWith(MarConstant.BATTLE_START_SUNDAY_HEAD))
+                            if (bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS3_CHIARI)
+                                    || bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS3_DAILY))
                             {
-                                mapEvt.setTarget(0);
+                                bossEvt.setProcess(MarzConstant.MARZMAP_PROCESS_3);
+                                bossEvt.setTarget(0);
                             }
                             else
                             {
-                                mapEvt.setTarget(4);
+                                bossEvt.setProcess(MarzConstant.MARZMAP_PROCESS_1);
+                                bossEvt.setTarget(4);
                             }
                             
-                            battleMapList.add(mapEvt);
-                            eventMapList.add(mapEvt);
+                            // 展示顺序 以及VIP
+                            if (bossEvt.getBossId().startsWith("8"))
+                            {
+                                bossEvt.setSort("0");
+                                bossEvt.setVip(MarzConstant.MARZ_ACCOUNT_VIP_2);
+                            }
+                            else if (bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS3_CHIARI))
+                            {
+                                bossEvt.setSort("99");
+                                bossEvt.setVip(MarzConstant.MARZ_ACCOUNT_VIP_1);
+                            }
+                            else
+                            {
+                                bossEvt.setSort("9");
+                                bossEvt.setVip(MarzConstant.MARZ_ACCOUNT_VIP_1);
+                            }
+                            
+                            // 校验是否需要添加入库
+                            MarzDataPool.getInstance().addMarzMap(new MarzMapEvt(bossEvt));
+                            
+                            battleMapList.add(bossEvt);
+                            eventMapList.add(bossEvt);
                         }
                     }
                 }
                 // 至此全部地图都已经处理完毕
                 
                 // 先初始化地图对象 后续检查是否被赋值，然后再看是否需要走一般流程
-                mapEvt = new MarzMapEvt();
+                bossEvt = new BossEvt();
                 
                 // 先看是否开启了练级模式
                 if (validateSetting(MarzConstant.VALIDATE_SETTING_BATTLE_LEVEL_UP))
                 {
-                    // 先看是否已经打出了17-3
-                    for (MarzMapEvt map : normalMapList)
+                    boolean isAllNormalComplete = false;
+                    
+                    // 先看是否已经打完所有图了
+                    for (BossEvt map : normalMapList)
                     {
-                        if (MarConstant.BATTLESOLOSTART_17_3.equals(map.getBossId()))
+                        if (MarConstant.BATTLESOLOSTART_18_1.equals(map.getBossId()) && MarzConstant.MARZMAP_STATE_2.equals(map.getState()))
                         {
-                            mapEvt = map;
+                            isAllNormalComplete = true;
                             break;
                         }
                     }
                     
-                    if (CommonUtil.isEmpty(mapEvt.getBossId()))
+                    if (isAllNormalComplete)
                     {
-                        for (MarzMapEvt map : normalMapList)
+                        for (BossEvt map : normalMapList)
+                        {
+                            if (MarConstant.BATTLESOLOSTART_17_3.equals(map.getBossId()))
+                            {
+                                bossEvt = map;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // 如果还没有全部打完 则继续最新的
+                    if (CommonUtil.isEmpty(bossEvt.getBossId()))
+                    {
+                        for (BossEvt map : normalMapList)
                         {
                             // 如果地图的标志为标明未通过 并且体力够打这个图 那么就打这个
                             if ((MarzConstant.MARZMAP_STATE_0.equals(map.getState()) || MarzConstant.MARZMAP_STATE_1.equals(map.getState()))
                                     && account.getBpMax() >= map.getBpCost())
                             {
-                                mapEvt = map;
+                                bossEvt = map;
                                 break;
                             }
                         }
@@ -1493,54 +1520,47 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 }
                 
                 // 如果开启了优先拿石模式 则先找没拿过石头的副本 拿石模式下不包含8开头的带锁副本
-                if (CommonUtil.isEmpty(mapEvt.getBossId()) && validateSetting(MarzConstant.VALIDATE_SETTING_BATTLE_GET_STONE))
+                if (CommonUtil.isEmpty(bossEvt.getBossId()) && validateSetting(MarzConstant.VALIDATE_SETTING_BATTLE_GET_STONE))
                 {
                     // 拿石模式只处理Event副本
-                    for (MarzMapEvt map : eventMapList)
+                    for (BossEvt map : eventMapList)
                     {
-                        // TODO 首先过滤掉 8开头的钥匙副本
-                        if (map.getBossId().startsWith("8"))
-                        {
-                            continue;
-                        }
-                        
                         // 如果地图的标志为标明未通过 并且体力够打这个图 那么就打这个
                         if ((MarzConstant.MARZMAP_STATE_0.equals(map.getState()) || MarzConstant.MARZMAP_STATE_1.equals(map.getState()))
                                 && account.getBpMax() >= map.getBpCost())
                         {
-                            mapEvt = map;
+                            bossEvt = map;
                             break;
                         }
                     }
                 }
                 
                 // 这里判断上面的是否选中了需要打的图 如果没有 则走用户自定义流程
-                if (CommonUtil.isEmpty(mapEvt.getBossId()))
+                if (CommonUtil.isEmpty(bossEvt.getBossId()))
                 {
                     // 判断应该打哪张图
                     List<String> userMapList = MarzUtil.stringToList(account.getBossIds());
-                    mapEvt = new MarzMapEvt();
+                    bossEvt = new BossEvt();
                     
                     for (String id : userMapList)
                     {
-                        for (MarzMapEvt m : battleMapList)
+                        for (BossEvt m : battleMapList)
                         {
                             if (id.equals(m.getBossId()) && account.getBpMax() >= m.getBpCost())
                             {
-                                mapEvt = m;
-                                MarzMapReq mapReq = new MarzMapReq();
-                                mapReq.setBossId(m.getBossId());
-                                List<MarzMapEvt> mapList = this.marzMapService.queryMarzMap(mapReq);
-                                if (mapList != null && !mapList.isEmpty())
+                                bossEvt = m;
+                                MarzMapEvt map = MarzDataPool.getInstance().getMarzMapByBossId(m.getBossId());
+                                if (null != map)
                                 {
-                                    mapEvt.setTarget(mapList.get(0).getTarget());
-                                    mapEvt.setEnemy(mapList.get(0).getEnemy());
+                                    bossEvt.setProcess(map.getProcess());
+                                    bossEvt.setTarget(map.getTarget());
+                                    //mapEvt.setEnemy(mapList.get(0).getEnemy());
                                 }
                                 break;
                             }
                         }
                         
-                        if (!CommonUtil.isEmpty(mapEvt.getBossId()))
+                        if (!CommonUtil.isEmpty(bossEvt.getBossId()))
                         {
                             // 自定义副本可以循环打
                             isBattleOnce = false;
@@ -1550,7 +1570,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 }
                 
                 // 没有可以打的副本时
-                if (CommonUtil.isEmpty(mapEvt.getBossId()))
+                if (CommonUtil.isEmpty(bossEvt.getBossId()))
                 {
                     // 是否启用不浪费BP
                     if (validateSetting(MarzConstant.VALIDATE_SETTING_BATTLE_NOWASTE) && account.getBp() >= account.getBpMax())
@@ -1558,45 +1578,45 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                         // 不浪费BP打的地图为空或者为日限轮询的0时
                         if (CommonUtil.isEmpty(marzSettingEvt.getBattleNowasteBossId()) || "0".equals(marzSettingEvt.getBattleNowasteBossId()))
                         {
-                            for (MarzMapEvt m : battleMapList)
+                            for (BossEvt m : battleMapList)
                             {
                                 if (MarConstant.BATTLE_START_MONDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_TUESDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_WEDNESDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_THURSDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_FRIDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_SATURDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                                 else if (MarConstant.BATTLE_START_SUNDAY.equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                             }
                         }
                         else
                         {
-                            for (MarzMapEvt m : battleMapList)
+                            for (BossEvt m : battleMapList)
                             {
                                 if (marzSettingEvt.getBattleNowasteBossId().equals(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
-                                    mapEvt = m;
+                                    bossEvt = m;
                                 }
                             }
                         }
@@ -1608,10 +1628,10 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 }
                 
                 // 校验数据
-                if  (!CommonUtil.isEmpty(mapEvt.getBossId()))
+                if  (!CommonUtil.isEmpty(bossEvt.getBossId()))
                 {
                     
-                    if (itemUseFlag && account.getBp() < mapEvt.getBpCost())
+                    if (itemUseFlag && account.getBp() < bossEvt.getBpCost())
                     {
                         // 有药水了可以直接嗑药
                         map = request.itemUse(sid, marzSettingEvt.getAutoUseBPPotionItemId());
@@ -1633,29 +1653,34 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                 	// update by ken 20150621 战斗改为一次性循环打完所有BP
                     do
                     {
-                        if (account.getBp() < mapEvt.getBpCost())
+                        if (Thread.currentThread().getName().contains(MarzConstant.OVER))
                         {
-                            this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "体力不足，停止战斗！目标副本：" + mapEvt.getBossName() + " 当前体力：" + account.getBp() + " 副本需要：" + mapEvt.getBpCost());
                             break;
                         }
                         
-                    	map = request.teamBattleSoloStart(sid, mapEvt.getBossId(), arthur1, arthur2, arthur4);
+                        if (account.getBp() < bossEvt.getBpCost())
+                        {
+                            this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "体力不足，停止战斗！目标副本：" + bossEvt.getBossName() + " 当前体力：" + account.getBp() + " 副本需要：" + bossEvt.getBpCost());
+                            break;
+                        }
+                        
+                    	map = request.teamBattleSoloStart(sid, bossEvt.getBossId(), arthur1, arthur2, arthur4);
                         
                         resultCode = map.get(MarzConstant.JSON_TAG_RESCODE).getInt(MarzConstant.JSON_TAG_RESCODE);
                         
-                        this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "战斗开始" + MarzUtil.resultCodeStr(resultCode) + " 目标副本 " + mapEvt.getBossName());
+                        this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "战斗开始" + MarzUtil.resultCodeStr(resultCode) + " 目标副本 " + bossEvt.getBossName());
                         
                         if (MarzConstant.RES_CODE_SUCCESS_0 == resultCode)
                         {
                             sid = map.get(MarzConstant.JSON_TAG_SID).getString(MarzConstant.JSON_TAG_SID);
-                            account.setBp(account.getBp() - mapEvt.getBpCost());
+                            account.setBp(account.getBp() - bossEvt.getBpCost());
                             
                             String battleEndParam = "";
-                            if (0 == mapEvt.getTarget())
+                            if (0 == bossEvt.getTarget() && MarzConstant.MARZMAP_PROCESS_3 == bossEvt.getProcess())
                             {
                                 battleEndParam = MarConstant.BATTLESOLOEND_3;
                             }
-                            else if (1 == mapEvt.getTarget())
+                            else if (1 == bossEvt.getTarget() && MarzConstant.MARZMAP_PROCESS_1 == bossEvt.getProcess())
                             {
                                 battleEndParam = MarConstant.BATTLESOLOEND_1_1;
                             }
@@ -1712,7 +1737,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                                 }
                             }
                             
-                            this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "战斗结束" + MarzUtil.resultCodeStr(resultCode) + " 目标副本 " + mapEvt.getBossName() + " 战斗获得 " + MarzUtil.getFaceImageUrlByIdList(newCardIdList));
+                            this.marzLogService.marzLog(account, MarzConstant.MARZ_LOG_TYPE_1, "战斗结束" + MarzUtil.resultCodeStr(resultCode) + " 目标副本 " + bossEvt.getBossName() + " 战斗获得 " + MarzUtil.getFaceImageUrlByIdList(newCardIdList));
                             
                             if (isBattleOnce)
                             {
@@ -1727,10 +1752,10 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                         }
                     }
                     while (MarzConstant.RES_CODE_SUCCESS_0 == resultCode
-                            && account.getBp() >= mapEvt.getBpCost()
+                            && account.getBp() >= bossEvt.getBpCost()
                             //&& !marzSettingEvt.getBattleNowasteBossId().equals(mapEvt.getBossId()) // 如果这个图是不浪费BP刷的图 则只刷一次
                             //&& !(CommonUtil.isEmpty(marzSettingEvt.getBattleNowasteBossId()) || "0".equals(marzSettingEvt.getBattleNowasteBossId())) // 如果选择7合1也要过滤
-                    		&& MarzConstant.MARZMAP_STATE_2.equals(mapEvt.getState())); // 练级模式以及拿石模式下 第一次打的图不重复刷
+                    		&& MarzConstant.MARZMAP_STATE_2.equals(bossEvt.getState())); // 练级模式以及拿石模式下 第一次打的图不重复刷
                 }
                 else
                 {
@@ -1741,6 +1766,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
         catch (Exception e)
         {
             CommonUtil.infoLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_OUT, String.format(account.getTgksId() + "战斗过程中发生异常！"));
+            System.out.println(e);
             return MarzConstant.FAILED;
         }
         

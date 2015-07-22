@@ -114,6 +114,16 @@ CommonUtil.debugLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_OUT, "MarzLogA
 return SUCCESS;
 }
 
+public String resetMarzLog()
+{
+CommonUtil.debugLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_IN, "MarzLogAction.resetMarzLog");
+int result = mar_marzLogService.resetMarzLog();
+CommonUtil.systemLog("mar/deleteMarzLog.action", CommonConstant.SYSTEMLOG_TYPE_3, result == 0 ? CommonConstant.FAILD : CommonConstant.SUCCESS, "清除所有日志");
+CommonUtil.infoLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_EXECUTE_NUMS, StringUtil.toBeString(result));
+CommonUtil.debugLog(logger, CommonConstant.SYSTEM_INFO_LOG_METHOD_OUT, "MarzLogAction.resetMarzLog");
+return SUCCESS;
+}
+
 /**
  * @return 返回 mar_marzLogService
  */

@@ -20,7 +20,7 @@ public List<MarzItemEvt> queryMarzItem(MarzItemReq marzItemReq)
 {
 if (CommonUtil.isEmpty(marzItemReq.getSortSql()))
 {
-marzItemReq.setSortSql(" t.ID DESC");
+marzItemReq.setSortSql(" t.ITEMID DESC");
 }
 return mar_marzItemDao.mar_queryMarzItem(marzItemReq);
 }

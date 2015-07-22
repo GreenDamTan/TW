@@ -231,4 +231,14 @@ public class MarzConstant
      * MARZ PVP TYPE 1 排位
      */
     public static final String MARZPVP_TYPE_1 = "1";
+    
+    /**
+     * MARZ PVP PROCESS 1 一回合
+     */
+    public static final int MARZMAP_PROCESS_1 = 1;
+    
+    /**
+     * MARZ PVP PROCESS 3 三回合
+     */
+    public static final int MARZMAP_PROCESS_3 = 3;
 }

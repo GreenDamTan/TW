@@ -43,8 +43,8 @@
 	</form>
 </div>
 
-<button id="addMarzLog">新增</button>
 <button id="deleteMarzLog">删除</button>
+<button id="resetMarzLog">清空</button>
 
 <div id="marzLogDiv"></div>
 
@@ -200,6 +200,47 @@ $(document).ready(function(){
 		});
 		return false;
 	});
+	
+	// 清空按钮
+    $( "#resetMarzLog" ).button({
+        icons: {
+            primary: "ui-icon-minus"
+            }
+        }).click(function() {
+        $("#marzLogManagerSubmit").val("1");
+                
+        // ajax调用删除action
+        var options = { 
+            url:"../mar/resetMarzLog.action" , // 提交给哪个执行
+            type:'POST', 
+            success: function(){
+                alert("清空成功");
+                // 执行成功刷新form
+                query();
+            },
+            error:function(){ 
+                alert("清空失败"); 
+            }
+        };
+        
+        // 确认操作
+        $("#marzLogConfirm").dialog({
+            resizable: false,
+            height:160,
+            modal: true,
+            buttons: {
+                "确认": function() {
+                    $( this ).dialog( "close" );
+                    // 异步请求删除操作
+                    $("#marzLogConfirm").ajaxSubmit(options);
+                },
+                "取消": function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+        return false;
+    });
 	 
 	 // 启用按钮
 	$( "#onMarzLog" ).button({

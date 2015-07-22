@@ -13,7 +13,20 @@
 		<table>
 			<tr>
 				<td><label>BOSSID: </label></td><td><input type="text" name="marzMapReq.bossId" /></td>
-				<td><label>名称: </label></td><td><input type="text" name="marzMapReq.bossName" /></td>
+                <td><label>名称: </label></td><td><input type="text" name="marzMapReq.bossName" /></td>
+                <td><label>VIP: </label></td>
+                <td>
+		        <td>
+		            <select name="marzMapReq.vip">
+                        <option value="">全部</option>
+                        <option value="0">试用</option>
+		                <option value="1">普通</option>
+		                <option value="2">白金</option>
+		                <option value="3">钻石</option>
+		                <option value="4">未生效</option>
+		            </select>
+		        </td>
+		        </td>
 				<td>
 				
 				</td>

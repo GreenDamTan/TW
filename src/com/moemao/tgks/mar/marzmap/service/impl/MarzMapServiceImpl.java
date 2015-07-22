@@ -20,7 +20,7 @@ public List<MarzMapEvt> queryMarzMap(MarzMapReq marzMapReq)
 {
 if (CommonUtil.isEmpty(marzMapReq.getSortSql()))
 {
-marzMapReq.setSortSql(" t.ID");
+marzMapReq.setSortSql(" t.SORT DESC, t.BOSSID DESC");
 }
 return mar_marzMapDao.mar_queryMarzMap(marzMapReq);
 }

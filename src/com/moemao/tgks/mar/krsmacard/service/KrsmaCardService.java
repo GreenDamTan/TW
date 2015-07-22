@@ -19,4 +19,12 @@ public int updateKrsmaCard(KrsmaCardEvt krsmaCardEvt);
 
 public int deleteKrsmaCard(List<String> ids);
 
+public int onSellKrsmaCard(List<String> ids);
+
+public int offSellKrsmaCard(List<String> ids);
+
+public int onFameKrsmaCard(List<String> ids);
+
+public int offFameKrsmaCard(List<String> ids);
+
 }

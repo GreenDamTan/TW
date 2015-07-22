@@ -10,7 +10,9 @@
 				<th>名称</th>
                 <th>BP消耗</th>
                 <th>攻击目标数</th>
-				<th>VIP等级</th>
+                <th>VIP等级</th>
+                <th>钥匙类型</th>
+                <th>排序</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +40,8 @@
                             未生效
                         </s:elseif>
                     </td>
+                    <td><s:property value='#evt.openKeyType'/></td>
+                    <td><s:property value='#evt.sort'/></td>
 				</tr>
 			</s:iterator>
 		</tbody>

@@ -35,7 +35,7 @@ import com.moemao.tgks.mar.tool.MarConstant;
  */
 public class MarzThreadPoolDiffusion implements Runnable, ApplicationContextAware
 {
-    private MarzThreadPoolDiffusion() {};
+    private MarzThreadPoolDiffusion() {}
     
     private static MarzThreadPoolDiffusion instance;
     
