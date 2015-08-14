@@ -36,7 +36,7 @@
                 <td width="12%">
                     <select id="marzSettingEvt.pvp" name="marzSettingEvt.pvp">
                          <option value="0">关</option>
-                         <option value="1" <s:if test="marzSettingEvt.pvp == 1">selected="selected"</s:if>>开</option>
+                         <!-- <option value="1" <s:if test="marzSettingEvt.pvp == 1">selected="selected"</s:if>>开</option> -->
                     </select>
                 </td>
             </tr>
@@ -73,7 +73,7 @@
                 <td>
                     <select id="marzSettingEvt.coinGacha" name="marzSettingEvt.coinGacha">
                          <option value="0">关</option>
-                         <option value="1" <s:if test="marzSettingEvt.coinGacha == 1">selected="selected"</s:if>>开</option>
+                         <!-- <option value="1" <s:if test="marzSettingEvt.coinGacha == 1">selected="selected"</s:if>>开</option> -->
                     </select>
                 </td>
                 <td>硬币类型</td>
@@ -245,6 +245,6 @@ $(document).ready(function(){
         $("#saveSettingForm").ajaxSubmit(options);
         
         return false;
-    });  
+    });
 });
 </script>
