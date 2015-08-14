@@ -26,7 +26,7 @@
     <a id="marzCardUsePageA" href="#"><b>点卡充值</b></a>
 </li>
 <li style="width:80px;">
-    <a id="pointCardBuy" href="#" onclick="window.open('http://shop116807624.taobao.com/search.htm?orderType=coefp_desc&viewType=grid&keyword=%B5%E3%BF%A8&lowPrice=&highPrice=')"><b>点卡购买</b></a>
+    <a id="pointCardBuy" href="#" onclick="window.open('http://shop116807624.taobao.com/category-1115914305.htm')"><b>点卡购买</b></a>
 </li>
 <li style="width:80px;">
     <a id="help" href="#" onclick="window.open('http://www.moemao.com/index.php/marweb-help')"><b>使用说明</b></a>
