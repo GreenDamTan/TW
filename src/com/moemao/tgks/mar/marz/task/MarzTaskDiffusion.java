@@ -82,7 +82,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
     
     public boolean running = true;
     
-    boolean itemUseFlag = true;
+    boolean itemUseFlag = false;
     
     public MarzTaskDiffusion(MarzAccountEvt marzAccountEvt)
     {
