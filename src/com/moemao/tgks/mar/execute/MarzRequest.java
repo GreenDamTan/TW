@@ -42,7 +42,7 @@ public class MarzRequest
     {
         map = new HashMap<String, JSONObject>();
         
-        String paramStr = "{\"uuid\":\"" + uuid + "\",\"hash_token\":\"" + hashToken + "\",\"clver\":\"1.1.0\",\"os\":0,\"carrier\":3,\"market\":1,\"lang\":0,\"device\":\"iPhone5S\",\"token\":\"\",\"os_ver\":\"iPhone OS 7.1.2\"}";
+        String paramStr = "{\"uuid\":\"" + uuid + "\",\"hash_token\":\"" + hashToken + "\",\"clver\":\"2.1.0\",\"os\":0,\"carrier\":3,\"market\":1,\"lang\":0,\"device\":\"iPhone5S\",\"token\":\"\",\"os_ver\":\"iPhone OS 7.1.2\"}";
         
         String result = httpRequest.sendPost(MarConstant.URL_LOGIN, paramStr);
         System.out.println(MarzConstant.LOG_SYSTEM_INFO + "loginIOS " + uuid + " " + Thread.currentThread().getName());
@@ -61,7 +61,7 @@ public class MarzRequest
     {
         map = new HashMap<String, JSONObject>();
         
-        String paramStr = "{\"uuid\":\"" + uuid + "\",\"hash_token\":\"" + hashToken + "\",\"clver\":\"1.1.0\",\"os\":1,\"carrier\":1,\"market\":2,\"lang\":0,\"device\":\"LGE Nexus 5\",\"token\":\"\",\"os_ver\":\"Android OS 4.4.3 / API-19 (FUCK YOU)\"}";
+        String paramStr = "{\"uuid\":\"" + uuid + "\",\"hash_token\":\"" + hashToken + "\",\"clver\":\"2.1.0\",\"os\":1,\"carrier\":1,\"market\":2,\"lang\":0,\"device\":\"LGE Nexus 5\",\"token\":\"\",\"os_ver\":\"Android OS 4.4.3 / API-19 (FUCK YOU)\"}";
         
         String result = httpRequest.sendPost(MarConstant.URL_LOGIN, paramStr);
         System.out.println(MarzConstant.LOG_SYSTEM_INFO + "loginAndroid " + uuid + " " + Thread.currentThread().getName());
