@@ -76,14 +76,14 @@ public class CardEvt
         this.setAtkp(cardJSON.getInt("8"));
         this.setIntp(cardJSON.getInt("9"));
         this.setMndp(cardJSON.getInt("10"));
-        this.setNext_lv_exp(cardJSON.getInt("11"));
-        this.setNow_lv_exp(cardJSON.getInt("12"));
-        this.setAdd_exp(cardJSON.getInt("13"));
-        this.setBase_add_price(cardJSON.getInt("14"));
-        this.setEvolution_price(cardJSON.getInt("15"));
-        this.setIs_lock(cardJSON.getInt("16"));
-        this.setCreate_time(cardJSON.getInt("17"));
-        this.setFame(cardJSON.getInt("18"));
+        //this.setNext_lv_exp(cardJSON.getInt("11"));
+        this.setNow_lv_exp(cardJSON.getInt("11"));
+        this.setAdd_exp(cardJSON.getInt("12"));
+        this.setBase_add_price(cardJSON.getInt("13"));
+        this.setEvolution_price(cardJSON.getInt("14"));
+        this.setIs_lock(cardJSON.getInt("15"));
+        this.setCreate_time(cardJSON.getInt("16"));
+        this.setFame(cardJSON.getInt("17"));
     }
     
     public String getUniqid()

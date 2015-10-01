@@ -806,11 +806,11 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                         // 蓝狗粮
                         userSellList.add("20000001");
                         // 2星进化素材
-                        userSellList.add("20000009");
-                        userSellList.add("20000008");
-                        userSellList.add("20000007");
-                        userSellList.add("20000006");
-                        userSellList.add("20000005");
+                        //userSellList.add("20000009");
+                        //userSellList.add("20000008");
+                        //userSellList.add("20000007");
+                        //userSellList.add("20000006");
+                        //userSellList.add("20000005");
                     }
                     
                     // update by ken 20150622 将卖卡逻辑改为单次循环卖光
@@ -1446,6 +1446,25 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                                 bossEvt.setTarget(4);
                             }
                             
+                            // 钥匙类型
+                            if (bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS3_CHIARI_KEY))
+                            {
+                                bossEvt.setOpenKeyType(MarConstant.ITEM_ID_KEY_CHIARI);
+                            }
+                            else if (bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS3_DAILY_KEY))
+                            {
+                                bossEvt.setOpenKeyType(MarConstant.ITEM_ID_KEY_KIRARI);
+                            }
+                            else if (bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS1_DRAGON_KEY)
+                                    || bossEvt.getBossId().startsWith(MarConstant.BOSSID_HEAD_PROCESS1_EVENT_KEY))
+                            {
+                                bossEvt.setOpenKeyType(MarConstant.ITEM_ID_KEY_BOSS);
+                            }
+                            else
+                            {
+                                bossEvt.setOpenKeyType("0");
+                            }
+                            
                             // 展示顺序 以及VIP
                             if (bossEvt.getBossId().startsWith("8"))
                             {
@@ -1525,6 +1544,12 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                     // 拿石模式只处理Event副本
                     for (BossEvt map : eventMapList)
                     {
+                        // 过滤8开头的副本 打了也没有石头
+                        if (map.getBossId().startsWith("8"))
+                        {
+                            continue;
+                        }
+                        
                         // 如果地图的标志为标明未通过 并且体力够打这个图 那么就打这个
                         if ((MarzConstant.MARZMAP_STATE_0.equals(map.getState()) || MarzConstant.MARZMAP_STATE_1.equals(map.getState()))
                                 && account.getBpMax() >= map.getBpCost())
@@ -1546,7 +1571,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                     {
                         for (BossEvt m : battleMapList)
                         {
-                            if (id.equals(m.getBossId()) && account.getBpMax() >= m.getBpCost())
+                            if (id.contains(m.getBossId()) && account.getBpMax() >= m.getBpCost())
                             {
                                 bossEvt = m;
                                 MarzMapEvt map = MarzDataPool.getInstance().getMarzMapByBossId(m.getBossId());
@@ -1614,7 +1639,7 @@ public class MarzTaskDiffusion implements Runnable, ApplicationContextAware
                         {
                             for (BossEvt m : battleMapList)
                             {
-                                if (marzSettingEvt.getBattleNowasteBossId().equals(m.getBossId()) && account.getBp() >= m.getBpCost())
+                                if (marzSettingEvt.getBattleNowasteBossId().contains(m.getBossId()) && account.getBp() >= m.getBpCost())
                                 {
                                     bossEvt = m;
                                 }

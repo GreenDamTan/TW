@@ -36,7 +36,7 @@
                 <td width="12%">
                     <select id="marzSettingEvt.pvp" name="marzSettingEvt.pvp">
                          <option value="0">关</option>
-                         <!-- <option value="1" <s:if test="marzSettingEvt.pvp == 1">selected="selected"</s:if>>开</option> -->
+                         <option value="1" <s:if test="marzSettingEvt.pvp == 1">selected="selected"</s:if>>开</option>
                     </select>
                 </td>
             </tr>

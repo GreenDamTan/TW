@@ -27,6 +27,12 @@ public class MarConstant
     public static final String ITEM_ID_BP_RECOVER_30 = "1002";
     
     public static final String ITEM_ID_BP_RECOVER_FULL_SUNDAY = "1100";
+
+    public static final String ITEM_ID_KEY_CHIARI = "3000";
+    
+    public static final String ITEM_ID_KEY_BOSS = "3001";
+    
+    public static final String ITEM_ID_KEY_KIRARI = "3002";
     
     /**
      * 未使用
@@ -259,6 +265,11 @@ public class MarConstant
     public static final String BATTLE_START_FRIDAY_HEAD = "2000050";
     public static final String BATTLE_START_SATURDAY_HEAD = "2000060";
     public static final String BATTLE_START_SUNDAY_HEAD = "2000070";
+    
+    public static final String BOSSID_HEAD_PROCESS3_CHIARI_KEY = "8200";
+    public static final String BOSSID_HEAD_PROCESS3_DAILY_KEY = "8490";
+    public static final String BOSSID_HEAD_PROCESS1_DRAGON_KEY = "830";
+    public static final String BOSSID_HEAD_PROCESS1_EVENT_KEY = "840";
     
     public static final String BATTLE_START_MONDAY = "20000103";
     public static final String BATTLE_START_TUESDAY = "20000203";
